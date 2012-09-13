@@ -2,16 +2,16 @@
 
 % Use this command to override the default ACM copyright statement (e.g. for preprints). 
 % Consult the conference website for the camera-ready copyright statement.
-\toappear{
-Permission to make digital or hard copies of all or part of this
-work for personal or classroom use is granted without fee provided that 
-copies are not made or distributed for profit or commercial advantage and
-that copies bear this notice and the full citation on the first page. To
-copy otherwise, or republish, to post on servers or to redistribute to 
-lists, requires prior specific permission and/or a fee.\\
-{\confname{CHI'12}}, May 5--10, 2012, Austin, Texas, USA.\\
-Copyright 2012 ACM 978-1-4503-1015-4/12/05...\$10.00.
-}
+%% \toappear{
+%% Permission to make digital or hard copies of all or part of this
+%% work for personal or classroom use is granted without fee provided that 
+%% copies are not made or distributed for profit or commercial advantage and
+%% that copies bear this notice and the full citation on the first page. To
+%% copy otherwise, or republish, to post on servers or to redistribute to 
+%% lists, requires prior specific permission and/or a fee.\\
+%{\confname{CHI'13}}, May 5--10, 2012, Austin, Texas, USA.\\
+%Copyright 2012 ACM 978-1-4503-1015-4/12/05...\$10.00.
+%}
 
 % Arabic page numbers for submission. 
 % Remove this line to eliminate page numbers for the camera ready copy
@@ -98,33 +98,14 @@ breaklinks=true,
 \maketitle
 
 \begin{abstract}
+
 \end{abstract}
 
-\keywords{
-	Guides; instructions; author's kit; conference publications;
-	keywords should be separated by a semi-colon.
-	\textcolor{red}{Mandatory section to be included in your final version.}
-}
+\keywords{}
 
 \category{H.5.m.}{Information Interfaces and Presentation (e.g. HCI)}{Miscellaneous}
 
-See: \url{http://www.acm.org/about/class/1998/}
-for more information and the full list of ACM classifiers
-and descriptors. 
-\textcolor{red}{Mandatory section to be included in your
-final version. On the submission page only the classifiers'
-letter-number combination will need to be entered.}
-
-\terms{
-	Human Factors; Design; Measurement. 
-	If you choose more than one ACM General Term, 
-	separate the terms with a semi-colon.
-}
-
-See list of the limited ACM 16 terms in the
-instructions and additional information:
-\url{http://www.sheridanprinting.com/sigchi/generalterms.htm}.
-\textcolor{red}{Optional section to be included in your final version.}
+\terms{Human Factors; Design; Measurement.}
 
 \section{Introduction}
 
@@ -132,54 +113,19 @@ In recent years, an unprecedented quantity and variety of information has been m
 
 While a primary goal of opening up such direct access to information is the hope that end-user citizens will make more informed decisions pertaining to their health, wealth, or well-being \cite{}, use of this data beyond specialised app developers, journalists and other “data specialists” remains minimal.  Our hypothesis is that the main impediment towards end-user access to this data is a mismatch between the capabilities of tools currently used to satisfy daily information needs, and those required to effectively browse, use and consume heterogeneous structured data from diverse sources.  For example, while much of this data represents a many and varied set of things, activities, and descriptions at various granularities, most commonly used structured personal information management (PIM) tools either can only manage a small, fixed set of data types (such as digital calendaring tools and  to-do list managers) or provide little or no support for structured data at all, such as text editors and sketching/drawing tools \cite{}.    
 
-If PIM tools were extended to enable end-users to make effective use of the emerging ecosystem of personal data, how would this impact personal information practice? This paper presents our initial results towards answering this question through a multi-method investigation of the personal data integration problem.  We start with a small interview study examining information tasks people perform that rely on multiple sources of information, and how such needs are currently satisfied.  Our results suggest that people prefer to rely upon multiple, diverse sources to singular integrated ones for a number of reasons, including coverage, reliability, and \_\_\_\_\_\_.  Second, we conduct a analysis of various popular personal data sources available today to identify barriers to effective unification of data from each.  We draw upon definitions and work from the database integration systems literature to characterise types of heterogeneity exhibited across data sources in three popular domains: social networking, shopping, and dining, finding that terminological heterogeneity dominates the simpler data feeds (including social networking and restaurant recommendations), while structural issues pervade the more complex schemas of online retailers' product catalogues.
+If PIM tools were extended to enable end-users to make effective use of the emerging ecosystem of personal data, how would this impact personal information practice? This paper presents our initial results towards answering this question through a multi-method investigation of the personal data integration problem.  We start with a small interview study examining information tasks people perform that rely on multiple sources of information, and how such needs are currently satisfied.  Our results suggest that people prefer to rely upon multiple, diverse sources to singular integrated ones for a number of reasons, including coverage, reliability, and seeking out more suitable alternatives.  Second, we conduct a analysis of various popular personal data sources available today to identify barriers to effective unification of data from each.  We draw upon definitions and work from the database integration systems literature to characterise types of heterogeneity exhibited across data sources in three popular domains: social networking, shopping, and dining, finding that terminological heterogeneity dominates the simpler data feeds (including social networking and restaurant recommendations), while structural issues pervade the more complex schemas of online retailers' product catalogues.
 
-Based upon the data integration needs revealed by people in the interviews, and the kinds of heterogeneity observed in the data feeds, we embarked on a user-centric design exercise towards an interface to facilitate simple, "light-touch" integration tasks of diverse, heterogeneous data sources.  We describe our initial foray into this exercise, an interface we call DataPalette, which focuses on the most common types of heterogeneity to enable serendipitous "data mixing" - a form of simple integration sufficient to let people easily and effectively combine and compare information sources without the need to write code.  Our usability evaluation of Data Palette reveals that most users were comfortable with and that this interface is effectively expedites the most sophisticated of the typical kinds of "data integration" tasks people need to perform while planning personal,
+Based upon the data integration needs revealed by people in the interviews, and the kinds of heterogeneity observed in the data feeds, we embarked on a user-centric design exercise towards an interface to facilitate simple, ``light-touch'' integration tasks of diverse, heterogeneous data sources.  We describe our initial foray into this exercise, an interface we call DataPalette, which focuses on the most common types of heterogeneity to enable serendipitous ``data mixing'' - a form of simple integration sufficient to let people easily and effectively combine and compare information sources without the need to write code.  Our usability evaluation of Data Palette reveals that most users were comfortable with and that this interface is effectively expedites the most sophisticated of the typical kinds of ``data integration'' tasks people need to perform while planning personal,
 
 \section{Related Work}
 
-As the theoretical basis of data integration extends nearly a half-century in the database systems literature . As described by Halvey et al’s comprehensive textbook on data integration problems and techniques \cite{principlesofdataintegration} much of this focus of this community has focused on \emph{engineered} or \emph{automatic} approaches to data integration at a large scale, 
+In this section, we touch on motivating work for DataPalette from three fields: peronal information management, database integration, and end-user mashups and toolkits.
 
-In scientific laboratory settings, 
+First, 
 
-We only briefly touch on the extensive literature covering the “deep end” of data integration - both automatic and “hand-coded” techniques to link multiple, typically large, data sources in consistent, correct and efficient ways, little work has pertained on the opposite end -- the “light”, “small” and “sketchy” end of data integration, such as arises when multiple heterogeneous sources of data about similar kinds of things are brought together spontaneously
+Data integration has been a major recurring theme in the literature of personal information management.  The problem of data fragmentation, for example, defined by Jones et al \cite{jones}, can be seen as as an inability failure of current PIM practices to support effective consolidation of data from multiple sources.  In our own study, (reference anonymised) we observed the manual ``coping strategies'' (or, if programmers, elaborate, custom-coded one-off solutions)  devised to manage and updating data from external sources.  Similar observations have been made in others' studies, such as Voida et al.'s findings concerning volunteer coordinators' ``homebrew databases'', manually-mainted information assemblages that were concocted to meet data integration needs in the absence of tools with suitable capabilities.
 
-Interfaces that let end-users find, consolidate, and work with heterogeneous data 
-PIM 
-	Amy Voida’s databases paper
-User-subjective approach to information management
-
-Information scraps
-End-user Data Gathering and integration platforms
-	Potluck
-	Cards (M. Dontcheva)
-
-End-user data gathering
-	Piggy Bank
-“data notebooks”	Hunter-gatherer
-	Yahoo Pipes
-PROMPT 
-
-A key assumption of this work is that ontologies are not going to converge.  (Studies about the diversity of web ontologies backing this claim up?)
-
-Why end-user data integration is desirable
-User-subjective approach to personal information management
-
-Why is the data integration problem so hard?  
-The problem of reconciling schema heterogeneity has been a subject of research for decades, but solutions are few.  In the words of leading data integration researcher Alon Halevy,
-[The problem stems from the fact that] we are trying to integrate data systems that were developed for slightly (or vastly) different business needs. Hence, even if they model
-overlapping domains, they will model them in different ways. Differing structures are a byproduct of human nature ?people think differently from one another even when faced with  the same modeling goal. \cite{alonhalevy}
-
-Exhibit - designed for personal structured curation
-Yahoo Pipes! - designed for not-personal (public) curation
-MySupermarket - http://mysupermarket.co.uk/
-Demonstrates the power of joining across data sources: people can gather a grocery list, and compare how much the same shopping list would cost at each of the major UK supermarket chains (ASDA, Tesco, Waitrose, ocado) --
-
-But what about the mom + pop groceries?
-What if they’re missing data: allergies, suitable for -- available from somewhere else
-
-Schema.org  - is it helping or not?
-
+A number of research PIM systems have been devised to solve this problem. 
 
 \section{Pre-study 1 - Understanding Heterogeneity for Everyday Tasks}
 \subsection{Method}
@@ -294,5 +240,5 @@ Limitations found from study... what is the take away from the limitations
 % uncomment the following line:
 % \small
 \bibliographystyle{acm-sigchi}
-\bibliography{sample}
+\bibliography{carpedata}
 \end{document}
