@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.19)  13 SEP 2012 21:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.19)  13 SEP 2012 22:21
 entering extended mode
  %&-line parsing enabled.
-**chi2012.tex
+**chi2012
 (./chi2012.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
@@ -405,13 +405,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 \OT1/ptm/m/n/10 ``lightweight'' vi-sual, user-interactive data col-lec-tion,
  []
 
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+Missing character: There is no Ê in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.152 
+l.149 
        [2]
 Missing character: There is no Õ in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
@@ -421,31 +436,166 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.226 \section{Conclusion}
-                           %Key findings of the whole paper and its implicat...
-[3] (./chi2012.bbl)pdfTeX warning (ext4): destination with the same identifier 
-(name{page.}) has been already used, duplicate ignored
+l.177 \subsection{Prestudy 2 Summary of Findings}
+                                                  [3]
+Missing character: There is no Õ in font ptmr7t!
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 201.
+
+Underfull \hbox (badness 1838) in paragraph at lines 208--208
+[]\OT1/ptm/m/n/10 1) Three uni-ver-si-ties they
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+[]\OT1/ptm/m/n/10 Universities: 1) Lough-bor-ough, 2)
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 208--208
+\OT1/ptm/m/n/10 Durham, 3) Ex-eter, 4) Ed-in-burgh, 5)
+ []
+
+
+Overfull \hbox (17.11151pt too wide) in paragraph at lines 208--209
+[]\OT1/ptm/m/n/10 http://www.thecompleteuniversityguide.co.uk/,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+\OT1/ptm/m/n/10 http://www.ucas.ac.uk/,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+\OT1/ptm/m/n/10 http://unistats.direct.gov.uk/,
+ []
+
+
+Overfull \hbox (16.57147pt too wide) in paragraph at lines 208--209
+\OT1/ptm/m/n/10 http://www.timeshighereducation.co.uk/world-
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 210--210
+[]\OT1/ptm/m/n/10 2) Three uni-ver-si-ties they
+ []
+
+
+Overfull \hbox (17.11151pt too wide) in paragraph at lines 210--211
+[]\OT1/ptm/m/n/10 http://www.thecompleteuniversityguide.co.uk/,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+\OT1/ptm/m/n/10 http://www.ucas.ac.uk/,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+\OT1/ptm/m/n/10 http://unistats.direct.gov.uk/,
+ []
+
+
+Overfull \hbox (16.57147pt too wide) in paragraph at lines 210--211
+\OT1/ptm/m/n/10 http://www.timeshighereducation.co.uk/world-
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 212--212
+[]\OT1/ptm/m/n/10 3) Restau-rant they would
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 212--212
+\OT1/ptm/m/n/10 House, 4) Al Cas-bah, 5) Mid-sum-mer
+ []
+
+
+Underfull \hbox (badness 5939) in paragraph at lines 212--213
+[]\OT1/ptm/m/n/10 www.yelp.co.uk, www.tripadvisor.co.uk,
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 212--213
+\OT1/ptm/m/n/10 http://ratings.food.gov.uk/, face-book and
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 214--214
+[]\OT1/ptm/m/n/10 4) Restau-rant they would
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+\OT1/ptm/m/n/10 book for 12 friends in
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 214--214
+[]\OT1/ptm/m/n/10 Restaurants :1) Black Sheep Bistro, 2)
+ []
+
+
+Underfull \hbox (badness 5939) in paragraph at lines 214--215
+[]\OT1/ptm/m/n/10 www.yelp.co.uk, www.tripadvisor.co.uk,
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 214--215
+\OT1/ptm/m/n/10 http://ratings.food.gov.uk/, face-book and
+ []
+
+Missing character: There is no Õ in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+
+Underfull \hbox (badness 1715) in paragraph at lines 239--240
+[]\OT1/ptm/m/n/10 h1.1 - Do peo-ple un-der-stand-ing the prob-lem of co-
+ []
+
+Missing character: There is no Õ in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+(./chi2012.bbl
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.258 \end{document}
-                     [4] (./chi2012.aux) ) 
+l.8 
+     [4])
+Overfull \vbox (15.7775pt too high) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.292 \end{document}
+                     [5] (./chi2012.aux) ) 
 Here is how much of TeX's memory you used:
- 5259 strings out of 493848
- 74129 string characters out of 3149207
- 156650 words of memory out of 3000000
- 8407 multiletter control sequences out of 15000+200000
- 25733 words of font info for 52 fonts, out of 3000000 for 9000
+ 5294 strings out of 493848
+ 74667 string characters out of 3149207
+ 161018 words of memory out of 3000000
+ 8427 multiletter control sequences out of 15000+200000
+ 27359 words of font info for 54 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 39i,10n,38p,1319b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,38p,1420b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2009/texmf-dist/f
-onts/enc/dvips/base/8r.enc}</usr/local/texlive/2009/texmf-dist/fonts/type1/urw/
-helvetic/uhvb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/helveti
-c/uhvro8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmb8a.
-pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
-local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on chi2012.pdf (4 pages, 90917 bytes).
+onts/enc/dvips/base/8r.enc}</usr/local/texlive/2009/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/h
+elvetic/uhvb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/helvetic
+/uhvro8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
+ocal/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on chi2012.pdf (5 pages, 112415 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
