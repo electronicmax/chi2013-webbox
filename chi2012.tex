@@ -184,29 +184,38 @@ Design process
 
 \section{Methodology}
 
-Lab based usability study, 
+\subsection{Participants}We recruited 20 participants (10 female) from the University of Southampton’s international student mailing list.  All of the participants spoke English, and for 12 of them, English was not their first language, however they had all passed the university English proficiency test.  Predominately the participants were studying various levels of Computer Science, and 5 of which studied other subjects.  All of the participants had previously encountered tasks requiring them to use and evaluate data from multiple websites.\subsection{Task Design}We designed a semi-structured lab-based study around four possible tasks shown in Table \ref{tab:studyfactors}.  The tasks were to select a restaurant for an event or university at which to study, out of six possible choices. We selected a shortlist of six because it is typical for users to narrow down their options to a limited selection before analysing the details of their final choices. The shortlist of universities and restaurants were taken from the top six ranked from the Complete University Guide (for task 1 and 2), Tripadvisor (for task 3) and Yelp (for task 4).  The top six were chosen from these websites because they provide a realistic shortlist and are comparable in terms of rankings and properties. The web sites used as data sources were chosen because they are the most popular and contain comparable statistics for universities and restaurants.
+\begin{table*}[t]
+\caption{Tasks, choices and data sources}
+\begin{center}
 
-Design of Study
-How we designed the tasks, subjective task that requires multi dimensions 
-How we got data
-How we recruited participants - International student list
+\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
+\hline
+Task	 &Choices	&Data Sources\\
+\hline
+1) Three universities they would apply to study Sport Science & Universities: 1) Loughborough,  2) Durham,  3) Exeter, 4) Edinburgh, 5) Birmingham, and 6) Bath & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
+\hline
+2) Three universities they would apply to study History & Universities: 1) Cambridge, 2) London School of Economics and Political Science, 3) Durham, 4) Oxford, 5) St Andrews, and 6) University College London & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
+\hline
+3) Restaurant they would book for 12 friends in Cambridge&Restaurants : 1) Alimentum, 2) Gardenia Restaurant, 3) The Cambridge Chop House, 4) Al Casbah, 5) Midsummer House Restaurant, and 6) Nando's Restaurant. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
+\hline
+4) Restaurant they would book for 12 friends in Glagow & Restaurants :1) Black Sheep Bistro, 2) Charcoals, 3) Number 16 Family Restaurant, 4) Fanny Trollopes Cafe, 5) Two Fat Ladies At The Buttery, and 6) Sapori D'Italia. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:studyfactors}
+\end{table*}%Each task had an A and B condition.  The A condition, the participant could only use WebBox to make their decision; and in the B condition the participant was given the choice to using any websites they desired and or spreadsheets in Microsoft Excel containing the data taken from the data sources to make their choice.  Each study consisted of two tasks, one A and one B condition.  Each participant was given 10 minutes to complete a task.  In order to select which tasks the participant was given, we used a latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute WebBox tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.\subsection{Data Collection}Each study was overseen by a facilitator and an observer:  the role of the facilitator was to explain the study’s protocol to the participant and to answer any questions; and the role of the observer was to observe without interacting with the user, and to take notes.  During the lab study, we recorded the audio and the participant’s actions on screen. We asked the participants to speak out loud their thought process and what they were looking at, so that we could evaluate their reasoning behind their processes.The studies lasted 40 minutes, on average.  Both the facilitator and observer were trained on the purpose of the study, their role and how they could and couldn’t influence the study.  The studies were run over 4 days.  At the end of each day the facilitators and observers met to discuss the studies’ data and to revisit protocols, if necessary.\subsection{Data Analysis}During the data collection we collated a spreadsheet summarising the participant’s gender, typical daily computer usage, the tasks allocated and basic actions performed during the task.  After we had collected the study’s data, we performed our data analysis. 
 
-Our aim was XXX, To accomplish thies XX participants were recruited to the lab for a 1 hour session
+TODO look further into types of data analysis....
 
-	Latin square dance!
-	4 factors
-		Interface or not
-		Task (restaurant or uni)
-		Dataset (glasgow / cambridge; history or sports)
-		Participant
-
-Hypotheses
+\subsection{Hypotheses}
 Interaction-method specific hypotheses
-	h1.1 - Do people understanding the problem of co-reference, and the need to reconcile coreference problems?
-	h1.2. Does the ability to do drag + drop combination for co-reference reconciliation effectively solve this problem?
-	h2.1- Do people understand the problem of structural differences in data?
-h2.2 - Does multipath selection let people effectively deal with this -- and work with collections of heterogeneous items?
-	
+\begin{itemize}
+	\item h1.1 - Do people understanding the problem of co-reference, and the need to reconcile coreference problems?
+	\item h1.2. Does the ability to do drag + drop combination for co-reference reconciliation effectively solve this problem?
+	\item h2.1- Do people understand the problem of structural differences in data?
+	\item h2.2 - Does multipath selection let people effectively deal with this -- and work with collections of heterogeneous items?
+\end{itemize}
 Are these interaction methods sufficient to perform common tasks involving heterogeneous data sources?  Does supporting these simple techniques facilitate task completion?
 
 \section{Results}
