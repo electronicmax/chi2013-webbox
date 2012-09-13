@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.19)  13 SEP 2012 22:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.19)  13 SEP 2012 22:22
 entering extended mode
  %&-line parsing enabled.
 **chi2012
@@ -557,8 +557,15 @@ Underfull \hbox (badness 1715) in paragraph at lines 239--240
 []\OT1/ptm/m/n/10 h1.1 - Do peo-ple un-der-stand-ing the prob-lem of co-
  []
 
-Missing character: There is no Õ in font ptmr7t!
-Missing character: There is no Õ in font ptmr7t!
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.271 
+       [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 (./chi2012.bbl
 
 Package balance Warning: You have called \balance in second column
@@ -569,23 +576,20 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.8 
-     [4])
-Overfull \vbox (15.7775pt too high) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+     [5])pdfTeX warning (ext4): destination with the same identifier (name{page
+.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.292 \end{document}
-                     [5] (./chi2012.aux) ) 
+l.363 \end{document}
+                     [6] (./chi2012.aux) ) 
 Here is how much of TeX's memory you used:
  5294 strings out of 493848
  74667 string characters out of 3149207
- 161018 words of memory out of 3000000
+ 160018 words of memory out of 3000000
  8427 multiletter control sequences out of 15000+200000
  27359 words of font info for 54 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 39i,10n,38p,1420b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,38p,1420b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2009/texmf-dist/f
 onts/enc/dvips/base/8r.enc}</usr/local/texlive/2009/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/h
@@ -593,9 +597,9 @@ elvetic/uhvb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/helvetic
 /uhvro8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmb8a.p
 fb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
 ocal/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on chi2012.pdf (5 pages, 112415 bytes).
+Output written on chi2012.pdf (6 pages, 116173 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
+ 200 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
