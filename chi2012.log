@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.19)  13 SEP 2012 16:18
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.2.19)  13 SEP 2012 20:54
 entering extended mode
  %&-line parsing enabled.
 **chi2012.tex
@@ -376,13 +376,6 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 Missing character: There is no Ò in font ptmr7t!
 Missing character: There is no Ó in font ptmr7t!
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
-
-
-LaTeX Warning: Citation `jones-fragmentation' on page \thepage  undefined on in
-put line 124.
-
 
 Underfull \vbox (badness 1515) has occurred while \output is active []
 
@@ -392,26 +385,26 @@ Underfull \vbox (badness 1515) has occurred while \output is active []
 Non-PDF special ignored!
 
 ]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 132.
+
 
 LaTeX Warning: Citation `alonhalevy' on page \thepage  undefined on input line 
-129.
+132.
 
 Missing character: There is no Õ in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
-Missing character: There is no Õ in font ptmr7t!
-
-Underfull \vbox (badness 3601) has occurred while \output is active []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.151 
+l.157 
        [2]
 Missing character: There is no Õ in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
- (./chi2012.bbl)
+Missing character: There is no Õ in font ptmr7t!
+ (./chi2012.bbl
 
 Package balance Warning: You have called \balance in second column
 (balance)                Columns might not be balanced.
@@ -420,24 +413,30 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.248 \end{document}
-                     [3] (./chi2012.aux) ) 
+l.30 \bibitem{Voida:2011:HDC:1978942.1979078}
+                                              [3])pdfTeX warning (ext4): destin
+ation with the same identifier (name{page.}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.258 \end{document}
+                     [4] (./chi2012.aux) ) 
 Here is how much of TeX's memory you used:
- 5237 strings out of 493848
- 73759 string characters out of 3149207
- 156345 words of memory out of 3000000
- 8397 multiletter control sequences out of 15000+200000
- 22832 words of font info for 49 fonts, out of 3000000 for 9000
+ 5250 strings out of 493848
+ 73958 string characters out of 3149207
+ 157555 words of memory out of 3000000
+ 8403 multiletter control sequences out of 15000+200000
+ 24516 words of font info for 51 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 39i,10n,38p,1319b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,38p,1319b,383s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2009/texmf-dist/f
 onts/enc/dvips/base/8r.enc}</usr/local/texlive/2009/texmf-dist/fonts/type1/urw/
 helvetic/uhvb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-
-Output written on chi2012.pdf (3 pages, 61866 bytes).
+</usr/local/texlive/2009/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on chi2012.pdf (4 pages, 80082 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
