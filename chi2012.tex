@@ -156,9 +156,10 @@ A number of research PIM systems have demonstrated a great number of ways that u
 Setting out to investigate the potential role for better support for data integration in PIM, we first sought an updated understanding of how and whether people still used multiple information sources in the course of everyday information-related activities. There were several reasons for this inquiry; first, we wondered whether people were increasingly relying only on the handful of the massive ``supersites'' (Facebook, Google, Wikipedia) for most of their activities than actually searching for distributed sources of information.  If this were the case, much of the benefit could be gained by merely integrating PIM tools with the handful of sites, rather than the substantially more challenging problem of integrating data from arbitrary information sources on the Web.  Second, if people did rely on multiple sites, we wished to know why, and the typical kinds of tasks people did that required diverse information collection - were these kinds of tasks rare?  If so, this would suggest that perhaps specialised interfaces could be concocted for this purpose rather than it being a PIM need. 
 
 % blargh. this needs to be integrated above! 
-In order to support our primary motivation to allow users to effectively consolidate and work with data from multiple sources, we performed an exploratory sequential mixed-method investigation to help us design our contribution.  For our first pre-study we designed a semi-structured interview about which tasks and the processes people use to perform a task requiring multiple websites (see Section \ref{sec:prestudy1}).  We analysed the data collected from this study using a thematic approach.  From our first pre-study's qualitative analysis, we then designed our second pre-study which investigates the data and data formats available for people to use from popular websites (see Section \ref{sec:prestudy2}).  We performed a statistical analysis of the features of the available data.  In the next two sections, we describe our two pre-studies.
+In order to support our primary motivation to allow users to effectively consolidate and work with data from multiple sources, we performed an exploratory sequential mixed method study to help us design our contribution.  For our first pre-study we designed a semi-structured interview about which tasks and the processes people use to perform a tasks requiring multiple websites (see Section \ref{sec:prestudy1}).  We analysed the data collected from this study using a thematic approach.  From our first pre-study's qualitative analysis, we designed and performed our second study which analyses existing on data available from APIs and structured data feeds on the Web (see Section \ref{sec:prestudy2}).  The purpose of this study was to identify the degree of technical difficulty of integrating data from these sources.  We performed a statistical analysis of the features of the available data.  In the next two sections, we describe our two pre-studies.
 
 The second study we performed an analysis on existing on data available from APIs and structured data feeds on the Web.  The purpose of this study was to identify the degree of technical difficulty of integrating data from these sources.   We describe our methodology below.
+
 
 %% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sensemaking scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
 
@@ -260,7 +261,7 @@ Design process
 \section{Methodology}
 
 \subsection{Participants}
-We recruited 20 participants (10 female) from the University of Southampton's international student mailing list.  All of the participants spoke English, and for 12 of them, English was not their first language, however they had all passed the university English proficiency test.  Predominately the participants were studying various levels of Computer Science, and 5 of which studied other subjects.  All of the participants had previously encountered tasks requiring them to use and evaluate data from multiple websites.
+We recruited participants by calling for participant on the University of Southampton's international student mailing list.  There is no guarantee of the mailing list's recipients first language, however all of them passed the university English proficiency test.  We required that all participants had encountered tasks that required them to use and evaluate data from multiple websites.
 
 \subsection{Task Design}
 We designed a semi-structured lab-based study around four possible tasks shown in Table \ref{tab:studyfactors}.  The tasks were to select a restaurant for an event or university at which to study, out of six possible choices. We selected a shortlist of six because it is typical for users to narrow down their options to a limited selection before analysing the details of their final choices. The shortlist of universities and restaurants were taken from the top six ranked from the Complete University Guide (for task 1 and 2), Tripadvisor (for task 3) and Yelp (for task 4).  The top six were chosen from these websites because they provide a realistic shortlist and are comparable in terms of rankings and properties. The web sites used as data sources were chosen because they are the most popular and contain comparable statistics for universities and restaurants.
@@ -268,7 +269,7 @@ We designed a semi-structured lab-based study around four possible tasks shown i
 \begin{table*}[t]
 \caption{Tasks, choices and data sources}
 \begin{center}
-
+\small
 \begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
 \hline
 Task	 &Choices	&Data Sources\\
@@ -284,14 +285,15 @@ Task	 &Choices	&Data Sources\\
 \end{tabular}
 \end{center}
 \label{tab:studyfactors}
+\normalsize
 \end{table*}%
 
-Each task had an A and B condition.  The A condition, the participant could only use WebBox to make their decision; and in the B condition the participant was given the choice to using any websites they desired and or spreadsheets in Microsoft Excel containing the data taken from the data sources to make their choice.  
+Each task had an A and B condition.  The A condition, the participant could only use WebBox to make their decision; and in the B condition the participant was given the choice to using any websites they desired and or workbook in Microsoft Excel containing the data taken from the data sources to make their choice on individual spreadsheets.
 
 Each study consisted of two tasks, one A and one B condition.  Each participant was given 10 minutes to complete a task.  In order to select which tasks the participant was given, we used a latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute WebBox tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
 
 \subsection{Data Collection}
-Each study was overseen by a facilitator and an observer:  the role of the facilitator was to explain the study's protocol to the participant and to answer any questions; and the role of the observer was to observe without interacting with the user, and to take notes.  During the lab study, we recorded the audio and the participant's actions on screen. We asked the participants to speak out loud their thought process and what they were looking at, so that we could evaluate their reasoning behind their processes.
+Each study was overseen by a facilitator and an observer:  the role of the facilitator was to explain the study's protocol to the participant and to answer any questions; and the role of the observer was to observe without interacting with the user, and to take notes.  During the lab study, we recorded the audio and the participant's actions on screen. We asked the participants to speak out loud their thought process and what they were looking at, so that we could evaluate their reasoning behind their processes.  At the end of the study the participant completed an exit survey.  
 
 The studies lasted 40 minutes, on average.  Both the facilitator and observer were trained on the purpose of the study, their role and how they could and couldn't influence the study.  The studies were run over 4 days.  At the end of each day the facilitators and observers met to discuss the studies' data and to revisit protocols, if necessary.
 
@@ -313,48 +315,55 @@ Are these interaction methods sufficient to perform common tasks involving heter
 
 \section{Results}
 
+We recruited 20 participants (10 female) from the University of Southampton's international student mailing list.  All of the participants spoke English, and for 12 of them, English was not their first language.  Predominately the participants were studying various levels of Computer Science, and 5 of which studied other subjects. 
 
-% behaviours in websites
+The information in Table \ref{} was captured during the studies, so that we could statistically analyses the features used by the participants.
 
-Users who opted to use websites to make their decisions repeatedly encountered a number of difficulties and issues. In
-particular, there was significant confusion over the meaning of data points, for example the percentage-based rankings of
-university teaching by the Times Higher Education. There were numerous usability issues in using websites, particularly
-in searching for university courses and course requirements. Similarly, participants found it difficult to understand the
-locations of restaurants in cities that they were not familiar, and could not find a way to plot the shortlist of restaurants onto
-the same map using the websites. Overall, the users that spent the most time using websites exhibited significant
-frustration attempting to locate and compare different criteria (such as course entry requirements, or restaurant locations),
-and all ended up falling back to using the supplied spreadsheets.
+\begin{table*}[htdp]
+\caption{default}
+\small
+\begin{center}
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Participants & 1 &2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17&18&19&20\\
+\hline\hline
+gender&f&m&f&f&f&f&f&m&f&f&m&f&m&f&m&m&m&m&m&m\\
+A condition first task &y&y&y&n&n&y&n&n&y&y&n&n&y&y&n&n&n&n&n&n\\
+\hline\hline
+A Condition: task &4&2&3&4&3&&2&1&4&1&4&1&3&2&3&2&1&4&3&2\\
+paper used&n&n&n&n&n&n&y&n&y&y&n&y&n&n&y&n&n&n&n&n\\
+charts used &1&2&2&0&2&4&5&0&0&0&2&3&2&0&0&0&3&3&4&1\\
+maps used &1&1&2&2&2&1&1&0&1&0&1&1&2&1&0&1&0&0&2&1\\ 
+same as &4&3&3&6&0&2&0&2&1&0&6&5&6&2&7&0&6&7&7&7\\
+number data sources  &4&3&4&4&4&3&4&3&4&4&3&3&5&4&5&4&4&5&5&4\\
+chosen restaurant/uni &4.1&2.4&3.5&4.3&3.3&&2.4&1.4&4.2&1.6, 1.3, 1.2& 4.2& 1.4, 1.5, 1.3& 3.2& 2.1, 2.3, 2.6& 3.5, 3.3&2.6, 2.3, 2.5&1.6, 1.5, 1.3&4.1&3.3&2.4, 2.5, 2.6\\
+\hline\hline
+ B Condition:task &3&&4&3&4&2&1&2&2&3&2&3&1&4&1&4&2&2&1&3\\
+ paper used &n&n&n&n&n&n&y&n&y&y&n&y&n&y&y&n&n&y&n&n\\
+ spreadsheet/website&&&&&&&&&&&&&&&&&&&&\\
+ number of spreadsheets used&5/5&4/4&2/5&1.5&2/5&5/5&4/4&2/4&3/4&&2/4&4/5&2/4&4/5&2/4&2/5&4/4&4/4&0&5/5\\
+ number of websites used&1&1&4&3&3&0&2&3&2&&1&2&3&1&2&3&2&0&4&0\\
+ chosen restaurant/uni&3.5&&4.2&3.3&4.3&2.1&1.4,1.2,1.6&2.1&2.3,2.6,2.5&3.5&2.2,2.3,2.6&3.5&1.1&4.1&1.6&4.2&2.6,2.3, 2.5&2.3,2.5,2.6&1.1, 1.3, 1.4&3.5\\
+ \hline
+\end{tabular}
+\end{center}
+\label{default}
+\normalsize
+\end{table*}
 
-% behaviours in excel
-One of the designs of the study was to produce a spreadsheet worksheet for each website, which meant that users
-had to switch between the worksheets to gather data from multiple sources. Different approaches to using the spreadsheets
-were observed. Some users were keen to collate all data onto a single sheet, so that they could compare the values
-all at once. However, this approach was error prone, for example participants noticing too late that the ordering of rows
-was different on each sheet, so that their pasted values were incorrectly mapped. Others used pen and paper to collate
-the values, which was often faster and resulted in less observed frustration. While the majority of users did not
+In the A condition, where participants used WebBox to complete their tasks they used it to collate the data on-screen, and compare multiple values directly. About half of the observed users actually used the instance combination feature of WebBox, with the other half able to successfully make decisions without using it. Those who tried to use it were largely successful, and were able to therefore use the global brush-highlighting to simultaneously compare different statistics. Most users instantly opened up all data sources into individual boxes, in order to determine which sources contained specific statistics. The result of this technique is that the users instantly filled their screen, and ran out of space for plots and maps.
+
+In the B conditions, users were given the option of using websites and or a spreadsheet to make their choice.  Participants who opted to use websites to make their decisions repeatedly encountered a number of difficulties and issues. In particular, there was significant confusion over the meaning of data points, for example the percentage-based rankings of university teaching by the Times Higher Education. There were numerous usability issues in using websites, particularly in searching for university courses and course requirements. Similarly, participants found it difficult to understand the locations of restaurants in cities that they were not familiar, and could not find a way to plot the shortlist of restaurants onto the same map using the websites. Overall, the users that spent the most time using websites exhibited significant frustration attempting to locate and compare different criteria (such as course entry requirements, or restaurant locations), and all ended up falling back to using the supplied spreadsheets.
+
+Participants who opted to use the spreadsheet to support their decisions switched between worksheets to view data from different websites.  They used different approaches to using the spreadsheets, some participants were keen to collate all data onto a single sheet, so that they could compare the values all at once. However, this approach was error prone, for example participants noticing too late that the ordering of rows was different on each sheet, so that their pasted values were incorrectly mapped. Others used pen and paper to collate the values, which was often faster and resulted in less observed frustration. While the majority of users did not
 attempt anything complex with Excel (in fact only one users used charts), there was some advanced use of Excel observed.
 One user explained that they did not like to look at numbers, and so coloured the cells of the types of restaurant, and the
 friends' preferences, and matched the colours to make their decision. Another user calculated their own weighted metric
 of which university to choose by averaging different metrics supplied by the data sources.
 
-% webbox client
+Notably, a number of users admittedly introduced their own bias into the choices in both A and B conditions: ``I prefer Indian food, so I will choose the Indian restaurant'', and one participant spent time on Google Maps looking at the routes to each restaurant, and eliminating those that required bus transfers (the protocol did not mention routing/transfers at all).
 
-The most commonly observed use of WebBox was to collate the data on-screen, and compare multiple values directly.
-About half of the observed users actually used the instance combination feature of WebBox, with the other half able
-to successfully make decisions without using it. Those who tried to use it were largely successful, and were able
-to therefore use the global brush-highlighting to simultaneously compare different statistics. Most users instantly opened
-up all data sources into individual boxes, in order to determine which sources contained specific statistics. The result
-of this technique is that the users instantly filled their screen, and ran out of space for plots and maps.
-
-%% more from doc here
-
-% weird and wonderful
-A number of users admittedly introduced their own bias into the choices: ``I prefer Indian food, so I will choose the Indian
-restaurant'', and one participant spent time on Google Maps looking at the routes to each restaurant, and eliminating
-those that required bus transfers (the protocol did not mention routing/transfers at all).
-
-
-
+In the exit survey, the users noted that they would use WebBox for finding a property to rent/buy, choosing a job and purchasing electronic devices, in the future.  However, one participant said that they would not use it for things like deciding on a restaurant because ``it would cheapen the experience'' by removing the spontaneity, but would use it for making more important decisions.  In order to improve our solutions the participants suggested making the origin of the information clearer, sorting instances, and explanations of ratings and scoring systems (however some of these are not transparent on websites).
 
 \section{Discussion}
 
