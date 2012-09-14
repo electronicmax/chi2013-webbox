@@ -160,7 +160,6 @@ The second study we performed an analysis on existing on data available from API
 %% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sensemaking scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
 
 \subsection{PS.1 - Understanding Data Diversity in Everyday Tasks}
-% \subsubsection{Method}
 Our pre-study investigated the types of tasks people perform online that required heterogeneous data sources, and which tools they would use to organise a large social event involving 15 or more people.  We interviewed 8 participants, using a general interview guide approach based loosely on a set of questions (see Appendix ?).  This approach allowed both the participant and interviewer a degree of freedom in conversation and each interview could adapt to the participant’s experiences, while collecting the same general areas of information.  Each interview was recorded and notes taken, the interviewer was trained so that they were knowledgeable about the importance of the study and to minimise bias.
 
 \subsubsection{Results}
@@ -180,11 +179,25 @@ When organising an event the weather was not that important because it they did 
 People said that they would like a website that could support the evolution of an event, that allowed them to post drafts of an event.  They felt that organising an event should be a process that changes over time and did not need rushing.  Three of the participants said that they would like a recommendation system for places to eat and activities. Another strong requirement was that it had to be ubiquitous so that everyone could use it because they wanted a single place to communicate with their friends.  While Facebook was the most popular social networking site for organising events, half of the participants felt that it was not the best solution and would prefer a collaborative environment, which could be wiki based.
 
 \subsection{PS.2 - Technical Challenges of Integrating the Data}
+Our investigation of integration challenges started with identifying a set of data sources to analyze.  For this, we consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} and looked at the 50 most popular data feeds, based upon number of developer API keys issued for each.  In order to get a variety of different kinds of sources represented, we feeds pertaining to 5 topics: social networks (people), retail (shopping), events (calendar events, happenings, etc), music, and weather.   Table The second took a look at the structured data available via popular APIs, data feeds and downloadable data sets in order to characterise and understand challenges of combining data from these sources. 
 
-The second took a look at the structured data available via popular APIs, data feeds and downloadable data sets in order to characterise and understand challenges of combining data from these sources. 
+We first sought out the APIs and data feeds of popular Web services and sites that were aimed at developers creating apps for end-users.  Based on statistics collected We first selected 4 different categories 
 
-\subsubsection{Method}
-We sought out APIs and data feeds of popular Web services and sites that were aimed at developers targeting consumption of the data by end-users.  Based on statistics collected We first selected 4 different categories 
+\begin{table*}
+\small
+\begin{tabular}{| p{2.0cm} | p{1.5cm} | p{3.6cm} | p{2cm} | p{2cm} | l | l | l |}
+\hline
+source category  & data type & sources & API type & avg fields/rec & avg depth & term. het & struc. het \\
+\hline
+social networking  & person's profile & Facebook, LinkedIn, Google+ & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+event calendars & events & eventbrit, gcal  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+retail (shopping)  & product profile & Amazon, shopping.com, Etsy, Groupon, Zappos  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+music catalogues & songs and albums & echonest, rdio, soundcloud, spotify  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+weather & forecasts & wunderground, weatherbug, yahoo weather & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+\hline
+\end{tabular}
+\caption{\emph{PS.2 Results} - Analysis of heterogeneity present across data feeds, by category of feed} \label{tbl_tps}
+\end{table*}
 
 \subsubsection{Results}
 
