@@ -186,15 +186,15 @@ People said that they would like a website that could support the evolution of a
 %% TODO THIS IS PLACEHOLDER DATA >> 
 \begin{table*}
 \small
-\begin{tabular}{| p{2.0cm} | p{1.5cm} | p{3.6cm} | p{2cm} | p{2cm} | l | l | l |}
+\begin{tabular}{| p{2.0cm} | p{1.5cm} | p{3.6cm} | p{2cm} | p{2cm} | l | l | l | l |}
 \hline
-source category  & data type & sources & API type & avg fields/rec & avg depth & term. het & struc. het \\
+source category  & data type & sources & API type & avg fields/rec & avg depth & term. & struct & semantic \\
 \hline
-social networking  & person's profile & Facebook, LinkedIn, Google+ & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
-event calendars & events & Eventbrite, Google Calendar  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
-retail (shopping)  & product profile & Amazon, Shopping.com, Etsy, Groupon, Zappos  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
-music catalogues & songs and albums & Echonest, rdio, Soundcloud, Spotify  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
-weather & forecasts & W.Underground, Weatherbug, Yahoo! Weather & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+social networking  & person's profile & Facebook, LinkedIn, Google+ & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
+event calendars & events & Eventbrite, Google Calendar  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
+retail (shopping)  & product profile & Amazon, Shopping.com, Etsy, Groupon, Zappos  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
+music catalogues & songs and albums & Echonest, rdio, Soundcloud, Spotify  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
+weather & forecasts & W.Underground, Weatherbug, Yahoo! Weather & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
 \hline
 \end{tabular}
 \caption{\emph{PS.2 Results} - Analysis of heterogeneity present across data feeds, by category of feed}\label{tbl:prestudy2}
@@ -202,24 +202,27 @@ weather & forecasts & W.Underground, Weatherbug, Yahoo! Weather & REST (JSON/XML
 \end{table*}
 %% << 
 
-\subsection{PS.2 - Technical Challenges Data Integration}
+\subsection{PS.2 - Technical Challenges of Data Integration}
 Our investigation of integration challenges started with identifying a set of candidate data sources for analysis.  For this, we consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} of 50 most popular data feeds measured by the number of developer API keys issued for each.  In order to get a variety of different kinds of sources represented, we first categorised feeds into 5 topic categories: social networks (people), retail (shopping), events (calendar events, happenings, etc), music, and weather. We then populated each category with 2-5 feeds each depending on feed availability, for a total of 15 total feeds.  
 
-For each feed, 3-5 data records were obtained by querying the API directly for records of a that category's primary \emph{corresponding type}, listed in the second colum of Table \ref{tbl:prestudy2}. For example, while many of the APIs also provided access to other kinds of data, ranging from reviews to customer profilesonly product records were obtained for this category.  Once data records were obtained, each set of record was analysed individually for the following metrics 
+For each feed, 3-5 data records were obtained by querying the API directly for records of a that category's primary \emph{corresponding type}, listed in the second colum of Table \ref{tbl:prestudy2}. For example, while many of the APIs also provided access to other kinds of data, ranging from reviews to customer profilesonly product records were obtained for this category.  Once data records were obtained, simple complexity metrics were computed individually, followed by pairwise heterogeneity metrics.  
 
+The per-source metrics were as follows:
 \begin{itemize}
-\item \emph{Average number of fields per record} - A simple metric of how many properties were typically associated with each field from each source
-\item \emph{Variance in number of fields per record} - 
-\item \emph{Average Depth of record} - Levels of data which 
+\item \emph{Average Width of record} - Average number of properties per record.
+\item \emph{Average Depth of record} - Average depth of data record (number of subproperties in self-contained record). In JSON/XML representations which have tree representations, this would reflect the number of levels in the tree; for ``infinite'' relational representations (such as RDF with external links) this is merely the number of embedded entity definitions returned by a top-level query.
 \end{itemize}
 
-Pairwise analysis was done to compute the following heterogeneity metrics
+Heterogeneity was measured through \emph{pairwise consistency metrics} along the 
 \begin{itemize}
 \item \emph{Terminological consistency} - 
 \item \emph{Structural consistency} - 
+\item \emph{Semantic/Model consistency} - 
 \end{itemize}
 
+
 \subsubsection{Results}
+
 \section{WebBox Interface - Design of the DataPalette}
 
 Design Goals, 
