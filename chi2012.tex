@@ -197,15 +197,19 @@ music catalogues & songs and albums & Echonest, rdio, Soundcloud, Spotify  & RES
 weather & forecasts & W.Underground, Weatherbug, Yahoo! Weather & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
 \hline
 \end{tabular}
-\label{tbl:prestudy2}
-\caption{\emph{PS.2 Results} - Analysis of heterogeneity present across data feeds, by category of feed} \label{tbl_tps}
+\caption{\emph{PS.2 Results} - Analysis of heterogeneity present across data feeds, by category of feed}\label{tbl:prestudy2}
+
 \end{table*}
 %% << 
 
 \subsection{PS.2 - Technical Challenges Data Integration}
 Our investigation of integration challenges started with identifying a set of candidate data sources for analysis.  For this, we consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} of 50 most popular data feeds measured by the number of developer API keys issued for each.  In order to get a variety of different kinds of sources represented, we first categorised feeds into 5 topic categories: social networks (people), retail (shopping), events (calendar events, happenings, etc), music, and weather. We then populated each category with 2-5 feeds each depending on feed availability, for a total of 15 total feeds.  
 
+<<<<<<< HEAD
 For each feed, 3-5 data records were obtained by querying the API directly for records of a that category's primary \emph{corresponding type}, listed in the second colum of Table \ref{tbl:prestudy2}. For example, while many of the APIs also provided access to other kinds of data, ranging from reviews to customer profilesonly product records were obtained for this category.  Once data records were obtained, each set of record was analysed individually for the following metrics 
+=======
+For each feed, 3-5 data records were obtained by querying the API directly for records of a that category's primary \emph{corresponding type}, listed in the second column of Table \ref{tbl:prestudy2}; that is, while many of the APIs also provided access to other kinds of data; for example, \url{shopping.com} offers programmatic access to ``offers'' in addition to particular product descriptions, Amazon offers access to the shopper's profile, etc, but only product records were obtained for 
+>>>>>>> 3793334c481217866a7cdcf72c9ec6382df4b239
 
 \begin{itemize}
 \item \emph{Average number of fields per record} - A simple metric of how many properties were typically associated with each field from each source
@@ -267,7 +271,6 @@ We recruited participants by calling for participant on the University of Southa
 We designed a semi-structured lab-based study around four possible tasks shown in Table \ref{tab:studyfactors}.  The tasks were to select a restaurant for an event or university at which to study, out of six possible choices. We selected a shortlist of six because it is typical for users to narrow down their options to a limited selection before analysing the details of their final choices. The shortlist of universities and restaurants were taken from the top six ranked from the Complete University Guide (for task 1 and 2), Tripadvisor (for task 3) and Yelp (for task 4).  The top six were chosen from these websites because they provide a realistic shortlist and are comparable in terms of rankings and properties. The web sites used as data sources were chosen because they are the most popular and contain comparable statistics for universities and restaurants.
 
 \begin{table*}[t]
-\caption{Tasks, choices and data sources}
 \begin{center}
 \small
 \begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
@@ -284,7 +287,7 @@ Task	 &Choices	&Data Sources\\
 \hline
 \end{tabular}
 \end{center}
-\label{tab:studyfactors}
+\caption{Tasks, choices and data sources} \label{tab:studyfactors}
 \normalsize
 \end{table*}%
 
@@ -317,10 +320,9 @@ Are these interaction methods sufficient to perform common tasks involving heter
 
 We recruited 20 participants (10 female) from the University of Southampton's international student mailing list.  All of the participants spoke English, and for 12 of them, English was not their first language.  Predominately the participants were studying various levels of Computer Science, and 5 of which studied other subjects. 
 
-The information in Table \ref{} was captured during the studies, so that we could statistically analyses the features used by the participants.
+The information in Table \ref{tbl:data} was captured during the studies, so that we could statistically analyses the features used by the participants.
 
 \begin{table*}[htdp]
-\caption{default}
 \small
 \begin{center}
 \begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
@@ -347,7 +349,7 @@ chosen restaurant/uni &4.1&2.4&3.5&4.3&3.3&&2.4&1.4&4.2&1.6, 1.3, 1.2& 4.2& 1.4,
  \hline
 \end{tabular}
 \end{center}
-\label{default}
+\caption{Participants data.} \label{tbl:data}
 \normalsize
 \end{table*}
 
