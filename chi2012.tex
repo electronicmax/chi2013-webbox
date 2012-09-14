@@ -98,7 +98,7 @@ breaklinks=true,
 \maketitle
 
 \begin{abstract}
-
+Exploratory sequential mixed method study
 \end{abstract}
 
 \keywords{}
@@ -113,7 +113,7 @@ In recent years, an unprecedented quantity and variety of information has been m
 
 While a primary goal of opening up such direct access to information is the hope that end-user citizens will make more informed decisions pertaining to their health, wealth, or well-being \cite{}, use of this data beyond specialised app developers, journalists and other Òdata specialistsÓ remains minimal.  Our hypothesis is that the main impediment towards end-user access to this data is a mismatch between the capabilities of tools currently used to satisfy daily information needs, and those required to effectively browse, use and consume heterogeneous structured data from diverse sources.  For example, while much of this data represents a many and varied set of things, activities, and descriptions at various granularities, most commonly used structured personal information management (PIM) tools either can only manage a small, fixed set of data types (such as digital calendaring tools and  to-do list managers) or provide little or no support for structured data at all, such as text editors and sketching/drawing tools \cite{}.    
 
-If PIM tools were extended to enable end-users to make effective use of the emerging ecosystem of personal data, how would this impact personal information practice? This paper presents our initial results towards answering this question through a multi-method investigation of the personal data integration problem.  We start with a small interview study examining information tasks people perform that rely on multiple sources of information, and how such needs are currently satisfied.  Our results suggest that people prefer to rely upon multiple, diverse sources to singular integrated ones for a number of reasons, including coverage, reliability, and seeking out more suitable alternatives.  Second, we conduct a analysis of various popular personal data sources available today to identify barriers to effective unification of data from each.  We draw upon definitions and work from the database integration systems literature to characterise types of heterogeneity exhibited across data sources in three popular domains: social networking, shopping, and dining, finding that terminological heterogeneity dominates the simpler data feeds (including social networking and restaurant recommendations), while structural issues pervade the more complex schemas of online retailers' product catalogues.
+If PIM tools were extended to enable end-users to make effective use of the emerging ecosystem of personal data, how would this impact personal information practice? This paper presents our initial results towards answering this question through a sequential exploratory mixed-method investigation of the personal data integration problem.  We start with a small interview study examining information tasks people perform that rely on multiple sources of information, and how such needs are currently satisfied.  Our results suggest that people prefer to rely upon multiple, diverse sources to singular integrated ones for a number of reasons, including coverage, reliability, and seeking out more suitable alternatives.  Second, we conduct a analysis of various popular personal data sources available today to identify barriers to effective unification of data from each.  We draw upon definitions and work from the database integration systems literature to characterise types of heterogeneity exhibited across data sources in three popular domains: social networking, shopping, and dining, finding that terminological heterogeneity dominates the simpler data feeds (including social networking and restaurant recommendations), while structural issues pervade the more complex schemas of online retailers' product catalogues.
 
 Based upon the data integration needs revealed by people in the interviews, and the kinds of heterogeneity observed in the data feeds, we embarked on a user-centric design exercise towards an interface to facilitate simple, ``light-touch'' integration tasks of diverse, heterogeneous data sources.  We describe our initial foray into this exercise, an interface we call DataPalette, which focuses on the most common types of heterogeneity to enable serendipitous ``data mixing'' - a form of simple integration sufficient to let people easily and effectively combine and compare information sources without the need to write code.  Our usability evaluation of DataPalette reveals that most users were comfortable with and that this interface is effectively expedites the most sophisticated of the typical kinds of ``data integration'' tasks people need to perform while planning personal,
 
@@ -150,10 +150,15 @@ A number of research PIM systems have demonstrated a great number of ways that u
 % For our purposes of allowing users to explore and compare data from different websites, we are particularly interested in aligning instances of the most common forms of data that people compare from website to website.  Instance matching within this scope is in its infancy, some of its problems have been addressed by the record linkage problem in the database field \cite{fellegi1969theory,winkler1999state,gu2003record}.  However, there are new problems to address in this field, which are strongly related to schema matching, including structural heterogeneity and logical heterogeneity.
 % The approaches used to match instances typically use: natural language processing, using lexicons like Wordnet to identify synonyms, and word stems \cite{euzenat2004api}; machine learning techniques \cite{doan2003learning}; probabilistic approaches \cite{suchanek2011paris} and comparisons of instance schemas structural and logical definitions \cite{castano2006matching}.  In our case, this is problematic because information from the web does not always have a schema.  In real-world scenarios, semi-automatic ontology matching approaches are favoured over automatic because reconciling the differences between ontologies that were designed for different purposes is not always accurate.  Semi-automatic approaches use varying levels of support to aid a user, from prompting users to manually check flagged alignments, to suggesting possible alignments.  Allowing users to compare instances across heterogeneous data is powerful because users can combine and evaluate multiple sources.  In principle, automatic instance matching approaches would allow users to seamlessly browse this data, however for now and the foreseeable future such approaches cannot make use of personal knowledge and do not guarantee their alignments.  Therefore, in our work, we adopt a semi-automated matching approach, which will support the user to make alignments between web data and their personal data.
 
-\section{Pre-studies: The Need and Challenge of Data Integration in PIM}
+\section{Pre-studies: The Need for and Challenges in realizing Ad-Hoc Data Integration in PIM Tools}
 
 %% not sure where this goes >> but i want to keep it
 Setting out to investigate the potential role for better support for data integration in PIM, we first sought an updated understanding of how and whether people still used multiple information sources in the course of everyday information-related activities. There were several reasons for this inquiry; first, we wondered whether people were increasingly relying only on the handful of the massive ``supersites'' (Facebook, Google, Wikipedia) for most of their activities than actually searching for distributed sources of information.  If this were the case, much of the benefit could be gained by merely integrating PIM tools with the handful of sites, rather than the substantially more challenging problem of integrating data from arbitrary information sources on the Web.  Second, if people did rely on multiple sites, we wished to know why, and the typical kinds of tasks people did that required diverse information collection - were these kinds of tasks rare?  If so, this would suggest that perhaps specialised interfaces could be concocted for this purpose rather than it being a PIM need. 
+
+% blargh. this needs to be integrated above! 
+In order to support our primary motivation to allow users to effectively consolidate and work with data from multiple sources, we performed an exploratory sequential mixed-method investigation to help us design our contribution.  For our first pre-study we designed a semi-structured interview about which tasks and the processes people use to perform a task requiring multiple websites (see Section \ref{sec:prestudy1}).  We analysed the data collected from this study using a thematic approach.  From our first pre-study's qualitative analysis, we then designed our second pre-study which investigates the data and data formats available for people to use from popular websites (see Section \ref{sec:prestudy2}).  We performed a statistical analysis of the features of the available data.  In the next two sections, we describe our two pre-studies.
+
+The second study we performed an analysis on existing on data available from APIs and structured data feeds on the Web.  The purpose of this study was to identify the degree of technical difficulty of integrating data from these sources.   We describe our methodology below.
 
 In order to support our primary motivation to allow users to effectively consolidate and work with data from multiple sources, we performed an exploratory sequential mixed method study to help us design our contribution.  For our first pre-study we designed a semi-structured interview about which tasks and the processes people use to perform a tasks requiring multiple websites (see Section \ref{sec:prestudy1}).  We analysed the data collected from this study using a thematic approach.  From our first pre-study's qualitative analysis, we designed and performed our second study which analyses existing on data available from APIs and structured data feeds on the Web (see Section \ref{sec:prestudy2}).  The purpose of this study was to identify the degree of technical difficulty of integrating data from these sources.  We performed a statistical analysis of the features of the available data.  In the next two sections, we describe our two pre-studies.
 %% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sensemaking scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
@@ -168,19 +173,15 @@ The participant demographic consisted of 8 people, 7 of which were male and 1 fe
 All participants reported having used multiple websites to accomplish a task.  They listed example tasks such as shopping (including food, consumer electronics, hotels and flights), searching for jobs, choosing recipes, study and work.  The biggest focus for shopping focused tasks was balancing price, quality and speed of delivery.  In general, people did not not trust a single websites for reviews because they said that they could be biased and did not always review the features they were interested in.  One participant said that video reviews of items were really important because they showed the aesthetics and scale of the item.  In general for initial research into organising a task it was typical to Google keywords to find related websites to their tasks.  They identified that they used different website for different jobs, such as manufacturers website for technical details, review aggregators for a range of opinions, and Google maps for location based decisions.  Social networks were also identified to have different functions, such as different groups of people belong to each and share different types of opinions.  One participant said that they shared their outlook and gmail calendars, but only for work events and did not record social activities on them.
 
 \subsubsection{Question 2: Large Social Event}
-All of the participants would organise a large social event by talking to their friends, about their ideas, preferences and recommendations.  The tools they would use to acquire this information included face-to-face, phone calls, email, Skype, Facebook events.  The method chosen depended on the time scale required to organise an event, in general if there was a short time scale people would speak in person or on the phone.  Otherwise, people would set up a FaceBook event page to discuss ideas with their friends.  If their friends were not on Facebook they would email them.  All but one participant said they would not use Doddle to organise day and time of an event, because they felt that people did not fill in the form and it was more suit to organising work event not social.  
+All of the participants would organise a large social event by talking to their friends, about their ideas, preferences and recommendations.  The tools they would use to acquire this information included face-to-face, phone calls, email, Skype, Facebook events.  The method chosen depended on the time scale required to organise an event, in general if there was a short time scale people would speak in person or on the phone.  Otherwise, people would set up a Facebook event page to discuss ideas with their friends.  If their friends were not on Facebook they would email them.  All but one participant said they would not use Doodle\footnote{Doodle - \emph{www.doodle.com}} to organise day and time of an event, because they felt that people did not fill in the form and it was more suit to organising work event not social.  
 
-Most people felt that being assertive and posting their decisions about the date and time on Facebook meant that organising events were more successful than trying to gather a consensus.  They expected that their friends would voice any objections if they could not attend or like the restaurant or activity selected.   They selected venues, locations, restaurants and activities based on their own knowledge, friend's recommendations, Google maps, reviews through Googling and review sites such as tripadvisor.  People stated that the cost, price and easy to get to locations were the most important factors when choosing a venue.  They considered how to get there and looked up train or bus times on the Web.  One participant organised carpools informally and at last minute via Facebook or text messages.
+Most people felt that being assertive and posting their decisions about the date and time on Facebook meant that organising events were more successful than trying to gather a consensus.  They expected that their friends would voice any objections if they could not attend or like the restaurant or activity selected.   They selected venues, locations, restaurants and activities based on their own knowledge, friend's recommendations, Google maps, reviews obtained through web search and sites such as tripadvisor.  People stated that the cost, price and easy to get to locations were the most important factors when choosing a venue.  They considered how to get there and looked up train or bus times on the Web.  One participant organised carpools informally and at last minute via Facebook or text messages.
 
 When organising an event the weather was not that important because it they did not trust its accuracy for events plan further in the future than one week.  Also, their friend's preferences in price and food choices were not a priority; they would try to be inclusive but only if it meant small changes to the plan.  Choosing food and timings were often made on-the-fly, by either with the use of mobile applications or by walking past a location.
 
 \subsubsection{Summary of Findings}
 People said that they would like a website that could support the evolution of an event, that allowed them to post drafts of an event.  They felt that organising an event should be a process that changes over time and did not need rushing.  Three of the participants said that they would like a recommendation system for places to eat and activities. Another strong requirement was that it had to be ubiquitous so that everyone could use it because they wanted a single place to communicate with their friends.  While Facebook was the most popular social networking site for organising events, half of the participants felt that it was not the best solution and would prefer a collaborative environment, which could be wiki based.
 
-\subsection{PS.2 - Technical Challenges of Integrating the Data}
-Our investigation of integration challenges started with identifying a set of data sources to analyze.  For this, we consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} and looked at the 50 most popular data feeds, based upon number of developer API keys issued for each.  In order to get a variety of different kinds of sources represented, we feeds pertaining to 5 topics: social networks (people), retail (shopping), events (calendar events, happenings, etc), music, and weather.   Table The second took a look at the structured data available via popular APIs, data feeds and downloadable data sets in order to characterise and understand challenges of combining data from these sources. 
-
-We first sought out the APIs and data feeds of popular Web services and sites that were aimed at developers creating apps for end-users.  Based on statistics collected We first selected 4 different categories 
 
 %% TODO THIS IS PLACEHOLDER DATA >> 
 \begin{table*}
@@ -190,15 +191,21 @@ We first sought out the APIs and data feeds of popular Web services and sites th
 source category  & data type & sources & API type & avg fields/rec & avg depth & term. het & struc. het \\
 \hline
 social networking  & person's profile & Facebook, LinkedIn, Google+ & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
-event calendars & events & eventbrit, gcal  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
-retail (shopping)  & product profile & Amazon, shopping.com, Etsy, Groupon, Zappos  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
-music catalogues & songs and albums & echonest, rdio, soundcloud, spotify  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
-weather & forecasts & wunderground, weatherbug, yahoo weather & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+event calendars & events & Eventbrite, Google Calendar  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+retail (shopping)  & product profile & Amazon, Shopping.com, Etsy, Groupon, Zappos  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+music catalogues & songs and albums & Echonest, rdio, Soundcloud, Spotify  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
+weather & forecasts & W.Underground, Weatherbug, Yahoo! Weather & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 \\
 \hline
 \end{tabular}
+\label{tbl:prestudy2}
 \caption{\emph{PS.2 Results} - Analysis of heterogeneity present across data feeds, by category of feed} \label{tbl_tps}
 \end{table*}
 %% << 
+
+\subsection{PS.2 - Technical Challenges Data Integration}
+Our investigation of integration challenges started with identifying a set of candidate data sources for analysis.  For this, we consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} of 50 most popular data feeds measured by the number of developer API keys issued for each.  In order to get a variety of different kinds of sources represented, we first categorised feeds into 5 topic categories: social networks (people), retail (shopping), events (calendar events, happenings, etc), music, and weather. We then populated each category with 2-5 feeds each depending on feed availability, for a total of 15 total feeds.  
+
+For each feed, 3-5 data records were obtained by querying the API directly for records of a that category's primary \emph{corresponding type}, listed in the second colum of Table \ref{tbl:prestudy2}; that is, while many of the APIs also provided access to other kinds of data; for example, \url{shopping.com} offers programmatic access to ``offers'' in addition to particular product descriptions, Amazon offers access to the shopper's profile, etc, but only product records were obtained for 
 
 \subsubsection{Results}
 
@@ -216,6 +223,31 @@ Interaction features
 	visualisation of partial results
 
 Design process
+
+\begin{figure*}[htbp]
+\begin{center}
+\includegraphics[width=18cm]{img/dragdrop}
+\caption{WebBox uses a Drag and Drop interface to add data into the workspace.}
+\label{fig:dragdrop}
+\end{center}
+\end{figure*}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=8cm]{img/multipathing}
+\caption{To see properties, users click on the name of the property. When instances do not have a particular property, additional property names can be added.}
+\label{fig:multipathing}
+\end{center}
+\end{figure}
+
+\begin{figure*}[htbp]
+\begin{center}
+\includegraphics[width=18cm]{img/sameas}
+\caption{When two instances represent the same entity, users can drag one on top of the other, and they are combined.}
+\label{fig:sameas}
+\end{center}
+\end{figure*}
+
 
 \section{Methodology}
 
