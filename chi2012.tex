@@ -263,7 +263,17 @@ Multiple selection group-dereferencing results in two effects:
 
  
 
-% Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
+\subsubsection{Coreference management: Drag-and-Drop Same-As}
+
+A major challenge with integration from multiple sources is coreference consolidation, or combining representations that co-refer to the same entity into one.  For example, consolidating one's friends from Facebook, Google+, and LinkedIn, one might quickly want to de-duplicate and combine friends that use multiple services so that they each have one representation.
+
+Although we considered a way to do this automatically, PS.2 revealed no way to reliably identify co-referring instances; due to a lack of standard URIs across social networks, IDs used to identify particular individuals were system-specific.  Thus, we sought to make instead make it use-driven, and easy to do manually.  
+
+In order to remain consistent with the drag-and-drop interactions used throughout the interface, we decided that simply dragging an instance onto another instance was a likely intuitive way for people to specify that two things should be combined.  
+
+Although general, this can be tedious for groups of items; to support more efficient combination, we extended this to allow entire groups to be dropped on other groups.  When this is done, DataPalette attempts to identify matching pairs among items in the dragged and target groups by comparing each pairs' labels.  Only exact matches (modulo white space/underscores) are considered matches and automatically combined.  The rest are added to the target group as distinct elements, and may be explicitly combined by hand.
+
+Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
 
 \subsection{Summary of interaction features}
 
