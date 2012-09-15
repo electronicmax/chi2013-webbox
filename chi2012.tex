@@ -252,9 +252,11 @@ When working with instances, users may be interested in a particular aspect of a
 
 Instances that cannot be dereferenced by a particular path selection  are left alone;  a second path selection can be created for such insances, which, like the first path selection, causes all like instances to be dereferenced.  Each group can carry an arbitrary number of path selections, and each path selection can be extended arbitrarily deep by selecting successive properties of values. This achieves the ability to \emph{link slide} in the same way introduced by Parallax \cite{parallax}.  
  
-Each instance is displayed with its corresponding properties, and \emph{value selection}.  
+The effect that multiple selection group-dereferencing of values are twofold: the fact that clicking on a property dereferences all corresponding values makes it easy to quickly compare all instances that have the same structure.  Although we were concerned that users might be surprised that path selection applied to all objects within each group in parallel, users adapted very quickly and used this functionality to save them time.   
 
-Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
+The second effect that this multiple paths is that supporting the selection of different paths by structure lets values be selected using separate different paths - making it possible to easily cope with properties with different names, and even at levels -- select the appropriate values even between instances that exhibit both  terminological and structurally heterogeneity.
+
+% Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
 
 \subsection{Summary of interaction features}
 
