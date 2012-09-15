@@ -256,6 +256,16 @@ The effect that multiple selection group-dereferencing of values are twofold: th
 
 The second effect that this multiple paths is that supporting the selection of different paths by structure lets values be selected using separate different paths - making it possible to easily cope with properties with different names, and even at levels -- select the appropriate values even between instances that exhibit both  terminological and structurally heterogeneity.
 
+\subsubsection{Coreference management: drag-and-drop sameas}
+
+A major problem with data integration is consolidating representations that co-refer to the same entity, e.g. person, place or thing.  For example, effectively looking up properties of one's friends using Facebook and Google+ services, one might quickly want to combine the representations of our friends that have profiles on \emph{both} services to into single instances.
+
+Although we considered a way to do this automatically, PS.2 revealed no way to reliably identify co-referring instances.  Thus, 
+
+To make this as easy as possible, 
+
+This was made \emph{optional}, so that people could opt to combine multiple representations co-referring to the same thing or not as it suits their purposes.  Keeping representations from multiple sources separate, 
+
 % Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
 
 \subsection{Summary of interaction features}
