@@ -269,7 +269,7 @@ Multiple selection group-dereferencing results in two effects:
 \item Supporting dereferencing along different paths \emph{by structure} allows instances with different property names, and even sub-structures to be quickly consolidated by separate dereferencing, thereby effectively coping with terminological and structural hetereogeneity.
 \end{enumerate}
 
-\subsubsection{Coreference consolidation: Drag-and-Drop Same-As}
+\subsubsection{Coreference consolidation: Drag-and-Drop Same-as}
 
 \begin{figure*}[htbp]
 \begin{center}
@@ -289,17 +289,20 @@ By making such consolidation user-driven, we gave the user freedom to combine th
 
 \subsubsection{Enumerated-type value consolidation}
 
-Related to the concept of co-reference, PS.2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reoncile such differences, so that they can be uniformly compared, we extended the drag and drop support of co-reference combination to support enumerated literal values as well,  This effectively allowed de-duplicated histograms and other visualisations to be made.
+Related to the concept of co-reference, PS.2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reoncile such differences, so that items from corresponding datasources can be effectively compared, we extended the drag and drop support of co-reference combination to support enumerated literal values as well.  
+
+\subsubsection{``Do What I Mean'' Visualisation}
+
+To make it easier for people to quickly visually compare aspects of instances, we created a charting tool and integrated a mapping feature.  To make these tools suitable for fast use, e.g. data exploration, we designed these tools to automatically configure display parameters instances or groups of were dropped on them, rather than making users manually specify them. In the current prototype, the DWIM behaviour of the chart automatically sets whether the plot is a histogram representation (counts of values) or numeric value display based upon the types of the dereferenced values being plotted; values that are non-numeric are counted, while numeric values are displayed.    Similarly, the map was made to detect address strings and latitude/longitude pairs, geocoding them where appropriate, and determining the optimal bounding box to display all items at maximum zoom.
 
 \subsubsection{Model-based brushing}
-
-Since it can get confusing having an instance represented in multiple groups, 
+Since it can get confusing having a single instance represented across several groups, we provided \emph{universal brushing} across the interface; hovering over any representation of any instance (an instance block, a map marker or a histogram bar), causes all other visible representations of that instance to lightly glow, so that the user can quickly identify all the places that a single instance is represented
 
 % Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
 
-\subsubsection{Adaptive visualisation modes}
+\subsection{Summary of interaction capabilities}
 
-\subsection{Summary of interaction features}
+%% TODO
 
 \begin{itemize}
 \item \emph{Group multi-path value selection} - Selecting any of the properties of an instance in a group (window) causes all of the rest of the instances that have that property in that group to be dereferenced along the same property, displaying the resulting value underneath the instance label.  Selecting a further property of the resulting value further dereferences this value.
