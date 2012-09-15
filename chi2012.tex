@@ -228,8 +228,8 @@ Our findings suggest that
 \begin{figure*}[htbp]
 \begin{center}
 \includegraphics[width=18cm]{img/screenshot}
-\caption{WebBox uses a Drag and Drop interface to add data into the workspace.}
-\label{fig:dragdrop}
+\caption{DataPalette Workspace, a file manager-inspired Drag and Drop interface for structured data mixing. Collapsable displays of data sources are listed on the left, from which instances or entire sets of items can be dragged to form a windoow (group) on the workspace.}
+\label{fig:workspace}
 \end{center}
 \end{figure*}
 
@@ -243,7 +243,7 @@ In the following sections we describe the design process we used to create proto
 We followed a five-phase spiral model consisting of planning, designing, mocking-up, prototyping, and testing to derive the design of DataPalette.  This process was used because of the high degree of initial uncertainty associated with the mechanisms for facilitating the various aspects of effective data mixing that we describe in the next section. We approached this design challenge through alternative generation and elimination; alternatives were designed, drawn up and evaluated by expert colleagues (and in later iterations, non-expert potential users), who provided critiques of the alternatives. The ease with which designs could be prototyped in HTML5 with modern web frameworks allowed us to perform this develop-test-iterate rapidly through seven iterations of this process.
 
 \subsection{Interaction mechanisms for data mixing}
-In order to familiar to new users, we borrowed the overall interaction and feel from MacOS Finder-style file managers, with support for separate windows which can be freely moved, resized and titled. (As described in Results, we discovered that windows caused considerable clutter and frustration in later stages of some tasks, a fact we did not detect during prototype testing.)  Instead of files, however, the element of manipulation was a single, discrete structured data item, or \emph{instance}.  (In order to do this, non-RDF data had to be first ``chunked'' into instances, which was usually a well-defined process).  Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \
+In order to familiar to new users, we borrowed the overall interaction and feel from MacOS Finder-style file managers, with support for separate windows which can be freely moved, resized and titled. (We later discovered that windows caused considerable clutter at the later stages of some tasks, a fact we did not detect until the main study as we describe later.)  Instead of files, however, the element of manipulation was a single, discrete structured data item, or \emph{instance}.  In order to define \emph{instances} for non-RDF data, such as JSON or XML, we defined all subtrees with more than 1 child as its an instance.  Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \
 
 
 As we refined our designs, we arrived at four simple mechanisms to support data mixing.  These were combined with a number of simple interaction mechanisms that were borrowed from other systems
