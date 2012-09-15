@@ -153,19 +153,17 @@ A number of research PIM systems have demonstrated a great number of ways that u
 \section{Pre-studies: The Need for and Challenges in realizing Ad-Hoc Data Integration in PIM Tools}
 
 %% not sure where this goes >> but i want to keep it
-Setting out to investigate the potential role for better support for data integration in PIM, we first sought an updated understanding of how and whether people still used multiple information sources in the course of everyday information-related activities. There were several reasons for this inquiry; first, we wondered whether people were increasingly relying only on the handful of the massive ``supersites'' (Facebook, Google, Wikipedia) for most of their activities than actually searching for distributed sources of information.  If this were the case, much of the benefit could be gained by merely integrating PIM tools with the handful of sites, rather than the substantially more challenging problem of integrating data from arbitrary information sources on the Web.  Second, if people did rely on multiple sites, we wished to know why, and the typical kinds of tasks people did that required diverse information collection - were these kinds of tasks rare?  If so, this would suggest that perhaps specialised interfaces could be concocted for this purpose rather than it being a PIM need. 
 
-We performed an exploratory sequential mixed method study to help us design our contribution. For our first pre-study we designed a semi-structured interview about which tasks and the processes people use to perform a tasks requiring multiple websites.  We analysed the data collected from this study using a thematic approach.
- 
-The second study we performed an analysis on existing on data available from APIs and structured data feeds on the Web, based from our first pre-study's qualitative analysis. The purpose of this study was to identify the degree of technical difficulty of integrating data from these sources. We performed a statistical analysis of the features of the available data.  In the next two sections, we describe our two pre-studies.
+We performed an exploratory sequential mixed-method study to help us design our contribution. For our first pre-study, we first sought an updated understanding of how and whether people still used multiple information sources regularly when they sought information on the Web. There were several reasons for this inquiry; first, we wondered whether people were increasingly relying only on the handful of the massive ``supersites'' (Facebook, Google, Wikipedia) for most of their activities, instead of  searching across distributed sources of information.  If this were the case, much of the benefit could be gained by merely integrating PIM tools with the handful of sites, rather than the substantially more challenging problem of integrating data from arbitrary information sources on the Web.   Second, if people did rely on multiple sites, we wished to know why, and the typical kinds of tasks people did that required diverse information collection - were these kinds of tasks rare?  If so, this would suggest that perhaps specialised interfaces could be concocted for this purpose rather than it being a PIM need. 
 
-
-
+The second pre-study focused on the characteristics of the data available from the kinds of sites used by the first pre-study's participants for the tasks described. The purpose of this follow-on  was to identify not specific characteristics of particular sites in question, but to identify, in general, the degree of complexity of the data feeds currently available across a variety of domains, and typical integration problems that might arise when mixing this data. In the remaining part sof this section, we summarise our methodologies and results for each of these two pre-studies.
 
 %% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sensemaking scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
 
 \subsection{PS.1 - Understanding Data Diversity in Everyday Tasks}
-Our pre-study investigated the types of tasks people perform online that required heterogeneous data sources, and which tools they would use to organise a large social event involving 15 or more people.  We interviewed 8 participants, using a general interview guide approach based loosely on a set of questions (see Appendix ?).  This approach allowed both the participant and interviewer a degree of freedom in conversation and each interview could adapt to the participant's experiences, while collecting the same general areas of information.  Each interview was recorded and notes taken, the interviewer was trained so that they were knowledgeable about the importance of the study and to minimise bias.
+We designed a semi-structured interview about tasks people performed on-line that required the use of multiple websites, and the processes people used to perform such tasks.  We analysed the data collected from this study using a thematic approach, as described below. 
+
+Our pre-study investigated the types of tasks people performed online that required heterogeneous data sources, and which tools they would use to organise a large social event involving 15 or more people.  We interviewed 8 participants, using a general interview guide approach based loosely on a set of questions (see Appendix ?).  This approach allowed both the participant and interviewer a degree of freedom in conversation and each interview could adapt to the participant's experiences, while collecting the same general areas of information.  Each interview was recorded and notes taken, the interviewer was trained so that they were knowledgeable about the importance of the study and to minimise bias.
 
 \subsubsection{Results}
 The participant demographic consisted of 8 people, 7 of which were male and 1 female.  They were split evenly into two age groups of 18-25 and 26-32.  All but one participant reported they used social network sites very regularly (many times a day); they said they either logged in multiple times a day, left a website page open or used dedicated application for their social networking site updates.  Those that used social networking websites primarily used Facebook.  All of the participants used Twitter to listen to broadcasted tweets, and 6 out of 8 people regularly tweeted. 
@@ -206,7 +204,7 @@ weather & forecasts & W.Underground, Weatherbug, Yahoo! Weather & REST (JSON/XML
 \subsection{PS.2 - Technical Challenges of Data Integration}
 Our investigation of integration challenges started with identifying a set of candidate data sources for analysis.  For this, we consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} of 50 most popular data feeds measured by the number of developer API keys issued for each.  In order to get a variety of different kinds of sources represented, we first categorised feeds into 5 topic categories: social networks (people), retail (shopping), events (calendar events, happenings, etc), music, and weather. We then populated each category with 2-5 feeds each depending on feed availability, for a total of 15 total feeds.  
 
-For each feed, 3-5 data records were obtained by querying the API directly for records using popular key terms for each category's primary \emph{corresponding type}, listed in the second colum of Table \ref{tbl:prestudy2}. While many of the APIs also provided access to other kinds of data, such as customer reviews, only the primary type (product records) were obtained for the \emph{shopping} category.  Once data records were obtained, two complexity metrics were computed for each, followed by pairwise heterogeneity metrics.  Since, due to optional fields,  individual records could vary in the number of fields.  An alternative approach to using instance documents was to directly compare schema definitions directly; however, this approach was abandoned after an initial investigation revealed two problems with schema analysis.  First, many of the sites' schema documentation was not actually publicly available; second, that many of the schemas were not actually representative of typical data returned by the service. For example, the schema documentation for \emph{shopping.com} listed full product attribute properties, but none of the records actually returned for the products we queried contained such attributes. 
+For each feed, 3-5 data records were obtained by querying the API directly for records using popular key terms for each category's primary \emph{corresponding type}, listed in the second colum of Table \ref{tbl:prestudy2}. While many of the APIs also provided access to other kinds of data, such as customer reviews, only the primary type were obtained for each category; e.g., product records for the \emph{shopping} category.  Once data records were obtained, two complexity metrics were computed for each, followed by pairwise heterogeneity metrics.  Since, due to optional fields,  individual records could vary in the number of fields.  An alternative approach to using instance documents was to directly compare schema definitions directly; however, this approach was abandoned after an initial investigation revealed two problems with schema analysis.  First, many of the sites' schema documentation was not actually publicly available; second, that many of the schemas were not actually representative of typical data returned by the service. For example, the schema documentation for \emph{shopping.com} listed full product attribute properties, but none of the records actually returned for the products we queried contained such attributes. 
 
 The per-source metrics were as follows:
 \begin{itemize}
@@ -214,21 +212,37 @@ The per-source metrics were as follows:
 \item \emph{Average Depth of record} - Average depth of data record (number of subproperties in self-contained record). (In JSON/XML representations, this is the tree depth; for RDF  representations this is merely the number of embedded entity resource definitions included in the top-level query).
 \end{itemize}
 
-Heterogeneity was measured through \emph{pairwise consistency metrics} we derived from paper on data heterogeneity \cite{george2005understanding}, that reflected the kinds of differences present in each set. These metrics are measured in a pairwies manner between sources and averaged :
+Heterogeneity was measured through \emph{pairwise consistency metrics} we derived from definitions in \cite{george2005understanding} and feature-metrics used in statistical instance alignment algorithms (such as summarised in \cite{bhattacharya2007collective}). Such metrics were chosen because they reflected, the differences among the data feeds at multiple levels - from the simple (labelling) differneces to differences in how data was structured, and modeled. Each such metric listed above is the result of averaging the pairwise score between sources in each category, separately and defined as follows:
+
 \begin{itemize}
-\item \emph{Terminological consistency} - Percentage of property names that match among schemas
-\item \emph{Structural consistency} - Percent of properties that have the same structural shape
-\item \emph{Semantic/Model consistency} - Percentage of entities/concepts that match corerspondences 
-\item \emph{Value consistency} - Percentage of values represente in the same way 
+\item \emph{Terminological consistency} - Percent of property names that match
+\item \emph{Structural consistency} - Percent of properties that have \emph{compatible structures}
+\item \emph{Semantic/Model consistency} - Percent of entities/concepts that have corresponding fields 
+\item \emph{Value consistency} - Percent of values that are compatible
 \end{itemize}
 
 \subsubsection{Results}
+% TODO TODO TODO TODO 
+Our findings suggest that 
 
-\section{WebBox Interface - Design of the DataPalette}
+\section{Supporting Design of the DataPalette}
 
-Design Goals, 
-	What are the problems observed needed to address
+\subsection{Design Goals}
+
+At a high level, the overall goal of DataPalette was to empower end-user citizens to mix arbitrary structured data feeds on-the-fly while in the process of doing their particular information task - be it sensemaking or decision-making related.  Unlike Mashup makers, including Yahoo Pipes!, our hope was that this could be accomplished without need for a separate, explicit mapping, integration or manual integration step which would make the effort-overhead and its use so high as to impede its use as a PIM tool.
+
+Thus we wanted to focus on the most common 
+
+The second prestudy highlighted the most common inconisistencies that occurred among data sources and allowed us to the focus on a smaller set of problems. The most common examples were terminological (labeling) inconsitencies, minor structural inconsistencies (pertaining to values at different levels of a field's record), and value range terminological An additional problem that needed to be addressed for effectively mixing data from multipl
+
+\emph{coreference}
+
+What are the problems observed needed to address
 	What kind of interactions can be designed to solve them?
+\subsection{Process}
+
+We followed a spiral model consisting of the phases of plan, design, mock-up, prototype, test, re-plan, and re-design to derive the design of DataPalette.  This process was used because of the high degree of initial uncertainty associated with how to design easy to use
+
 
 Interaction features 
 	multiple paths selection
