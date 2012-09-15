@@ -229,16 +229,12 @@ Our findings suggest that
 
 \subsection{Design Goals}
 
-At a high level, the overall goal of DataPalette was to empower end-user citizens to mix arbitrary structured data feeds on-the-fly while in the process of doing their particular information task - be it sensemaking or decision-making related.  Unlike Mashup makers, including Yahoo Pipes!, our hope was that this could be accomplished without need for a separate, explicit mapping, integration or manual integration step which would make the effort-overhead and its use so high as to impede its use as a PIM tool.
+At a high level, the overall goal of DataPalette was to empower end-users to mix arbitrary structured data feeds on-the-fly while solving their particular information task(s) - be them sensemaking or decision-making related - in order to more effectively accomplish these tasks.  Unlike Mashup makers, including Yahoo Pipes!, the goal was to facilitate such integration without a need for an explicit separate mapping or integration step, which would detract from the overall usability or usefulness of the system by making people do something that did not immediately contribute to their resolving their need.
 
-Thus we wanted to focus on the most common 
+Towards our design goal, the two prestudies provided valuable insight that allowed us to constrain the design search space. The first prestudy confirmed the need for data integration by showing that people did, in fact, prefer to rely upon multiple sources of information for making important decisions, and identified the kinds of sources people most commonly used.  The second prestudy revealed that the most common inconisistencies that occurred in the APIs and data feeds available through from such data sources consisted predominantly of the simpler kinds of heterogeneity - terminological and simpler forms of structural heterogeneity, rather than the delicate semantic/modeling variety, which were comparatively rare. This gave us optimism that an interactional approach optimised around the these simpler kinds of heterogeneity would be effective.
 
-The second prestudy highlighted the most common inconisistencies that occurred among data sources and allowed us to the focus on a smaller set of problems. The most common examples were terminological (labeling) inconsitencies, minor structural inconsistencies (pertaining to values at different levels of a field's record), and value range terminological An additional problem that needed to be addressed for effectively mixing data from multipl
+In the following sections we describe the design process we used to create prototype DataPalette, followed by a detailed description of the design of the prototype and justification.
 
-\emph{coreference}
-
-What are the problems observed needed to address
-	What kind of interactions can be designed to solve them?
 \subsection{Process}
 
 We followed a spiral model consisting of the phases of plan, design, mock-up, prototype, test, re-plan, and re-design to derive the design of DataPalette.  This process was used because of the high degree of initial uncertainty associated with how to design easy to use
