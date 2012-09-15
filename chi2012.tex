@@ -269,7 +269,7 @@ Multiple selection group-dereferencing results in two effects:
 \item Supporting dereferencing along different paths \emph{by structure} allows instances with different property names, and even sub-structures to be quickly consolidated by separate dereferencing, thereby effectively coping with terminological and structural hetereogeneity.
 \end{enumerate}
 
-\subsubsection{Coreference management: Drag-and-Drop Same-As}
+\subsubsection{Coreference consolidation: Drag-and-Drop Same-As}
 
 \begin{figure*}[htbp]
 \begin{center}
@@ -289,7 +289,7 @@ By having co-reference consolidation user-driven, we gave the user freedom to co
 
 \subsubsection{Enumerated-type value consolidation}
 
-Related to the concept of co-reference, we extended the drag-and-drop sameas support to also be used to consolidate inconsistant enumerated values of properties, such as ``Casual dining'' vs ``Relaxed'' so that they can be uniformly compared. This allows the creation of meaningful, de-duplicated histograms and other visualisations.
+Related to the concept of co-reference, PS2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reoncile such differences, so that they can be uniformly compared, we extended the drag and drop support of co-reference combination to support enumerated literal values as well,  This effectively allowed de-duplicated histograms and other visualisations to be made.
 
 \subsubsection{Model-based brushing}
 
