@@ -273,7 +273,7 @@ Multiple selection group-dereferencing results in two effects:
 \begin{figure*}[htbp]
 \begin{center}
 \includegraphics[width=18cm]{img/sameas}
-\caption{When two instances represent the same entity, users can drag one on top of the other, and they are combined.}
+\caption{\emph{Coreference consolidation with drag-and-drop Same-As} - When two instances represent the same entity, users can drag one on top of the other, and they are combined - effectively displaying the union of properties of both source entities. This can be un-done by deleting the Same-As relaitonship in the view in the lower-left corner of the workspace.}
 \label{fig:sameas}
 \end{center}
 \end{figure*}
@@ -299,7 +299,8 @@ Since it can get confusing having a single instance represented across several g
 
 % Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
 
-%% 
+%% it would be nice if we had space to summarize but i fear we don't
+
 %% \subsection{Summary of interaction capabilities}
 %% \begin{itemize}
 %% \item \emph{Group multi-path value selection} - Selecting any of the %% properties of an instance in a group (window) causes all of the rest %% of the instances that have that property in that group to be %% dereferenced along the same property, displaying the resulting value %% underneath the instance label.  Selecting a further property of the %% resulting value further dereferences this value.
@@ -310,13 +311,50 @@ Since it can get confusing having a single instance represented across several g
 
 \section{Evaluation}
 
-In order to determine whether the interaction affordances introduced in DataPalette would effectively enable serendipitous data mixing by end-users, we devised a within-subjects A-B trial lab study which we describe next. 
+In order to determine whether the interaction affordances introduced in DataPalette (henceforth DP) allow users to perform serendipitous data mixing on real data feeds by end-users, we devised a within-subjects A-B trial lab study which we describe next.
+
+\subsection{Methodology}
+
+We first describe our methodology, starting with the three hypotheses we set out to test. These hypothesis pertain to the usability of DP by end-users (h1), whether DP achieves its stated goal of enabling end-users to integrate data (h2), and finally if it has an effect on task performance (h3) - either in how well people perform a task, how quickly they perform it, or if it reduces task effort, as follows:
+
+\begin{itemize}
+\item \emph{h1 -} People understand how to use DP.
+\item \emph{h2 -} People can effectively mix heterogeneous data with DP.
+\item \emph{h3 -} Use of DP improves or facilitates task performance
+\end{itemize}
+
+%% Interaction-method specific hypotheses
+%% \begin{itemize}
+%% 	\item h1.1 - Do people understanding the problem of %% co-reference, and the need to reconcile coreference problems?
+%% 	\item h1.2. Does the ability to do drag + drop combination for %% co-reference reconciliation effectively solve this problem?
+%% 	\item h2.1- Do people understand the problem of structural %% differences in data?
+%% 	\item h2.2 - Does multipath selection let people effectively %% deal with this -- and work with collections of heterogeneous items?
+%% \end{itemize}
+%% Are these interaction methods sufficient to perform common tasks %% involving heterogeneous data sources?  Does supporting these simple %% techniques facilitate task completion?
+
+\subsubsection{Study design}
+To test these hypotheses, we designed a within-subjects lab-based A-B study in which participants were asked to perform two of four possible predefined tasks (depending on condition), with either DP (``condition A'') or a baseline interface (``condition B'') in 2 separate timed trials.  Each participant was asked to use DP for one of the trials and the baseline interface for the other; conditions were fully counterbalanced among particiants to eliminate inadvertant ordering and task bias.  
+
+The control (B) conditions were in a prepared Mac comprised of a web browser pre-loaded with a page with links to four live web sites, and an open instance of Excel with a workbook open containing spreadsheet versions of the same data as were loaded into DP for the A condition versions of the same tasks.  Other Office applications were also available for use and participants were allowed to visit other sites than the prespecified ones.  The purpose of this condition was to understand how people using standard desktop office software
+
+
+The tasks were to select a restaurant for an event or university at which to study, out of six possible choices  around four possible tasks shown in Table \ref{tab:studyfactors}.  
+
+We selected a shortlist of six because it is typical for users to narrow down their options to a limited selection before analysing the details of their final choices. The shortlist of universities and restaurants were taken from the top six ranked from the Complete University Guide (for task 1 and 2), Tripadvisor (for task 3) and Yelp (for task 4).  The top six were chosen from these websites because they provide a realistic shortlist and are comparable in terms of rankings and properties. The web sites used as data sources were chosen because they are the most popular and contain comparable statistics for universities and restaurants.
+
+\subsection{Data Collection}
+Each study was overseen by a facilitator and an observer:  the role of the facilitator was to explain the study's protocol to the participant and to answer any questions; and the role of the observer was to observe without interacting with the user, and to take notes.  During the lab study, we recorded the audio and the participant's actions on screen. We asked the participants to speak out loud their thought process and what they were looking at, so that we could evaluate their reasoning behind their processes.  At the end of the study the participant completed an exit survey.  
+
+In each trials, participants were given a paper notepad and pen to use if they wished.  Screen capture software recorded all interactions with applications.  Participants were asked to follow a \emph{think-aloud} protocol as they performed each task, and audio recordings (synchronized with the screen recordings) were taken. 
+
+% This goes in results: The studies lasted 40 minutes, on average.  
+Both the facilitator and observer were trained on the purpose of the study, their role and how they could and couldn't influence the study.  The studies were run over 4 days.  At the end of each day the facilitators and observers met to discuss the studies' data and to revisit protocols, if necessary.
+
 
 \subsection{Participants}
 We recruited participants through adverts posted near the University campus and e-mails to student mailing lists.  We screened participants to be at least 18 years of age, but did not filter or preferentially select particpants based on any other criteria.  We took the first 20 that signed up and that successfully specified time slots that were available.   As described below in results, we ended up getting a large number of international students, who had varying proficiency in English.  Since all such participants had passed the requisite proficiency tests to enrol at University, we did not think this would substantially impact results.
 
 \subsection{Task Design}
-We designed a semi-structured lab-based study around four possible tasks shown in Table \ref{tab:studyfactors}.  The tasks were to select a restaurant for an event or university at which to study, out of six possible choices. We selected a shortlist of six because it is typical for users to narrow down their options to a limited selection before analysing the details of their final choices. The shortlist of universities and restaurants were taken from the top six ranked from the Complete University Guide (for task 1 and 2), Tripadvisor (for task 3) and Yelp (for task 4).  The top six were chosen from these websites because they provide a realistic shortlist and are comparable in terms of rankings and properties. The web sites used as data sources were chosen because they are the most popular and contain comparable statistics for universities and restaurants.
 
 \begin{table*}[t]
 \begin{center}
@@ -343,26 +381,12 @@ Each task had an A and B condition.  The A condition, the participant could only
 
 Each study consisted of two tasks, one A and one B condition.  Each participant was given 10 minutes to complete a task.  In order to select which tasks the participant was given, we used a latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute DataPalette tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
 
-\subsection{Data Collection}
-Each study was overseen by a facilitator and an observer:  the role of the facilitator was to explain the study's protocol to the participant and to answer any questions; and the role of the observer was to observe without interacting with the user, and to take notes.  During the lab study, we recorded the audio and the participant's actions on screen. We asked the participants to speak out loud their thought process and what they were looking at, so that we could evaluate their reasoning behind their processes.  At the end of the study the participant completed an exit survey.  
-
-The studies lasted 40 minutes, on average.  Both the facilitator and observer were trained on the purpose of the study, their role and how they could and couldn't influence the study.  The studies were run over 4 days.  At the end of each day the facilitators and observers met to discuss the studies' data and to revisit protocols, if necessary.
-
 \subsection{Data Analysis}
 
 During the data collection we collated a spreadsheet summarising the participant's gender, typical daily computer usage, the tasks allocated and basic actions performed during the task.  After we had collected the study's data, we performed our data analysis. 
 
 TODO look further into types of data analysis....
 
-\subsection{Hypotheses}
-Interaction-method specific hypotheses
-\begin{itemize}
-	\item h1.1 - Do people understanding the problem of co-reference, and the need to reconcile coreference problems?
-	\item h1.2. Does the ability to do drag + drop combination for co-reference reconciliation effectively solve this problem?
-	\item h2.1- Do people understand the problem of structural differences in data?
-	\item h2.2 - Does multipath selection let people effectively deal with this -- and work with collections of heterogeneous items?
-\end{itemize}
-Are these interaction methods sufficient to perform common tasks involving heterogeneous data sources?  Does supporting these simple techniques facilitate task completion?
 
 \section{Results}
 
@@ -454,14 +478,13 @@ when using the DataPalette interface, significantly more comparison (and visuali
 participants using the ``ruling out'' process. A consequence of this was that when asked to justify their choices, users were
 able to verify their values on-screen immediately, whereas those who had ruled-out had to memorise their reasons, with
 mixed success  -- many participants had to look through the data sources to re-find the reasons why they has ruled out some choices.
+
 Therefore, the uses that were using DataPalette were more confident in their choices, and knew exactly why they had chosen them,
 often pointing to the screens to show and verify each choice as they explained them.
 
 \subsection{}
 
 - data integration literature demands 'correct' but perfect is the enemy of the good.
-
-%% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sensemaking scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
 
 
 %What we found 
@@ -486,6 +509,11 @@ often pointing to the screens to show and verify each choice as they explained t
 
 \section{Conclusion} %Key findings of the whole paper and its implications
 
+% ``perfect'' be the enemy of the good
+
+%% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sensemaking scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
+
+Just as journalism became peer-produced with the explosion of blogging, data journalism is on the brink of moving from skilled data analyists the likes of The Guardian Datablog staff\footnote{Guardian Datablog - \url{}} into the hands of the ordinary citizen \cite{datajournalismhandbook}.  In order for this to happen, however, tools that allow people to effectively combine data more effectively than current structured PIM tools and generic spreadsheet tools will become increasingly important. 
 
 \section{Acknowledgments}
 
