@@ -450,12 +450,25 @@ The third metric we used to gauge how well the participant performed their tasks
 \subsubsection{Effort: External cognition}
 Although we did not have an explicit measure of effort for this experiment (such as NASA's TLX \cite{tlx}) the use of paper notes provided an indicator of how much participants had to keep track of during the study.  We found that participants took notes less on average (25\%) with the DP interface than the standard interface (35\%), a difference which approached significance in an ANOVA blocked by participant ($F(1,19)= 8.22; p\approx0.10$).
 
+\subsubsection{Candidate selection}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=8.5cm]{img/results}
+\caption{The chosen restaurant/university for each participant, showing the choice on the x axis and frequency on the y axis under conditions A (blue) and B (red).}
+\label{fig:chosen_results}
+\end{center}
+\end{figure}
+
+Since the tasks were subjective-choice, we could not evaluate the 'correctness' of people's answers.  However, to determine whether there was a difference in variability of answers between interface conditions, we histogrammed responses for each task and dataset for both conditions, visible in  Figure \ref{fig:chosen_results}. 
 \subsection{Strategies: Successive Elimination vs Tallying}
 As described in Discussion later, we noticed several different strategies that people used to evalutate each candidate selection. One common strategy was \emph{successive elimination} - to look at a single dimension at a time, starting with the most important, ruling out candidates that did not meet the required minimum for that value.  However, when there is no clear ``most important'' aspect, this  ``greedy-style'' can result in suboptimal decisions.  By comparison, a different strategy, which we called \emph{tallying the pros and cons}, kept all candidates around, and counted up the advantages and disadvantages of each, potentially weighing each factor by its perceived importance.  This strategy is less vulnerable to getting stuck in local maxima than the former.
 
 To understand whether interface influenced choice of strategy, we measured the number of candidates that the participant considered \emph{at final result}.  This we found was a strong marker for use of each strategy; people using the successive elimination strategy arrived with only 1-2 candidates at decision time, while those that tallied still maintained the entire starting set.  
 
 We found that the use of DP strongly influenced people to keep all candidates around, while participants in the B condition eliminated choices early.  An ANOVA test demonstrated a significant effect between condition and number of candidates maintained ($F(1,19)=5.323; p<0.05$); a post-hoc Tukey HSD test confirmed that  the number of candidates used in the final choice for participants in the A condition ($M=5.85;SD=0.45$) differed significantly from the B condition ($M=4.95; SD=2.26$).
+
+
 
 \subsection{Use of Data Integration Features}
 
@@ -480,20 +493,23 @@ Participants ran into a number of difficulties with the spreadsheet interface. P
 %% todo - look up to make sure it was really p7 here 
 Various other difficulties were encountered with the websites. There was significant confusion over various attributes, especially in the University selection task.  For example, p15 could not tell how the teaching score from the Times Higher Education was calculated, in order to assess its relative importance.  Several participants had difficulty finding information they needed because of inconsistencies in site layout, especially finding course requirements, information that ``should be obvious''.  Similar issues were encountered with finding information in the restaurant condition; p7 said ``I wish they would put Cuisine Type in the same place for every restaurant - important information!'' Similarly, participants found it difficult to visualise the locations of restaurants in cities that they were not familiar, and could not find a way to easily map them. Overall, the users that spent the most time using websites exhibited significant frustration attempting to locate and compare different criteria (such as course entry requirements, or restaurant locations), and often ended up swapping back to using the supplied spreadsheets.
 
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=8.5cm]{img/results}
-\caption{The chosen restaurant/university for each participant, showing the choice on the x axis and frequency on the y axis under conditions A (blue) and B (red).}
-\label{fig:results}
-\end{center}
-\end{figure}
 
 % Notably, a number of users admittedly introduced their own bias into the choices in both A and B conditions: ``I prefer Indian food, so I will choose the Indian restaurant'', and one participant spent time on Google Maps looking at the routes to each restaurant, and eliminating those that required bus transfers (the protocol did not mention routing/transfers at all).
 
 \subsection{Survey Results}
 
-%+ ÊWhat did people think about it? 
-% Ê Ê Ê ÊUsefulness,Ease,Confusion,etc
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=8.5cm]{img/survey}
+\caption{The chosen restaurant/university for each participant, showing the choice on the x axis and frequency on the y axis under conditions A (blue) and B (red).}
+\label{fig:survey}
+\end{center}
+\end{figure}
+
+
+%+What did people think about it? 
+% Usefulness,Ease,Confusion,etc
 
 In the exit survey, the users noted that they would use an interface like DataPalette in the future, for finding a property to rent/buy, choosing a job and purchasing electronic devices.  However, one participant said that they would not use it for things like deciding on a restaurant because ``it would cheapen the experience'' by removing the spontaneity, but would use it for making more important decisions.  In order to improve our solutions the participants suggested making the origin of the information clearer, particularly when combining multiple data sources. The participants also requested the ability to sort instances, as well as explanations of ratings and scoring systems (however some of these are not even transparent on websites). Participants also requested standard features not present in our prototype, such as window management options (specifically, arranging and minimising windows), and the ability to undo operations.
 
