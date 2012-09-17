@@ -387,10 +387,10 @@ The participants were given a standard desktop PC running MacOS X on a 22" monit
 
 \subsection{Data Analysis}
 
+%% TODO - emax doesn't like this paragraph - kill it? 
 During the data collection we collated a spreadsheet summarising the participant's gender, typical daily computer usage, the tasks allocated and basic actions performed during the task.  After we had collected the study's data, we performed our data analysis. 
 
-TODO look further into types of data analysis....
-
+%% TODO look further into types of data analysis....
 
 \section{Results}
 
@@ -448,6 +448,13 @@ The third metric we used to gauge how well the participant performed their tasks
 
 \subsubsection{Effort: External cognition}
 Although we did not have an explicit measure of effort for this experiment (such as NASA's TLX \cite{tlx}) the use of paper notes provided an indicator of how much participants had to keep track of during the study.  We found that participants took notes less on average (25\%) with the DP interface than the standard interface (35\%), a difference which approached significance in an ANOVA blocked by participant ($F(1,19)= 8.22; p\approx0.10$).
+
+\subsubsection{Strategies: Successive Elimination vs Tallying}
+As described in Discussion later, we noticed several different strategies that people used to evalutate each candidate selection. One common strategy was \emph{successive elimination} - to look at a single dimension at a time, starting with the most important, ruling out candidates that did not meet the required minimum for that value.  However, when there is no clear ``most important'' aspect, this  ``greedy-style'' can result in suboptimal decisions.  By comparison, a different strategy, which we called \emph{tallying the pros and cons}, kept all candidates around, and counted up the advantages and disadvantages of each, potentially weighing each factor by its perceived importance.  This strategy is less vulnerable to getting stuck in local maxima than the former.
+
+To understand whether interface influenced choice of strategy, we measured the number of candidates that the participant considered \emph{at final result}.  This we found was a strong marker for use of each strategy; people using the successive elimination strategy arrived with only 1-2 candidates at decision time, while those that tallied still maintained the entire starting set.  
+
+We found that the use of DP strongly influenced people to keep all candidates around and 
 
 \subsection{Condition A (DataPalette)}
 In the A condition, where participants used DataPalette to complete their tasks, they used it to collate the data on-screen, and compare multiple values directly. About half of the observed users actually used the instance combination feature of DataPalette, with the other half able to successfully make decisions without using it. Those who tried to use it were largely successful, and were able to therefore use the global brush-highlighting to simultaneously compare different statistics. Most users instantly opened up all data sources into individual boxes, in order to determine which sources contained specific statistics. The result of this technique is that the users instantly filled their screen, and ran out of space for plots and maps.
