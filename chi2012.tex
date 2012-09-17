@@ -223,7 +223,7 @@ Heterogeneity was measured through \emph{pairwise consistency metrics} we derive
 Our findings suggest that -- FILL ME IN HERE PLEASE, 
 
 \section{Designing DataPalette : An Interface for Serendipitous Data Mixing}
-\begin{figure*}[htbp]
+\begin{figure*}[tbp]
 \begin{center}
 \includegraphics[width=18cm]{img/screenshot}
 \caption{DataPalette Workspace, a file manager-inspired Drag and Drop interface for structured data mixing. Collapsable displays of data sources are listed on the left, from which instances or entire sets of items can be dragged to form a windoow (group) on the workspace.}
@@ -455,20 +455,19 @@ Although we did not have an explicit measure of effort for this experiment (such
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=8.5cm]{img/results}
-\caption{The chosen restaurant/university for each participant, showing the choice on the x axis and frequency on the y axis under conditions A (blue) and B (red).}
+\caption{\emph{Choice picks per participant trial} - Histogram of number of times each restaurant/university was chosen in DP interface (A condition) in blue/left bars, compared to the Excel/website (B condition) in red/to the right.}
 \label{fig:chosen_results}
 \end{center}
 \end{figure}
 
-Since the tasks were subjective-choice, we could not evaluate the 'correctness' of people's answers.  However, to determine whether there was a difference in variability of answers between interface conditions, we histogrammed responses for each task and dataset for both conditions, visible in  Figure \ref{fig:chosen_results}. 
+Since the tasks were subjective-choice, we could not evaluate the 'correctness' of people's answers.  However, to determine whether there was a difference in variability of answers between interface conditions, we histogrammed first choices for each trial, per task and dataset for both conditions, visible in  Figure \ref{fig:chosen_results}.  As can be seen there is considerable variability and no discernable difference in variability between conditions.  
+
 \subsection{Strategies: Successive Elimination vs Tallying}
 As described in Discussion later, we noticed several different strategies that people used to evalutate each candidate selection. One common strategy was \emph{successive elimination} - to look at a single dimension at a time, starting with the most important, ruling out candidates that did not meet the required minimum for that value.  However, when there is no clear ``most important'' aspect, this  ``greedy-style'' can result in suboptimal decisions.  By comparison, a different strategy, which we called \emph{tallying the pros and cons}, kept all candidates around, and counted up the advantages and disadvantages of each, potentially weighing each factor by its perceived importance.  This strategy is less vulnerable to getting stuck in local maxima than the former.
 
 To understand whether interface influenced choice of strategy, we measured the number of candidates that the participant considered \emph{at final result}.  This we found was a strong marker for use of each strategy; people using the successive elimination strategy arrived with only 1-2 candidates at decision time, while those that tallied still maintained the entire starting set.  
 
 We found that the use of DP strongly influenced people to keep all candidates around, while participants in the B condition eliminated choices early.  An ANOVA test demonstrated a significant effect between condition and number of candidates maintained ($F(1,19)=5.323; p<0.05$); a post-hoc Tukey HSD test confirmed that  the number of candidates used in the final choice for participants in the A condition ($M=5.85;SD=0.45$) differed significantly from the B condition ($M=4.95; SD=2.26$).
-
-
 
 \subsection{Use of Data Integration Features}
 
@@ -484,9 +483,9 @@ To determine to what extent visualisation tools were used in condition A, 13 (65
 \subsection{Condition B - Results and Observations}
 In the B conditions, participants were given the option of using websites and or a spreadsheet to make their choice.  For B trials, we measured the fraction of the trial time spent in Excel versus looking at the sites in a 5-value range (0,25,50,75,100\%).  Six individuals used Excel entirely without consulting the web sites at all, while one avoided Excel altogether; most fell somewhere in between, with a median use of 75\% Excel.   When asked to explain their choice post-hoc, participants who used Excel explained that it saved them the effort of having to individually search and consolidate information from the websites (10 participants).  Participants who looked at websites chose to do so when they needed to know more than what was provided in the spreadsheets (8 participants), when they mistrusted the information in them (1 participant), or if they were not familiar with Excel (1 participant).
 
-Of the Excel use, most participants made minor formatting and column sizing changes to facilitate reading and interpreting the spreadsheets, while four made extensive edits to the sheets to help them ``think through'' the task in various ways.  These uses of Excel for external cognition varied from merely copying over candidate choices from one sheet to the next to keep track of their previous selections, to sorting values by multiple columns (which participants had considerable trouble with due to the need to sort columns together), and colour-coding cells to allow easy counting of  ``pros'' and ``cons''; ``I can't deal with so many textual values; I need colours to help me see'' (p6). Another user calculated their own weighted metric of which university to choose by averaging different metrics supplied by the data sources and filling in their own chosen weights.  
+Of the Excel use, most participants made minor formatting and column sizing changes to facilitate reading and interpreting the spreadsheets, while four made extensive edits to the sheets to help them ``think through'' the task in various ways.  These uses of Excel for external cognition ranged from merely copying over candidate choices from one sheet to the next to keep track of their previous selections, to sorting values by multiple columns (which participants had considerable trouble with due to the need to sort columns together), and colour-coding cells to allow easy counting of  ``pros'' and ``cons''; ``I can't deal with so many textual values; I need colours to help me see'' (p6). Another user calculated their own weighted metric of which university to choose by averaging different metrics supplied by the data sources and filling in their own chosen weights.  
 
-Participants ran into a number of difficulties with the spreadsheet interface. Participants struggled with looking up values across different worksheets (data sources).  Some participants coped by attempting to collate all data onto a single sheet, so that they could compare the values all at once as just described; however, this approach was often error prone.  For example, two participants did not notice that the rows in two sheets were in different order, causing their pasted values to be incorrectly mapped.  Four participants struggled with sorting columns, and only 1 attempted charting (p7).  Although she attempted to plot multiple factors simultaneously, Excel's charting features caused her considerable difficulty and she eventually resorted at creating multiple simple bar-charts instead.
+Participants ran into a number of difficulties with the spreadsheet interface. Participants struggled with looking up values across different worksheets (data sources).  Some attempted to collate all data onto a single sheet, so that they could compare the values all at once as just described; however, this approach was often error prone.  For example, two participants did not notice that the rows in two sheets were in different order, causing their pasted values to be incorrectly mapped.  Four participants struggled with sorting columns, and only 1 attempted charting (p7).  Although she attempted to plot multiple factors simultaneously, Excel's charting features caused her considerable difficulty and she eventually resorted at creating multiple simple bar-charts instead.
 
 %%  was use of pen and paper to collate the values, which was often faster and resulted in less observed frustration. While the majority of users did not attempt anything complex with Excel (in fact only one user used charts), there was some advanced use of Excel observed.
 
@@ -499,19 +498,20 @@ Various other difficulties were encountered with the websites. There was signifi
 \subsection{Survey Results}
 
 
-\begin{figure}[htbp]
+\begin{figure}[tbp]
 \begin{center}
 \includegraphics[width=8.5cm]{img/survey}
-\caption{The chosen restaurant/university for each participant, showing the choice on the x axis and frequency on the y axis under conditions A (blue) and B (red).}
+\caption{\emph{Survey results} - Answers to questions on a 5-point Likert scale, from 1-\emph{strongly disagree} to 5-\emph{strongly agree}.}
 \label{fig:survey}
 \end{center}
 \end{figure}
 
+When asked to rate the DP interface, all participants responded that they felt they understood the system, with sixteen (80\%) responding that they understood it \emph{very strongly} (5).  Eighteen (90\%) reported that they thought  DP was \emph{easy}, as well as useful, with one person being neutral on each.  On the statement ``DP is confusing'',  11 strongly disagreed, 6 disagreed, and 3 agreed.  Revisiting the time trials, we discovered that the 3 participants who rated DP as strongly confusing completed the trials statistically significantly slower than the rest of the group. Survey results were visualised in Figure \ref{fig:survey}.
 
 %+What did people think about it? 
 % Usefulness,Ease,Confusion,etc
 
-In the exit survey, the users noted that they would use an interface like DataPalette in the future, for finding a property to rent/buy, choosing a job and purchasing electronic devices.  However, one participant said that they would not use it for things like deciding on a restaurant because ``it would cheapen the experience'' by removing the spontaneity, but would use it for making more important decisions.  In order to improve our solutions the participants suggested making the origin of the information clearer, particularly when combining multiple data sources. The participants also requested the ability to sort instances, as well as explanations of ratings and scoring systems (however some of these are not even transparent on websites). Participants also requested standard features not present in our prototype, such as window management options (specifically, arranging and minimising windows), and the ability to undo operations.
+In the exit survey, the users noted that they would use an interface like DataPalette in the future, for finding a property to rent/buy, choosing a job and purchasing electronic devices.  However, one participant said that they would not use it for things like deciding on a restaurant because ``it would cheapen the experience'' by removing the element of spontaneity of choice, but would use it for making more important decisions.  Participants had a large number of suggestions for improvement, which In order to improve our solutions the participants suggested making the origin of the information clearer, particularly when combining multiple data sources. The participants also requested the ability to sort instances, as well as explanations of ratings and scoring systems (however some of these are not even transparent on websites). Participants also requested standard features not present in our prototype, such as window management options (specifically, arranging and minimising windows), and the ability to undo operations.
 
 \section{Discussion}
 
