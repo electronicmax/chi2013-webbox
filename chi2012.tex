@@ -314,7 +314,8 @@ In order to determine whether the interaction affordances introduced in DataPale
 
 \subsection{Methodology}
 
-We first describe our methodology, starting with the three hypotheses we set out to test. These hypothesis pertain to the usability of DP by end-users (h1), whether DP achieves its stated goal of enabling end-users to integrate data (h2), and finally if it has an effect on task performance (h3) - either in how well people perform a task, how quickly they perform it, or if it reduces task effort, as follows:
+We first describe our methodology, starting with the three hypotheses we set out to test:
+%These hypothesis pertain to the usability of DP by end-users (h1), whether DP achieves its stated goal of enabling end-users to integrate data (h2), and finally if it has an effect on task performance (h3) - either in how well people perform a task, how quickly they perform it, or if it reduces task effort, as follows:
 
 
 % heather: instead of these low-level hypotheses, i've made higher level ones that we can explicitly address in the disucssion section - the more hypotheses we have, the more we have to come back to them; since we're short on space we might as well keep it simple!
@@ -328,11 +329,11 @@ We first describe our methodology, starting with the three hypotheses we set out
 %% \end{itemize}
 %% Are these interaction methods sufficient to perform common tasks %% involving heterogeneous data sources?  Does supporting these simple %% techniques facilitate task completion?
 
-\begin{itemize}
-\item \emph{h1 -} People understand how to use DP.
-\item \emph{h2 -} People can effectively mix heterogeneous data with DP.
-\item \emph{h3 -} Use of DP improves or facilitates task performance.
-\end{itemize}
+\begin{description}
+\item [h1 - Usability] People understand how to use DP.
+\item [h2 - Data Integration] People can effectively mix heterogeneous data with DP.
+\item [h3 - Performance] Use of DP improves or facilitates task performance.
+\end{description}
 
 \subsubsection{Study and task design}
 To test these hypotheses, we designed a within-subjects lab-based A-B study in which participants were asked to perform two predefined tasks in separate timed trials, once with the DP interface (``condition A'') and once with a baseline interface (``condition B'' which we describe below).  We used upon the within-subjects A-B format in order to make both quantitative measurements about an individual's performance with DP (relative to baseline), but also to make qualitative observations of the processes used by each participant as they solved each task.  Each task was paired with one of two datasets, depending on condition, so that we could evaluate whether the participant's performance of completing a task differed with different datasets.  Conditions and interface order were fully counterbalanced among participants to eliminate ordering and task bias.  
@@ -362,26 +363,26 @@ The participants were given a standard desktop PC running MacOS X on a 22" monit
 
 %Each study consisted of two tasks, one A and one B condition.  Each participant was given 10 minutes to complete a task.  In order to select which tasks the participant was given, we used a latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute DataPalette tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
 
-%\begin{table*}[t]
-%\begin{center}
-%\small
-%\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
-%\hline
-%Task	 &Choices	&Data Sources\\
-%\hline
-%1) Three universities they would apply to study Sport Science & Universities: 1) Loughborough,  2) Durham,  3) Exeter, 4) Edinburgh, 5) Birmingham, and 6) Bath & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
-%\hline
-%2) Three universities they would apply to study History & Universities: 1) Cambridge, 2) London School of Economics and Political Science, 3) Durham, 4) Oxford, 5) St Andrews, and 6) University College London & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
-%\hline
-%3) Restaurant they would book for 12 friends in Cambridge&Restaurants : 1) Alimentum, 2) Gardenia Restaurant, 3) The Cambridge Chop House, 4) Al Casbah, 5) Midsummer House Restaurant, and 6) Nando's Restaurant. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
-%\hline
-%4) Restaurant they would book for 12 friends in Glagow & Restaurants :1) Black Sheep Bistro, 2) Charcoals, 3) Number 16 Family Restaurant, 4) Fanny Trollopes Cafe, 5) Two Fat Ladies At The Buttery, and 6) Sapori D'Italia. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
-%\hline
-%\end{tabular}
-%\end{center}
-%\caption{Tasks, choices and data sources} \label{tab:studyfactors}
-%\normalsize
-%\end{table*}%
+\begin{table*}[t]
+\begin{center}
+\small
+\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
+\hline
+Task	 &Choices	&Data Sources\\
+\hline
+1) Three universities they would apply to study Sport Science & Universities: 1) Loughborough,  2) Durham,  3) Exeter, 4) Edinburgh, 5) Birmingham, and 6) Bath & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
+\hline
+2) Three universities they would apply to study History & Universities: 1) Cambridge, 2) London School of Economics and Political Science, 3) Durham, 4) Oxford, 5) St Andrews, and 6) University College London & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
+\hline
+3) Restaurant they would book for 12 friends in Cambridge&Restaurants : 1) Alimentum, 2) Gardenia Restaurant, 3) The Cambridge Chop House, 4) Al Casbah, 5) Midsummer House Restaurant, and 6) Nando's Restaurant. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
+\hline
+4) Restaurant they would book for 12 friends in Glagow & Restaurants :1) Black Sheep Bistro, 2) Charcoals, 3) Number 16 Family Restaurant, 4) Fanny Trollopes Cafe, 5) Two Fat Ladies At The Buttery, and 6) Sapori D'Italia. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Tasks, choices and data sources} \label{tab:studyfactors}
+\normalsize
+\end{table*}%
 
 
 
@@ -468,11 +469,21 @@ One user explained that they did not like to look at numbers, and so coloured th
 friends' preferences, and matched the colours to make their decision. Another user calculated their own weighted metric
 of which university to choose by averaging different metrics supplied by the data sources.
 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=9cm]{img/results}
+\caption{Results, condition A and B shown.}
+\label{fig:results}
+\end{center}
+\end{figure}
+
+
 Notably, a number of users admittedly introduced their own bias into the choices in both A and B conditions: ``I prefer Indian food, so I will choose the Indian restaurant'', and one participant spent time on Google Maps looking at the routes to each restaurant, and eliminating those that required bus transfers (the protocol did not mention routing/transfers at all).
 
 \subsection{Survey Results}
 
-%+ ÊWhat did people think about it? % Ê Ê Ê ÊUsefulness,Ease,Confusion,etc
+%+ ÊWhat did people think about it? 
+% Ê Ê Ê ÊUsefulness,Ease,Confusion,etc
 
 In the exit survey, the users noted that they would use an interface like DataPalette in the future, for finding a property to rent/buy, choosing a job and purchasing electronic devices.  However, one participant said that they would not use it for things like deciding on a restaurant because ``it would cheapen the experience'' by removing the spontaneity, but would use it for making more important decisions.  In order to improve our solutions the participants suggested making the origin of the information clearer, particularly when combining multiple data sources. The participants also requested the ability to sort instances, as well as explanations of ratings and scoring systems (however some of these are not even transparent on websites). Participants also requested standard features not present in our prototype, such as window management options (specifically, arranging and minimising windows), and the ability to undo operations.
 
