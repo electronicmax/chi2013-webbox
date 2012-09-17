@@ -1,4 +1,4 @@
-\documentclass{sigchi}
+ \documentclass{sigchi}
 
 % Use this command to override the default ACM copyright statement (e.g. for preprints). 
 % Consult the conference website for the camera-ready copyright statement.
@@ -17,7 +17,6 @@
 % Remove this line to eliminate page numbers for the camera ready copy
 %\pagenumbering{arabic}
 
-\hyphenation{Data-Palette}
 
 % Load basic packages
 \usepackage{balance}  % to better equalize the last page
@@ -234,7 +233,7 @@ Our findings suggest that -- FILL ME IN HERE PLEASE,
 
 At a high level, the overall goal of DataPalette was to empower end-users to mix arbitrary structured data feeds on-the-fly while solving their particular information task(s) - be them sense-making or decision-making related - in order to more effectively accomplish these tasks.  Unlike Mashup makers, including Yahoo Pipes!, the goal was to facilitate such integration without a need for an explicit separate mapping or integration step, which would detract from the overall usability or usefulness of the system by making people do something that did not immediately contribute to their resolving their need.
 
-The two prestudies provided valuable insight towards this goal that allowed us to guide our design process. The first prestudy confirmed the need for data integration by showing that people did, in fact, prefer to rely upon multiple sources of information for making important decisions, and identified the kinds of sources people most commonly used.  The second prestudy revealed that the most common inconisistencies that occurred in the APIs and data feeds available through from such data sources consisted predominantly of the simpler kinds of heterogeneity - terminological and simpler forms of structural heterogeneity, rather than the delicate semantic/modeling variety, which were comparatively rare. This gave us optimism that an interactional approach optimised around the these simpler kinds of heterogeneity would be effective.
+The two pre-studies provided valuable insight towards this goal that allowed us to guide our design process. The first pre-study confirmed the need for data integration by showing that people did, in fact, prefer to rely upon multiple sources of information for making important decisions, and identified the kinds of sources people most commonly used.  The second pre-study revealed that the most common inconsistencies that occurred in the APIs and data feeds available through from such data sources consisted predominantly of the simpler kinds of heterogeneity - terminological and simpler forms of structural heterogeneity, rather than the delicate semantic/modelling variety, which were comparatively rare. This gave us optimism that an interactional approach optimised around the these simpler kinds of heterogeneity would be effective.
 [0
 In the following sections we describe the design process we used to create prototype DataPalette, followed by a detailed description of the design of the prototype and justification.
 
@@ -265,7 +264,7 @@ Multiple selection group-dereferencing results in two effects:
 \begin{enumerate}
 \item Clicking on a property dereferences all corresponding values makes it easy to quickly compare all instances that have the same structure.  Although we were concerned that users might be surprised that path selection applied to all objects within each group in parallel, users adapted very quickly and used this functionality to save them time.   
 
-\item Supporting dereferencing along different paths \emph{by structure} allows instances with different property names, and even sub-structures to be quickly consolidated by separate dereferencing, thereby effectively coping with terminological and structural hetereogeneity.
+\item Supporting dereferencing along different paths \emph{by structure} allows instances with different property names, and even sub-structures to be quickly consolidated by separate dereferencing, thereby effectively coping with terminological and structural heterogeneity.
 \end{enumerate}
 
 \subsubsection{Coreference consolidation: Drag-and-Drop Same-as}
@@ -273,7 +272,7 @@ Multiple selection group-dereferencing results in two effects:
 \begin{figure*}[htbp]
 \begin{center}
 \includegraphics[width=18cm]{img/sameas}
-\caption{\emph{Coreference consolidation with drag-and-drop Same-As} - When two instances represent the same entity, users can drag one on top of the other, and they are combined - effectively displaying the union of properties of both source entities. This can be un-done by deleting the Same-As relaitonship in the view in the lower-left corner of the workspace.}
+\caption{\emph{Coreference consolidation with drag-and-drop Same-As} - When two instances represent the same entity, users can drag one on top of the other, and they are combined - effectively displaying the union of properties of both source entities. This can be un-done by deleting the Same-As relationship in the view in the lower-left corner of the workspace.}
 \label{fig:sameas}
 \end{center}
 \end{figure*}
@@ -288,7 +287,7 @@ By making such consolidation user-driven, we gave the user freedom to combine th
 
 \subsubsection{Enumerated-type value consolidation}
 
-Related to the concept of co-reference, PS.2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reconcile and consolidate corresponding values from diffeent  datasources, we extended the drag and drop support of co-reference combination to also allow users to drag and drop to combine enumerated literal values as well.  
+Related to the concept of co-reference, PS.2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reconcile and consolidate corresponding values from different  datasources, we extended the drag and drop support of co-reference combination to also allow users to drag and drop to combine enumerated literal values as well.  
 
 \subsubsection{``Do What I Mean'' Visualisation}
 
@@ -336,7 +335,7 @@ We first describe our methodology, starting with the three hypotheses we set out
 \end{itemize}
 
 \subsubsection{Study and task design}
-To test these hypotheses, we designed a within-subjects lab-based A-B study in which participants were asked to perform two predefined tasks in separate timed trials, once with the DP interface (``condition A'') and once with a baseline interface (``condition B'' which we describe below).  We used upon the within-subjects A-B format in order to make both quantiative measurements about an individual's performance with DP (relative to baseline), but also to make qualitative observations of the processes used by each participant as they solved each task.  Each task was paired with one of two datasets, depending on condition, so that we could evaluate whether the participant's performance of completing a task differed with different datasets.  Conditions and interface order were fully counterbalanced among participants to eliminate ordering and task bias.  
+To test these hypotheses, we designed a within-subjects lab-based A-B study in which participants were asked to perform two predefined tasks in separate timed trials, once with the DP interface (``condition A'') and once with a baseline interface (``condition B'' which we describe below).  We used upon the within-subjects A-B format in order to make both quantitative measurements about an individual's performance with DP (relative to baseline), but also to make qualitative observations of the processes used by each participant as they solved each task.  Each task was paired with one of two datasets, depending on condition, so that we could evaluate whether the participant's performance of completing a task differed with different datasets.  Conditions and interface order were fully counterbalanced among participants to eliminate ordering and task bias.  
 
 % why? why were these tasks selected? can we drop in the phrase ``multi-dimensional subjective choice task'' and refer back to PS.1 to justify the choice of tasks?
 We based our two tasks on these scenarios on choosing a university and picking a restaurant for a large social event, because in PS.1 the majority of people stated that they had used multiple websites for these tasks.  We used different two different variables for both tasks, where the restaurant was located (Glasgow and Cambridge) and which subject people choose (sport science and history).  The cities Glasgow and Cambridge were chosen because they are not geographically close to the participants, they are two heavily populated areas that have a choice of restaurants, and they contained detail data about the same restaurants on various review sites.  When deciding on which cities to use, we found that different areas favoured different review websites and places such as Hull had sets of disjoint sets of restaurant reviews.  We selected the top restaurants for on Tripadvisor and Yelp, because they were the top two websites people quoted for comparing reviews when travelling.  We selected the two courses for the university task at random from a list taken form the complete university guide\footnote{}, and selected the top six university for that subject because they provide a realistic shortlist and are comparable in terms of rankings and properties.   We selected a shortlist of six because it is typical for users to narrow down their options to a limited selection before analysing the details of their final choicesex
@@ -434,26 +433,26 @@ chosen restaurant/uni &4.1&2.4&3.5&4.3&3.3&&2.4&1.4&4.2&1.6, \newline 1.3, \newl
 
 \subsection{Task performance}
 
-We used three metris to measure of task performance: time to completion, the number of factors used in the choice, and the number of candidates 
+We used three metrics to measure task performance: time to completion; the number of factors used in the choice; and the number of candidates evaluated.
 
 \subsubsection{Efficiency: Time taken}
-Participants spent an average of 8.9 minutes performing the tasks overall, with DP (condition A) taking slightly less time ($M=8.7$min, $SD=1.79$) per trial than condition B (the web browser/Excel interface) ($M=9.0$min; $SD=1.44$).  An ANOVA test of time taken by interface condition blocking by participant did not find a interface use a significant predictor of task completion time. A comparison of times taken are visible in Figure \ref{fig:time}.  
+Participants spent an average of 8.9 minutes performing the tasks overall, with condition A (DataPalette) taking slightly less time ($M=8.7$min, $SD=1.79$) per trial than condition B (the web browser/Excel interface) ($M=9.0$min; $SD=1.44$).  An ANOVA test of time taken by interface condition blocking by participant did not find interface use a significant predictor of task completion time. A comparison of times taken are visible in Figure \ref{fig:time}.  
 
-Although across trials, restaurant selection task took on average slightly less time ($M=8.8$min,$SD=1.58$) than the university trials ($M=8.9$min,$SD=1.66$), the aforementioned ANOVA test found task type to not be a significant predictor either.
+Although across trials, the restaurant selection task took on average slightly less time ($M=8.8$min,$SD=1.58$) than the university trials ($M=8.9$min,$SD=1.66$), the aforementioned ANOVA test found task type to not be a significant predictor.
 
 \subsubsection{Thoroughness: Factors weighed in final choice}
-A second metric was the number of factors the participant considered in making their final choice. To determine this, we asked participants to tell us precisely why their choice was made, and matched their justifications to properties in the data.  This analysis revealed a significant effect of interface on number of factors weighed ($F(1,19)=3.95; p<0.10$); participants in the DP condition listed an average of 5.5 choices in their decision ($SD=1.7$) versus 4 ($SD=1.73$) in the standard condition.
+The second metric was the number of factors the participant considered in making their final choice. To determine this, we asked participants to tell us precisely why their choice was made, and matched their justifications to properties in the data.  This analysis revealed a significant effect of interface on number of factors weighed ($F(1,19)=3.95; p<0.10$); participants in the DP condition listed an average of 5.5 choices in their decision ($SD=1.7$) versus 4 ($SD=1.73$) in the standard condition.
 
 \subsubsection{Diversity: Data sources consulted}
-A third metric we used to gauge how well the participant performed their tasks is the number of different data sources the participant consulted during the trial. In this metric, participants used an average of 88\% of data sources provided in the DP case, compared to 80\% in the standard interface, although an ANOVA test blocking on participant demonstrated that interface choice only approached significance in predicting the number of sources consulted ($F(1,19)=0.04$ $p\approx0.10$).
+The third metric we used to gauge how well the participant performed their tasks is the number of different data sources the participant consulted during the trial. In this metric, participants used an average of 88\% of data sources provided in the DP case, compared to 80\% in the standard interface, although an ANOVA test blocking on participant demonstrated that interface choice only approached significance in predicting the number of sources consulted ($F(1,19)=0.04$ $p\approx0.10$).
 
 \subsubsection{Effort: External cognition}
 Although we did not have an explicit measure of effort for this experiment (such as NASA's TLX \cite{tlx}) the use of paper notes provided an indicator of how much participants had to keep track of during the study.  We found that participants took notes less on average (25\%) with the DP interface than the standard interface (35\%), a difference which approached significance in an ANOVA blocked by participant ($F(1,19)= 8.22; p\approx0.10$).
 
-\subsection{Condition A (DP)}
-In the A condition, where participants used DataPalette to complete their tasks they used it to collate the data on-screen, and compare multiple values directly. About half of the observed users actually used the instance combination feature of DataPalette, with the other half able to successfully make decisions without using it. Those who tried to use it were largely successful, and were able to therefore use the global brush-highlighting to simultaneously compare different statistics. Most users instantly opened up all data sources into individual boxes, in order to determine which sources contained specific statistics. The result of this technique is that the users instantly filled their screen, and ran out of space for plots and maps.
+\subsection{Condition A (DataPalette)}
+In the A condition, where participants used DataPalette to complete their tasks, they used it to collate the data on-screen, and compare multiple values directly. About half of the observed users actually used the instance combination feature of DataPalette, with the other half able to successfully make decisions without using it. Those who tried to use it were largely successful, and were able to therefore use the global brush-highlighting to simultaneously compare different statistics. Most users instantly opened up all data sources into individual boxes, in order to determine which sources contained specific statistics. The result of this technique is that the users instantly filled their screen, and ran out of space for plots and maps.
 
-\subsection{Condition B (control}
+\subsection{Condition B (control)}
 In the B conditions, participants were given the option of using websites and or a spreadsheet to make their choice.  Participants who opted to use websites to make their decisions repeatedly encountered a number of difficulties and issues. In particular, there was significant confusion over the meaning of data points, for example the percentage-based rankings of university teaching by the Times Higher Education. There were numerous usability issues in using websites, particularly in searching for university courses and course requirements. Similarly, participants found it difficult to understand the locations of restaurants in cities that they were not familiar, and could not find a way to plot the shortlist of restaurants onto the same map using the websites. Overall, the users that spent the most time using websites exhibited significant frustration attempting to locate and compare different criteria (such as course entry requirements, or restaurant locations), and all ended up falling back to using the supplied spreadsheets.
 
 Participants who opted to use the spreadsheet to support their decisions switched between worksheets to view data from different websites.  They used different approaches to using the spreadsheets, some participants were keen to collate all data onto a single sheet, so that they could compare the values all at once. However, this approach was error prone, for example participants noticing too late that the ordering of rows was different on each sheet, so that their pasted values were incorrectly mapped. Others used pen and paper to collate the values, which was often faster and resulted in less observed frustration. While the majority of users did not
