@@ -198,23 +198,42 @@ When organising an event the weather was not that important because it they did 
 \subsubsection{Summary of Findings}
 People said that they would like a website that could support the evolution of an event, that allowed them to post drafts of an event.  They felt that organising an event should be a process that changes over time and did not need rushing.  Three of the participants said that they would like a recommendation system for places to eat and activities. Another strong requirement was that it had to be ubiquitous so that everyone could use it because they wanted a single place to communicate with their friends.  While Facebook was the most popular social networking site for organising events, half of the participants felt that it was not the best solution and would prefer a collaborative environment, which could be wiki based.
 
-%% TODO THIS IS PLACEHOLDER DATA >> 
 \begin{table*}
 \small
-\begin{tabular}{| p{2.0cm} | p{1.5cm} | p{3.6cm} | p{2cm} | p{2cm} | l | l | l | l |}
+\begin{tabular}{| p{2.0cm} | p{1.8cm} | p{1.8cm} | p{1.8cm} | p{1.8cm} | p{1.8cm} | p{1.8cm} | p{1.8cm} |}
 \hline
-source category  & data type & sources & API type & avg fields/rec & avg depth & term. & struct & semantic \\
+				& {\bf source}		& {\bf average props/record}	& {\bf average depth/record}	& {\bf equivalent to}	& {\bf prop name inconsistent}	& {\bf structural inconsistency} 	& {\bf model inconsistency} \\
 \hline
-social networking  & person's profile & Facebook, LinkedIn, Google+ & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
-event calendars & events & Eventbrite, Google Calendar  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
-retail (shopping)  & product profile & Amazon, Shopping.com, Etsy, Groupon, Zappos  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
-music catalogues & songs and albums & Echonest, rdio, Soundcloud, Spotify  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
-weather & forecasts & W.Underground, Weatherbug, Yahoo! Weather & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
+social networking	& google+			& 12						& 1.52					& tw:5, li:4, fb:4		& tw:3, li:2, fb:2				& tw:0, li:1, fb:1				& tw:0, li:0, fb:0 \\
+(profiles)			& twitter			& 39						& 1.37					& li:4, fb:4 			& li:2, fb:1					& li:0, fb:0					& li:0, fb:0 \\
+				& linkedin			& 18						& 2.42					& fb:7			& fb:5					& fb:3					& fb:0 \\
+				& facebook		& 22						& 1.5						&				&						&						& \\
+\hline
+calendars			& google calendar	& 15						& 1.46					& eb:9			& eb:6					& eb:1					& eb:1 \\
+(events)			& eventbrite		& 32						& 1.43					&				&						& 						& \\
+\hline
+retail				& milo			& 5						& 1.2						& z:2, s:3, e:1, a:3	& z:2, s:2, e:1, a:3			& z:0, s:0, e:0, a:2			& z:0, s:0, e:0, a:0 \\
+(products)			& zappos			& 6						& 1						& s:2, e:2, a:3		& s:2, e:2, a:2				& s:0, e:0, a:0				& s:0, e:0, a:0 \\
+				& shopping.com	& 11						& 3.74					& e:2, a:8			& e:2, a:8					& e:0, a:0					& e:0, a:0 \\
+				& etsy			& 31						& 1.13					& a:11			& a:10					& a:1						& a:2 \\
+				& amazon			& 108					&						&				& 						&						& \\
+\hline
+contacts			& google contacts	& 7						& 1.46					& yp:2			& yp:2					& yp: 0					& yp: 0 \\
+				& yellowpages		& 25						& 1						&				&						&						& \\
+\hline
+music			& echonest		& 4						& 1.83					& so:3, r:3, sp:3		& so:3, r:3, sp:3				& so:0, r:0, sp:0				& so:0, r:0, sp:0 \\
+(songs/			& soundcloud		& 42						& 2.14					& r:12, sp:7		& r:11, sp:6 				& r:1, sp:1					& r:1, sp:0 \\
+tracks)			& rdio			& 27						& 2						& sp: 7			& sp: 6					& sp: 1					& sp: 1 \\
+				& spotify			& 10						& 2.44					&				&						&						& \\
+\hline
+weather			& weatherbug		& 8						& 2						& wu: 5, y: 5		& wu: 5, y: 5				& wu: 5, y: 4				& wu: 0, y: 0 \\
+(forecasts)		& wundergound	& 52						& 1.38					& y:12			& y:12					& y:7						& y:3 \\
+				& yahoo weather	& 22						& 1.58					&				&						&						& \\
 \hline
 \end{tabular}
 \caption{\emph{PS.2 Results} - Analysis of heterogeneity present across data feeds, by category of feed}\label{tbl:prestudy2}
 \end{table*}
-%% << 
+
 
 \subsection{PS.2 - Technical Challenges of Data Integration}
 Our investigation of integration challenges of available structured data feeds started with identifying a set of candidate sources to examine.  For this, we consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} of 50 most popular data feeds measured by the number of developer API keys issued for each.  To increase the variety of sources, we first categorised sources into 5 topic categories: social network services, retailers, event sources (e.g., online calendars and event sites) music, and weather, and selected 2-5 sources from each 2-5 feeds each for a total of 20 total feeds for analysis.  
@@ -239,6 +258,9 @@ Heterogeneity was measured through \emph{pairwise consistency metrics} we derive
 \subsubsection{Results}
 % TODO TODO TODO TODO 
 Our findings suggest that -- FILL ME IN HERE PLEASE, 
+
+
+
 
 \section{Designing DataPalette : An Interface for Serendipitous Data Mixing}
 \begin{figure*}[tbp]
