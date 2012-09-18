@@ -195,28 +195,51 @@ Most people felt that being assertive and posting their decisions about the date
 \subsubsection{Summary of Findings}
 People said that they would like a website that could support the evolution of an event, that allowed them to post drafts of an event.  They felt that organising an event should be a process that changes over time.  Three participants said that they would like a recommendation system for places to eat and activities.  Another strong requirement was that it had to be ubiquitous so that everyone could use it because they wanted a single place to communicate with their friends.  While Facebook was the most popular social networking site for organising events, half of the participants felt that it was not the best solution and would prefer a collaborative environment.
 
-%% TODO THIS IS PLACEHOLDER DATA >> 
 \begin{table*}
 \small
-\begin{tabular}{| p{2.0cm} | p{1.5cm} | p{3.6cm} | p{2cm} | p{2cm} | l | l | l | l |}
+\begin{tabular}{p{2.0cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}}
+				&				& {\bf average}				& {\bf average }				& 				& {\bf prop name}			& {\bf structural} 			& {\bf model } \\
+				& {\bf source}		& {\bf props/record}			& {\bf depth/record}			& {\bf equivalent to}	& {\bf inconsistent}			& {\bf inconsistency} 			& {\bf inconsistency} \\
 \hline
-source category  & data type & sources & API type & avg fields/rec & avg depth & term. & struct & semantic \\
+social networking	& google+			& 12						& 1.52					& tw:5, li:4, fb:4		& tw:3, li:2, fb:2				& tw:0, li:1, fb:1				& tw:0, li:0, fb:0 \\
+(profiles)			& twitter			& 39						& 1.37					& li:4, fb:4 			& li:2, fb:1					& li:0, fb:0					& li:0, fb:0 \\
+				& linkedin			& 18						& 2.42					& fb:7			& fb:5					& fb:3					& fb:0 \\
+				& facebook		& 22						& 1.5						&				&						&						& \\
 \hline
-social networking  & person's profile & Facebook, LinkedIn, Google+ & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
-event calendars & events & Eventbrite, Google Calendar  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
-retail (shopping)  & product profile & Amazon, Shopping.com, Etsy, Groupon, Zappos  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
-music catalogues & songs and albums & Echonest, rdio, Soundcloud, Spotify  & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
-weather & forecasts & W.Underground, Weatherbug, Yahoo! Weather & REST (JSON/XML) & 10 & 1.2 & 0.90 & 0.10 & 1.0 \\
+calendars			& google calendar	& 15						& 1.46					& eb:9			& eb:6					& eb:1					& eb:1 \\
+(events)			& eventbrite		& 32						& 1.43					&				&						& 						& \\
 \hline
+retail				& milo			& 5						& 1.2						& z:2, s:3, e:1, a:3	& z:2, s:2, e:1, a:3			& z:0, s:0, e:0, a:2			& z:0, s:0, e:0, a:0 \\
+(products)			& zappos			& 6						& 1						& s:2, e:2, a:3		& s:2, e:2, a:2				& s:0, e:0, a:0				& s:0, e:0, a:0 \\
+				& shopping.com	& 11						& 3.74					& e:2, a:8			& e:2, a:8					& e:0, a:0					& e:0, a:0 \\
+				& etsy			& 31						& 1.13					& a:11			& a:10					& a:1						& a:2 \\
+				& amazon			& 108					&						&				& 						&						& \\
+\hline
+contacts			& google contacts	& 7						& 1.46					& yp:2			& yp:2					& yp: 0					& yp: 0 \\
+				& yellowpages		& 25						& 1						&				&						&						& \\
+\hline
+music			& echonest		& 4						& 1.83					& so:3, r:3, sp:3		& so:3, r:3, sp:3				& so:0, r:0, sp:0				& so:0, r:0, sp:0 \\
+(songs/			& soundcloud		& 42						& 2.14					& r:12, sp:7		& r:11, sp:6 				& r:1, sp:1					& r:1, sp:0 \\
+tracks)			& rdio			& 27						& 2						& sp: 7			& sp: 6					& sp: 1					& sp: 1 \\
+				& spotify			& 10						& 2.44					&				&						&						& \\
+\hline
+weather			& weatherbug		& 8						& 2						& wu: 5, y: 5		& wu: 5, y: 5				& wu: 5, y: 4				& wu: 0, y: 0 \\
+(forecasts)		& wundergound	& 52						& 1.38					& y:12			& y:12					& y:7						& y:3 \\
+				& yahoo weather	& 22						& 1.58					&				&						&						& \\
 \end{tabular}
 \caption{\emph{PS.2 Results} - Analysis of heterogeneity present across data feeds, by category of feed}\label{tbl:prestudy2}
 \end{table*}
-%% << 
+
 
 \subsection{PS.2 - Technical Challenges of Data Integration}
 Our investigation of integration challenges of available structured data feeds started with identifying a set of candidate sources to examine.  For this, we consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} of 50 most popular data feeds measured by the number of developer API keys issued for each.  To increase the variety of sources, we first categorised sources into 5 topic categories: social network services, retailers, event sources (e.g., online calendars and event sites) music, and weather, and selected 2-5 sources from each 2-5 feeds each for a total of 20 total feeds for analysis.  
 
-For each feed, 3-5 ``typical'' records of a single type were obtained; for social networking sites this was user profiles, , this was user profiles, this was done either by finding record IDs by first querying for popular key terms using each site's keyword query API (if available), or a ``top products'' query otherwise.  listed in the second column of Table \ref{tbl:prestudy2}. While many of the APIs also provided access to other kinds of data, such as customer reviews, only the primary type were obtained for each category; e.g., product records for the \emph{shopping} category.  Once data records were obtained, two complexity metrics were computed for each, followed by pairwise heterogeneity metrics described below.  An alternative approach to using instance documents was to directly compare schema definitions directly; however, many of the sites' schemas were not actually publicly available; second, that many of the schemas were not actually representative of typical data returned by the service. Thus we decided to use an instance document random sampling technique instead.
+For each feed, 3-5 ``typical'' records of a single type were obtained; for social networking sites this was user profiles, for music sites this was song info, etc.  Records were located either by first querying for popular key terms using each site's keyword query API (if available), or a ``top products'' query if available.  For each obtained data record, two simple complexity metrics were computed: an \emph{average width} and \emph{average depth} of record.  For determining the width, we first examined the record to find the appropriate level for comparison; for example, Amazon's retail product ``Item'' root record has few attributes about the actual product compared to its ItemAttributes sub-property, which was used instead. Thus, all comparisons were made to maximize comparative similarity.  Depth was computed as average from root 
+
+In addition to the complexity metrics, we mapped out the amount of overlap among the sources in each category by first manually determiningr \emph{equivalent properties}.  This was done manually by creating a pairwise alignment table between every two data sources in each category.  Each row of the alignment table comprised a property in some schema, and all its closest matches in the other schemas.  We used both property names and attribute descriptions (in documentation, if available) to make matching decisions; two properties  were considered equivalent if they intended to model the same piece of information; 
+
+, followed by pairwise heterogeneity metrics described below.  An alternative approach to using instance documents was to directly compare schema definitions directly; however, many of the sites' schemas were not actually publicly available; second, that many of the schemas were not actually representative of typical data returned by the service. Thus we decided to use an instance document random sampling technique instead.
+
 
 The per-source metrics were as follows:
 \begin{itemize}
@@ -238,11 +261,14 @@ Heterogeneity was measured through \emph{pairwise consistency metrics} we derive
 Our findings suggest that -- FILL ME IN HERE PLEASE, 
 
 %\section{Designing the DataPalette Interface}
+
 \section{Designing DataPalette : An Interface for Serendipitous Data Mixing}
 \begin{figure*}[tbp]
 \begin{center}
 \includegraphics[width=18cm]{img/screenshot}
-\caption{DataPalette Workspace, a file manager-inspired Drag and Drop interface for structured data mixing. Collapsable displays of data sources are listed on the left, from which instances or entire sets of items can be dragged to form a window (group) on the workspace.}
+
+\caption{DataPalette Workspace, a file manager-inspired Drag and Drop interface for structured data mixing. Collapsible displays of data sources are listed on the left, from which instances or entire sets of items can be dragged to form a window (group) on the workspace.}
+
 \label{fig:workspace}
 \end{center}
 \end{figure*}
@@ -300,7 +326,6 @@ To remain consistent with the drag-and-drop interactions used throughout the int
 By making such consolidation user-driven, we gave the user freedom to combine things when it suited him or her. As we saw in the system evaluation, while in certain circumstances users preferred combining representations, in others people preferred to keep things separate.  Thus, user-initiated consolidation afforded an additional flexibility that was ultimately deemed beneficial.
 
 \subsubsection{Enumerated-type value consolidation}
-
 Related to the concept of co-reference, PS.2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reconcile and consolidate corresponding values from different  datasources, we extended the drag and drop support of co-reference combination to also allow users to drag and drop to combine enumerated literal values as well.  
 
 \subsubsection{``Do What I Mean'' Visualisation}
@@ -310,7 +335,7 @@ To make it easier for people to quickly visually compare aspects of instances, w
 \subsubsection{Model-based brushing}
 Since it can get confusing having a single instance represented across several groups, we provided \emph{universal brushing} across the interface; hovering over any representation of any instance (an instance block, a map marker or a histogram bar), causes all other visible representations of that instance to lightly glow, so that the user can quickly identify all the places that a single instance is represented
 
-% Data sources were represented as collapsable panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
+% Data sources were represented as collapsible panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
 
 %% it would be nice if we had space to summarize but i fear we don't
 
@@ -542,7 +567,9 @@ Properties are tricky. Sometimes you don’t care [which data source] a property
 
 Pertaining to h2, all participants were able to work with multiple sets of heterogeneous data effectively.  With respect to integration specifically, a majority (80\%) of the particiapnts successfully and deliberately integrated data using drag-and-drop SameAs capabilities.  While single-paths were used, multi-path features were not as widely used, only by 4 participants. We believe that participants may not have realized that creating multiple path selections per group was possible, instead assuming it to be similar to the single ``Current path'' state per window of most file managers. 
 
-Ascertaining DP's impact on task performance (h3) was the most difficult to ascertain, given the small sample size of our study and large number of factors influencing each person's performance.  While tasks were completed on average slightly faster than the control interface, these differences were not statistically significant.  However, more data sources seemed to be consulted (we use ``seemed'' carefully because these findings approached significance) during trials with DP over the control interface, which meant that people were looking at more diverse information than the control conditions.  We also found that participants justified their choices with a greater number of factors in DP than the control interface, suggesting that decisions may have been made considering a greater number of factors.  Participants entertained more possibilities for longer in the DP trial, while participants were more prone to eliminate candidates early in the baseline interface.  Finally, people took fewer notes in the DP condition than the baseline, suggesting that there was less need for external cognitive support in DP, which strongly indicates that DP made the task easier to complete.
+
+Assessing whether DP's improved task performance (h3) was the most difficult to ascertain, given the small sample size of our study and large number of factors influencing each person's performance.  While tasks were completed on average slightly faster than the control interface, these differences were not statistically significant.  However, more data sources seemed to be consulted (we use ``seemed'' carefully because these findings approached significance) during trials with DP over the control interface, which meant that people were looking at more diverse information than the control conditions.  We also found that participants justified their choices with a greater number of factors in DP than the control interface, suggesting that decisions may have been made considering a greater number of factors.  Participants entertained more possibilities for longer in the DP trial, while participants were more prone to eliminate candidates early in the baseline interface.  Finally, people took fewer notes in the DP condition than the baseline, suggesting that there was less need for external cognitive support in DP, which strongly indicates that DP made the task easier to complete.
+
 
 %% -> discussion and limitations
 \subsection{Design Limitations}
