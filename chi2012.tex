@@ -200,8 +200,9 @@ People said that they would like a website that could support the evolution of a
 
 \begin{table*}
 \small
-\begin{tabular}{p{2.0cm} p{1.8cm} p{1.8cm} p{1.8cm} p{1.8cm} p{1.8cm} p{1.8cm} p{1.8cm}}
-				& {\bf source}		& {\bf avg props/record}	& {\bf avg depth/record}	& {\bf equivalent props}	& {\bf prop name inconsistent}	& {\bf structural inconsistency} 	& {\bf model inconsistency} \\
+\begin{tabular}{p{2.0cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}  p{1.8cm}}
+				&				& {\bf average}				& {\bf average }				& 				& {\bf prop name}			& {\bf structural} 			& {\bf model } \\
+				& {\bf source}		& {\bf props/record}			& {\bf depth/record}			& {\bf equivalent to}	& {\bf inconsistent}			& {\bf inconsistency} 			& {\bf inconsistency} \\
 \hline
 social networking	& google+			& 12						& 1.52					& tw:5, li:4, fb:4		& tw:3, li:2, fb:2				& tw:0, li:1, fb:1				& tw:0, li:0, fb:0 \\
 (profiles)			& twitter			& 39						& 1.37					& li:4, fb:4 			& li:2, fb:1					& li:0, fb:0					& li:0, fb:0 \\
@@ -240,34 +241,18 @@ For each feed, 3-5 ``typical'' records of a single type were obtained; for socia
 
 The third metric measured the amount of overlap among the sources in each category.  This was done by determining \emph{equivalent properties} between schemas, which we did manually by creating an alignment table for all properties across all data sources in each category.  Each row of the alignment table comprised a property of a record from one data source, and all its closest matching properties from the others.  We used both property names and attribute descriptions (in documentation, if available) to make matching decisions; two properties were aligned if they seemed to model the same piece of information.
 
-Once the equivalent properties were established, we look at how many of these properties were terminologically consistent, that is, identified using the same property name.  If the names were different, we scored these as , followed by pairwise heterogeneity metrics described below.  An alternative approach to using instance documents was to directly compare schema definitions directly; however, many of the sites' schemas were not actually publicly available; second, that many of the schemas were not actually representative of typical data returned by the service. Thus we decided to use an instance document random sampling technique instead.
+Once the equivalent properties were established, we look at how many of these properties were terminologically inconsistent, that is, identified using different property names.   Then, ignoring property name, we looked to see if its values were structurally comparable.  If two fields were of the same data type and, if complex, had equivalent subfields, they were considered comparable; otherwise they were considered \emph{structurally inconsistent}.  An example of such a structural inconsistency were``birthday'' fields in Facebook and LinkedIn; Facebook represented it as a single string formatted ``MM/DD/YYYY'', while LinkedIn represented it as a sub-structure with separate ``Month'', ``Day'' and ``Year'' subfields.  
 
-The per-source metrics were as follows:
-\begin{itemize}
-\item \emph{Average Width of record} - Average number of properties per record.
-\item \emph{Average Depth of record} - Average depth of data record (number of subproperties in self-contained record). (In JSON/XML representations, this is the tree depth; for RDF  representations this is merely the number of embedded entity resource definitions included in the top-level query).
-\end{itemize}
-
-Heterogeneity was measured through \emph{pairwise consistency metrics} we derived from definitions in \cite{george2005understanding} and feature-metrics used in statistical instance alignment algorithms (such as summarised in \cite{bhattacharya2007collective}). Such metrics were chosen because they reflected the differences among data feeds at multiple levels -  the terminological (use of names/labels), structural, and modelling levels. Each such metric listed above is the result of averaging the pairwise score between sources in each category, separately and defined as follows:
-
-\begin{itemize}
-\item \emph{Terminological consistency} - Percent of property names that match
-\item \emph{Structural consistency} - Percent of properties that have \emph{compatible structures}
-\item \emph{Semantic/Model consistency} - Percent of entities/concepts that have corresponding fields 
-\item \emph{Value consistency} - Percent of values that are compatible
-\end{itemize}
+Finally, we looked at fields that were equivalent, yet which could not be compared for reasons other than the terminological and structural reasons above.  These \emph{modeling differences} were caused by a variety of reasons including, but not limited to, the following: measurement unit inconsistencies, how data was measured (e.g., dewpoint vs relative humidity), differences in scale or granularity, and mismatches in what was being modeled (``offer'' versus ``listing'').
 
 \subsubsection{Results}
 % TODO TODO TODO TODO 
 Our findings suggest that -- FILL ME IN HERE PLEASE, 
 
-
-
-
 \section{Designing DataPalette : An Interface for Serendipitous Data Mixing}
 \begin{figure*}[tbp]
 \begin{center}
-\includegraphics[width=18cm]{img/screenshot}
+\includegraphics[width=14cm]{img/screenshot}
 \caption{DataPalette Workspace, a file manager-inspired Drag and Drop interface for structured data mixing. Collapsable displays of data sources are listed on the left, from which instances or entire sets of items can be dragged to form a windoow (group) on the workspace.}
 \label{fig:workspace}
 \end{center}
