@@ -7,7 +7,7 @@
 	<key>ApplicationVersion</key>
 	<array>
 		<string>com.omnigroup.OmniGraffle</string>
-		<string>139.7.0.167456</string>
+		<string>139.16.0.171715</string>
 	</array>
 	<key>AutoAdjust</key>
 	<true/>
@@ -46,14 +46,14 @@
 	<key>Creator</key>
 	<string>Daniel Smith</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{326, 592}, {108, 40}}</string>
+			<string>{{704, 252}, {108, 40}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -134,7 +134,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{326, 224}, {108, 40}}</string>
+			<string>{{325, 252}, {108, 40}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -215,7 +215,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{388.375, 361.13479181129389}, {364, 344}}</string>
+			<string>{{753.75000476837158, 18.134791811293894}, {364, 344}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -245,7 +245,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{23.000002222313299, 363.37497007722936}, {360, 336}}</string>
+			<string>{{388.3750022223133, 20.134796142578125}, {360, 336}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -303,36 +303,6 @@
 				</dict>
 			</dict>
 		</dict>
-		<dict>
-			<key>Bounds</key>
-			<string>{{387.125, 18}, {362, 337}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>ID</key>
-			<integer>3</integer>
-			<key>ImageID</key>
-			<integer>1</integer>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-			</dict>
-		</dict>
 	</array>
 	<key>GridInfo</key>
 	<dict>
@@ -352,14 +322,12 @@
 		<dict/>
 		<dict/>
 		<dict/>
-		<dict/>
 	</array>
 	<key>ImageList</key>
 	<array>
 		<string>image4.tiff</string>
 		<string>image3.tiff</string>
 		<string>image2.tiff</string>
-		<string>image1.tiff</string>
 	</array>
 	<key>KeepToScale</key>
 	<false/>
@@ -398,7 +366,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-09-14 20:06:49 +0000</string>
+	<string>2012-09-18 20:41:21 +0000</string>
 	<key>Modifier</key>
 	<string>Daniel Smith</string>
 	<key>NotesVisible</key>
@@ -434,7 +402,7 @@
 		<key>NSPaperName</key>
 		<array>
 			<string>string</string>
-			<string>A0</string>
+			<string>C33F4542-5F90-4AD1-9E91-52C8D493310B</string>
 		</array>
 		<key>NSPaperSize</key>
 		<array>
@@ -489,7 +457,7 @@
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{57, 103}, {1284, 915}}</string>
+		<string>{{14, 113}, {1284, 915}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -503,7 +471,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{4, 0}, {1135, 761}}</string>
+		<string>{{6, 0}, {1135, 761}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
