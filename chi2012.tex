@@ -312,15 +312,15 @@ Unlike file managers, the basic unit of data is not a file, but an \emph{instanc
 
 \subsubsection{Multi-path selection: link-sliding for heterogeneous sets}
 
-\begin{figure}[htbp]
+Typically, users are interested in viewing and comparing the \emph{properties} of instances; for example, a user might be keen to examine a product's price, rating, manufacturer and so on.  An instance's properties are displayed beneath it; selecting a property creates a \emph{path selection}, which dereferences all of the instances in a group that contain the selected property and displays their corresponding values.  For example, when a user selects the \emph{manufacturer} property for a product, all products in the same group with a manufacturer property will be dereferenced, causing the manufactures to be displayed alongside their corresponding products.  When such a path selection is applied, the properties displayed are updated to be the set of properties of the \emph{terminating value of the path}, so that this value can be dereferenced further.  For example, once selecting a manufacturer, a user may want to know the product's manufacturer's reputation and selects their ``reputation score'' property, causing the previous path selection to be extended. This process is illustrated in Figure \ref{fig:multipathing}.
+
+\begin{figure}[h]
 \begin{center}
 \includegraphics[width=8.5cm]{img/multipathing}
 \caption{To see properties, users click on the name of the property. When instances do not have a particular property, additional property names can be added.}
 \label{fig:multipathing}
 \end{center}
 \end{figure}
-
-Typically, users are interested in viewing and comparing the \emph{properties} of instances; for example, a user might be keen to examine a product's price, rating, manufacturer and so on.  An instance's properties are displayed beneath it; selecting a property creates a \emph{path selection}, which dereferences all of the instances in a group that contain the selected property and displays their corresponding values.  For example, when a user selects the \emph{manufacturer} property for a product, all products in the same group with a manufacturer property will be dereferenced, causing the manufactures to be displayed alongside their corresponding products.  When such a path selection is applied, the properties displayed are updated to be the set of properties of the \emph{terminating value of the path}, so that this value can be dereferenced further.  For example, once selecting a manufacturer, a user may want to know the product's manufacturer's reputation and selects their ``reputation score'' property, causing the previous path selection to be extended. This process is illustrated in Figure \ref{fig:multipathing}.
 
 When instances cannot be dereferenced by the chosen path selection, an additional path selection can be created. As with the first path selection, it causes all matching instances to be dereferenced.  Each group can carry an arbitrary number of path selections, and each path selection can be extended continually by selecting successive properties of values. This achieves the ability to \emph{link slide} as introduced by Parallax~\cite{parallax}, but across sets of heterogeneous items by supporting multiple parallel dereferenced paths simultaneously.  
 
