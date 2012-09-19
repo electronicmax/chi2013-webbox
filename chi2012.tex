@@ -145,6 +145,11 @@ In this section, we motivate our work using three fields: PIM, data integration,
 
 Recently, users are experiencing data fragmentation~\cite{Jones05towardsa} across multiple web-based applications and services, and struggle to consolidate across them~\cite{bergman,boardmansasse}.  In our own previously-conducted field study, (reference anonymised) we observed variations of manual ``coping strategies'' (or, if programmers, elaborate, custom-coded one-off solutions) to allow people to manage both online and offline data.  Similar findings from other studies include Voida et al.'s observations of volunteer coordinators' ``homebrew databases'', manually-maintained information assemblages concocted to handle the widely varied and heterogeneous data collection requirements such groups needed to coordinate their activities \cite{Voida:2011:HDC:1978942.1979078}.
 
+A number of research PIM systems have demonstrated a great number of ways that users could benefit from better support for data integration.  For example, SEMEX's \cite{semex} rich uniform query interface allowed users to quickly trace references of people, places and things across files, folders and repositories.  Similarly, Haystack, a personal information platform, allowed users to visualise and customise how they worked with their data in a uniform, consolidated manner \cite{haystack}. Pertaining to each system's ability to integrate information from arbitrary new data sources, however, both systems generally required new sources to either already conform to a pre-specified set of ontologies, or have the user provide a manual specify such a mapping translation themselves.
+
+% i think we do not need to differentiate between semantic web and database integration here, we're saying they're both bad, let's lump them together to keep the argument flowing and not kill our readers
+The database integration and Semantic Web \cite{Shadbolt:2006:SWR:1155313.1155373} research communities have primarily focused efforts on purely-automatic approaches to the problem of data integration.  Such approaches typically take the form of either \emph{ontology} or \emph{schema-level matching}, or \emph{direct} or \emph{instance-level} matching.  We presently focus  on \emph{instance-level} matching, as schemas may not always be available, nor easily accessed by users. Approaches to automatic instance matching have included applied natural language processing (NLP) techniques for terminological matching (e.g., \cite{euzenat2004api}), machine-learning techniques that use both structural and terminological features for matching \cite{doan2003learning}, probabilistic approaches \cite{suchanek2011paris}, and instance schema comparisons using structural and logical definitions \cite{castano2006matching}.   In real-world settings, however, manual and semi-automatic matching approaches are favoured over automatic because of the need for high degrees of accuracy.  
+
 %In this section, we motivate our work using three fields: PIM, data integration, and end-user mashups and toolkits.  Our primary motivation stems from field studies in PIM, where consolidating and working with data from multiple sources has remained a challenge for over a decade. Recently however, users are experiencing data fragmentation~\cite{Jones05towardsa} across multiple web-based applications and services, and struggle to consolidate across them~\cite{bergman,boardmansasse}.  In our own previously-conducted field study, (reference anonymised) we observed variations of manual ``coping strategies'' (or, if programmers, elaborate, custom-coded one-off solutions) to allow people to manage both online and offline data.  Similar findings from other studies include Voida et al.'s observations of volunteer coordinators' ``homebrew databases'', manually-maintained information assemblages concocted to handle the widely varied and heterogeneous data collection requirements such groups needed to coordinate their activities \cite{Voida:2011:HDC:1978942.1979078}.
 %% TODO MORE HERE
 
@@ -155,14 +160,12 @@ Recently, users are experiencing data fragmentation~\cite{Jones05towardsa} acros
   %The problem stems from the fact that] we are trying to integrate data systems that were developed for slightly (or vastly) different business needs. Hence, even if they model overlapping domains, they will model them in different ways. Differing structures are a byproduct of human nature --- people think differently from one another even when faced with the same modelling goal. \cite{alonhalevy}
 %\end{quote}
 
-% i think we do not need to differentiate between semantic web and database integration here, we're saying they're both bad, let's lump them together to keep the argument flowing and not kill our readers
-The database integration and Semantic Web \cite{Shadbolt:2006:SWR:1155313.1155373} research communities have primarily focused efforts on purely-automatic approaches to the problem of data integration.  Such approaches typically take the form of either \emph{ontology} or \emph{schema-level matching}, or \emph{direct} or \emph{instance-level} matching.  We presently focus  on \emph{instance-level} matching, as schemas may not always be available, nor easily accessed by users. Approaches to automatic instance matching have included applied natural language processing (NLP) techniques for terminological matching (e.g., \cite{euzenat2004api}), machine-learning techniques that use both structural and terminological features for matching \cite{doan2003learning}, probabilistic approaches \cite{suchanek2011paris}, and instance schema comparisons using structural and logical definitions \cite{castano2006matching}.   In real-world settings, however, manual and semi-automatic matching approaches are favoured over automatic because of the need for high degrees of accuracy.  
 
-A different approach entirely has been taken in the web mash-up community; this community has largely focused on end-user interfaces that allow people to interactively reconcile data from multiple sources.  Yahoo Pipes! is a visual programming language aimed at letting novice programmers easily create data-transformation workflows, but remained rather challenging to  use and effort-intensive for one-off information tasks.  Mash-up makers such as Intel Mashmaker \cite{intel_mashmaker}, QDEWiki \cite{}, and TX2 \cite{}. DataPalette's approach is most directly inspired by ``lightweight'' visual, user-interactive data collection, consolidation and alignment tools such as Potluck \cite{citeulike:3875264} and Cards \cite{Dontcheva:2007:RCS:1294211.1294224}.
+% A different approach entirely has been taken in the web mash-up community; this community has largely focused on end-user interfaces that allow people to interactively reconcile data from multiple sources.  Yahoo Pipes! is a visual programming language aimed at letting novice programmers easily create data-transformation workflows, but remained rather challenging to  use and effort-intensive for one-off information tasks.  Mash-up makers such as Intel Mashmaker \cite{intel_mashmaker}, QDEWiki \cite{}, and TX2 \cite{}. DataPalette's approach is most directly inspired by ``lightweight'' visual, user-interactive data collection, consolidation and alignment tools such as Potluck \cite{citeulike:3875264} and Cards \cite{Dontcheva:2007:RCS:1294211.1294224}.
 
 % Semi-automatic approaches use varying levels of support to aid a user, from prompting users to manually check flagged alignments, to suggesting possible alignments.  Allowing users to compare instances across heterogeneous data is powerful because users can combine and evaluate multiple sources.  In principle, automatic instance matching approaches would allow users to seamlessly browse this data, however for now and the foreseeable future such approaches cannot make use of personal knowledge and do not guarantee their alignments.  Therefore, in our work, we adopt a semi-automated matching approach, which will support the user to make alignments between web data and their personal data.
 
-A number of research PIM systems have demonstrated a great number of ways that users could benefit from better support for data integration.  For example, SEMEX's \cite{semex} rich uniform query interface allowed users to quickly trace references of people, places and things across files, folders and repositories.  Similarly, Haystack, a personal information platform, allowed users to visualise and customise how they worked with their data in a uniform, consolidated manner \cite{haystack}. Pertaining to each system's ability to integrate information from arbitrary new data sources, however, both systems generally required new sources to either already conform to a pre-specified set of ontologies, or have the user provide a manual specify such a mapping translation themselves.
+
 
 
 % integrated into the above :: 
@@ -279,17 +282,16 @@ In summary, while data records ranged in complexity, no data source subsumed the
 
 %\section{Designing the DataPalette Interface}
 \section{Designing DataPalette : An Interface for Serendipitous Data Mixing}
+
 \begin{figure*}[tbp]
 \begin{center}
 \includegraphics[width=18cm]{img/screenshot}
-
 \caption{DataPalette Workspace, a file manager-inspired Drag and Drop interface for structured data mixing. Collapsible displays of data sources are listed on the left, from which instances or entire sets of items can be dragged to form a window (group) on the workspace.}
-
 \label{fig:workspace}
 \end{center}
 \end{figure*}
 
-At a high level, the overall goal of DataPalette was to empower end-users to mix arbitrary structured data feeds on-the-fly while solving their particular information task(s) - be them sense-making or decision-making related - in order to more effectively accomplish these tasks.  Unlike Mashup makers, including Yahoo Pipes!, the goal was to facilitate such integration without a need for an explicit separate mapping or integration step.  This would detract from the overall usability and usefulness of the system by requiring that users perform tasks that did not immediately contribute to their resolving their need.
+At a high level, the overall goal of DataPalette was to empower end-users to mix arbitrary structured data feeds on-the-fly while solving their particular information task(s) --- be them sense-making or decision-making related --- in order to more effectively accomplish these tasks.  Unlike Mashup makers, including Yahoo Pipes!, the goal was to facilitate such integration without a need for an explicit separate mapping or integration step.  Instead, DataPalette's approach is most directly inspired by ``lightweight'' visual, user-interactive data collection, consolidation and alignment tools such as Potluck \cite{citeulike:3875264} and Cards \cite{Dontcheva:2007:RCS:1294211.1294224}.
 
 The two pre-studies provided valuable insight towards this goal that allowed us to guide our design process. The first pre-study confirmed the need for data integration by showing that people did, in fact, prefer to rely upon multiple sources of information for making important decisions, and identified the kinds of sources people most commonly used.  The second pre-study revealed that the most common inconsistencies that occurred in the APIs and data feeds available through from such data sources consisted predominantly of the simpler kinds of heterogeneity - terminological and simpler forms of structural heterogeneity, rather than the delicate semantic/modelling variety, which were comparatively rare. This gave us optimism that an interactional approach optimised around the these simpler kinds of heterogeneity would be effective.  In the following sections we describe the design process we used to create prototype DataPalette, followed by a detailed description of the design of the prototype and justification.
 
@@ -325,6 +327,10 @@ Multiple selection group-dereferencing results in two effects:
 
 \subsubsection{Coreference consolidation: Drag-and-Drop Same-as}
 
+
+
+A major challenge with integration from multiple sources is coreference consolidation, or combining representations that co-refer to the same entity into one.  For example, consolidating one's friends from Facebook, Google+, and LinkedIn, one might quickly want to de-duplicate and combine friends that use multiple services so that they each have one representation.  Although we considered a way to do this automatically, PS.2 revealed no way to reliably identify co-referring instances; due to a lack of standard URIs across social networks, identifiers used by each network were system-specific and inconsistent. Thus, we sought to make instead make it user-driven, and easy to do manually.  
+
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=8.7cm]{img/sameas}
@@ -332,10 +338,6 @@ Multiple selection group-dereferencing results in two effects:
 \label{fig:sameas}
 \end{center}
 \end{figure}
-
-A major challenge with integration from multiple sources is coreference consolidation, or combining representations that co-refer to the same entity into one.  For example, consolidating one's friends from Facebook, Google+, and LinkedIn, one might quickly want to de-duplicate and combine friends that use multiple services so that they each have one representation.
-
-Although we considered a way to do this automatically, PS.2 revealed no way to reliably identify co-referring instances; due to a lack of standard URIs across social networks, identifiers used by each network were system-specific and inconsistent. Thus, we sought to make instead make it user-driven, and easy to do manually.  
 
 To remain consistent with the drag-and-drop interactions used throughout the interface, we introduced the ability to simply drag one instance on top of another to specify that two things should be combined.  This action also caused the \emph{same-as display} in the lower left of the screen to display this new combination relationship.  The display also acted as a mechanism to delete/undo combinations, which reverted representations of instances back to their original, separate forms. An illustration of this interaction is provided in Figure \ref{fig:sameas}. Although general, this can be tedious for groups of items.  Thus, to support more efficient combination, we extended this to allow entire groups to be dropped on other groups.  When this is done, DataPalette attempts to identify matching pairs among items in the dragged and target groups by comparing each pairs' labels.  Only exact matches (modulo white space/underscores) are considered matches and automatically combined.  The rest are added to the target group as distinct elements, and may be explicitly combined by hand.  We are considering more sophisticated / less fragile approaches to matching in the future, which would make the system assistive. 
 
@@ -418,26 +420,22 @@ The participants were given a standard desktop PC running MacOS X on a 22-inch m
 
 %Each study consisted of two tasks, one A and one B condition.  Each participant was given 10 minutes to complete a task.  In order to select which tasks the participant was given, we used a Latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute DataPalette tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
 
-\begin{table*}[t]
+\begin{table}[htbp]
 \begin{center}
 \small
-\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
+\begin{tabular}{|p{3cm}|p{4.7cm}|}
 \hline
-Task	 &Choices	&Data Sources\\
+Task	 & Data Sources\\
 \hline
-1) Three universities they would apply to study Sport Science & Universities: 1) Loughborough,  2) Durham,  3) Exeter, 4) Edinburgh, 5) Birmingham, and 6) Bath & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
+Three universities they would apply to study 1)~Sport Science, and 2)~History & www.thecompleteuniversityguide.co.uk, www.ucas.ac.uk, unistats.direct.gov.uk, www.timeshighereducation.co.uk/world-university-rankings\\
 \hline
-2) Three universities they would apply to study History & Universities: 1) Cambridge, 2) London School of Economics and Political Science, 3) Durham, 4) Oxford, 5) St Andrews, and 6) University College London & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
-\hline
-3) Restaurant they would book for 12 friends in Cambridge&Restaurants : 1) Alimentum, 2) Gardenia Restaurant, 3) The Cambridge Chop House, 4) Al Casbah, 5) Midsummer House Restaurant, and 6) Nando's Restaurant. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
-\hline
-4) Restaurant they would book for 12 friends in Glasgow & Restaurants :1) Black Sheep Bistro, 2) Charcoals, 3) Number 16 Family Restaurant, 4) Fanny Trollope's Cafe, 5) Two Fat Ladies At The Buttery, and 6) Sapori D'Italia. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
+Restaurant they would book for 12 friends in 3)~Cambridge, and 4)~Glasgow & www.yelp.co.uk, www.tripadvisor.co.uk, ratings.food.gov.uk, facebook and google plus.\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Tasks, choices and data sources} \label{tab:studyfactors}
+\caption{For each type of task we used two variables, which affected which data we used from the relevant data sources.} \label{tab:studyfactors}
 \normalsize
-\end{table*}%
+\end{table}
 
 
 
