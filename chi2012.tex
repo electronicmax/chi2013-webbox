@@ -338,7 +338,7 @@ A major challenge with integration from multiple sources is coreference consolid
 
 To remain consistent with the drag-and-drop interactions used throughout the interface, we introduced the ability to simply drag one instance on top of another to specify that two things should be combined.  This action also caused the \emph{same-as display} in the lower left of the screen to display this new combination relationship.  The display also acted as a mechanism to delete/undo combinations, which reverted representations of instances back to their original, separate forms. An illustration of this interaction is provided in Figure \ref{fig:sameas}. Although general, this can be tedious for groups of items.  Thus, to support more efficient combination, we extended this to allow entire groups to be dropped on other groups.  When this is done, DataPalette attempts to identify matching pairs among items in the dragged and target groups by comparing each pairs' labels.  Only exact matches (modulo white space/underscores) are considered matches and automatically combined.  The rest are added to the target group as distinct elements, and may be explicitly combined by hand.  We are considering more sophisticated / less fragile approaches to matching in the future, which would make the system assistive. 
 
-By making such consolidation user-driven, we gave the user freedom to combine things when it suited him or her. As we saw in the system evaluation, while in certain circumstances users preferred combining representations, in others people preferred to keep things separate.  Thus, user-initiated consolidation afforded an additional flexibility that was ultimately deemed beneficial.
+By making consolidation user-driven, we gave users freedom to combine things when it suited them. As we saw in the system evaluation, while in certain circumstances users preferred combining representations, in others people preferred not to.  Thus, user-initiated consolidation afforded an additional flexibility that was ultimately deemed beneficial.\looseness=-1
 
 \subsubsection{Enumerated-type value consolidation}
 PS.2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reconcile and consolidate corresponding values from different  data sources, we extended the drag and drop support of co-reference combination to also allow users to drag and drop to combine enumerated literal values as well.  
@@ -348,7 +348,7 @@ PS.2 revealed that enumerated values of properties were often inconsistent, e.g.
 To make it easier for people to quickly visually compare aspects of instances, we created a charting tool and integrated a mapping feature.  To make these tools suitable for fast use, e.g. data exploration, we designed these tools to automatically configure display parameters instances or groups of were dropped on them, rather than making users manually specify them. In the current prototype, the DWIM behaviour of the chart automatically sets whether the plot is a histogram representation (counts of values) or numeric value display based upon the types of the dereferenced values being plotted; values that are non-numeric are counted, while numeric values are displayed.    Similarly, the map was made to detect address strings and latitude/longitude pairs, geocoding them where appropriate, and determining the optimal bounding box to display all items at maximum zoom.
 
 \subsubsection{Model-based brushing}
-Since it can get confusing having a single instance represented across several groups, we provided \emph{universal brushing} across the interface; hovering over any representation of any instance (an instance block, a map marker or a histogram bar), causes all other visible representations of that instance to lightly glow, so that the user can quickly identify all the places that a single instance is represented
+Since it can get confusing having a single instance represented across several groups, we provided \emph{universal brushing} across the interface; hovering over any representation of any instance (an instance block, a map marker or a histogram bar), causes all other visible representations of that instance to lightly glow, so that the user can quickly identify all the places that a single instance is represented.
 
 % Data sources were represented as collapsible panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
 
@@ -390,7 +390,7 @@ We first describe our methodology, starting with the three hypotheses we set out
 \end{description}
 
 \subsubsection{Study and task design}
-To test these hypotheses, we designed a within-subjects (repeated measures) lab-based A-B study in which participants were asked to perform predefined subjective-choice tasks in two separate timed trials, once with the DP interface (``condition A'') and once with a baseline interface (``condition B'').  Each task was paired with one of two datasets, chosen depending on condition, which were fully counterbalanced in a Latin square design to eliminate potential ordering, task, and dataset biases.  
+To test these hypotheses, we designed a within-subjects (repeated measures) lab-based A-B study in which participants were asked to perform predefined subjective-choice tasks in two separate timed trials, once with the DP interface (condition A) and once with a baseline interface (condition B).  Each task was paired with one of two datasets, depending on condition, which were fully counterbalanced in a Latin square design to eliminate potential ordering, task, and dataset biases.\looseness=-1
 
 The participants were seated at a standard Macintosh desktop equipped with a 22-inch monitor with a standard keyboard and mouse. Each participant was given a maximum of 10 minutes to each of two tasks, but were told that if they finished earlier they could tell us and move on to the next condition.  Prior to A conditions, participants were trained on how to use DP using a five-minute instructional video.
 
@@ -481,7 +481,7 @@ The following four sections describe the metrics we used to measure task perform
 %We used three metrics to measure task performance: time to completion; the number of factors used in the choice; and the number of candidates evaluated.
 
 \subsubsection{Efficiency: Time taken}
-Participants spent an average of 8.9 minutes performing the tasks. Our interface, condition A, took slightly less time ($M=8.7$min, $SD=1.79$) per trial than condition B ($M=9.0$min; $SD=1.44$).  An ANOVA test of time taken by interface condition blocking by participant did not find interface use a significant predictor of task completion time.  Although across trials, the restaurant selection task took on average slightly less time ($M=8.8$min,$SD=1.58$) than the university trials ($M=8.9$min,$SD=1.66$), the aforementioned ANOVA test found task type to not be a significant predictor.
+Participants spent an average of 8.9 minutes performing the tasks. Condition A (DP) took slightly less time ($M=8.7$min, $SD=1.79$) per trial than condition B ($M=9.0$min; $SD=1.44$).  An ANOVA test of time taken by interface condition blocking by participant did not find interface use a significant predictor of task completion time.  Although across trials, the restaurant selection task took on average slightly less time ($M=8.8$min,$SD=1.58$) than the university trials ($M=8.9$min,$SD=1.66$), the aforementioned ANOVA test found task type to not be a significant predictor.
 
 \subsubsection{Thoroughness: Factors weighed in final choice}
 The second metric was the number of factors the participant considered in making their final choice. To determine this, we asked participants to explain precisely why they made their choice, and matched their justifications to properties in the data.  This analysis revealed the interface used made a significant impact on the number of factors weighed ($F(1,19)=3.95; p<0.10$); participants in the DP condition listed an average of 5.5 choices in their decision ($SD=1.7$) versus 4 ($SD=1.73$) in the standard condition.
@@ -492,8 +492,6 @@ The third metric we used to gauge how well the participant performed their tasks
 \subsubsection{Effort: External cognition}
 Although we did not have an explicit measure of effort for this experiment (such as NASA's TLX \cite{tlx}) the use of paper notes provided an indicator of how much participants had to keep track of during the study.  We found that participants took notes less on average (25\%) with the DP interface than the standard interface (35\%), a difference which approached significance in an ANOVA blocked by participant ($F(1,19)= 8.22; p\approx0.10$).
 
-\subsubsection{Candidate selection}
-
 \begin{figure}[htb]
 \begin{center}
 \includegraphics[width=8.5cm]{img/results}
@@ -502,12 +500,17 @@ Although we did not have an explicit measure of effort for this experiment (such
 \end{center}
 \end{figure}
 
-Since the tasks were subjective-choice, we could not evaluate the `correctness' of people's answers.  However, to determine whether there was a difference in variability of answers between interface conditions, we plotted their choice on a histogram for each trial, per task and dataset for both conditions, visible in Figure \ref{fig:chosen_results}.  As can be seen there is considerable variability and no discernible difference in variability between conditions.  
+
+\subsubsection{Candidate selection}
+
+Since the tasks were subjective-choice, we could not evaluate the `correctness' of answers.  However, to determine whether there was a difference in variability of answers between interface conditions, we plotted their choice on a histogram for each trial, per task and dataset for both conditions, visible in Figure \ref{fig:chosen_results}.  As can be seen there is considerable variability and no discernible difference in variability between conditions.  
+
+
 
 \subsection{Strategies: Successive Elimination vs Tallying}
 As described in later this section, we noticed several different strategies people used to evaluate each candidate selection. One common strategy was \emph{successive elimination} - to look at a single dimension at a time, starting with the most important, ruling out candidates that did not meet the required minimum for that value.  However, when there is no clear ``most important'' aspect, this  ``greedy-style'' can result in suboptimal decisions.  Another strategy, which we called \emph{tallying the pros and cons}, kept all candidates around, and counted up the advantages and disadvantages of each, potentially weighing each factor by its perceived importance.  This strategy is less vulnerable to getting stuck in local maxima than the former.
 
-To understand whether the interface influenced choice of strategy, we measured the number of candidates that the participant considered \emph{at final result}.  This we found was a strong marker for use of each strategy; people using the successive elimination strategy arrived with only 1-2 candidates at decision time, while those that tallied still maintained the entire starting set.  
+To understand whether the interface influenced choice of strategy, we measured the number of candidates the participant considered \emph{at final result}.  This is a strong marker for use of each strategy; people using the successive elimination strategy arrived with only 1--2 candidates at decision time, while those that tallied still maintained the entire starting set.\looseness=-1
 
 We found that the use of DP strongly influenced people to keep all candidates around, while participants in the B condition eliminated choices early.  An ANOVA test demonstrated a significant effect between condition and number of candidates maintained ($F(1,19)=5.323; p<0.05$); a post-hoc Tukey HSD test confirmed that the number of candidates used in the final choice for participants in the A condition ($M=5.85;SD=0.45$) differed significantly from the B condition ($M=4.95; SD=2.26$).
 
@@ -515,7 +518,7 @@ We found that the use of DP strongly influenced people to keep all candidates ar
 
 To determine whether participants used the data integration features of DP, we looked at use of the \emph{multi-path selection} and \emph{Same-As} features of the system.   Pertaining to path selection, all participants readily used the path selection process to select values.   Five participants (25\%) deliberately used multi-path selection, defined as selecting more than one active path per group at the same time to display common values across heterogeneous items. (We did not count accidental use of multi-path, such as happened a few times when a participant had an already active path and wanted to switch to a separate path accidentally).
 
-Participants used the drag-and-drop \emph{Same-As} capability extensively. Sixteen (80\%) used \emph{Same-As} as least once; among these participants, they used \emph{Same-As} an average of 4.6 times per trial. We counted a single ``use'' as a single drag-and-drop of an individual item, or a drag-and-drop operation of an entire group onto another.  (We did not differentiate enumerated value consolidation from entity consolidation, as these operations were not discernibly different from the interface perspective.)
+Participants used the drag-and-drop \emph{Same-As} capability extensively. Sixteen (80\%) used \emph{Same-As} as least once; among these participants, they used \emph{Same-As} an average of 4.6 times per trial. We counted a single ``use'' as a single drag-and-drop of an individual item, or a drag-and-drop operation of an entire group onto another (we did not differentiate enumerated value consolidation from entity consolidation, as these are not discernibly different from the interface perspective).\looseness=-1
 
 % we examined use on performance but nothing significant was found :/
 
@@ -523,7 +526,6 @@ Participants used the drag-and-drop \emph{Same-As} capability extensively. Sixte
 To determine to what extent visualisation tools were used in condition A, 13 (65\%) used charting tools at least once, while a majority (15, 75\%) used the map.  Determining the impact these had on performance, we performed a multiple regression on time taken with the number of uses of charting and mapping as variables.   We found significant effects of both charting and mapping variables on time taken, ($R^2_{adj} = 0.04; F(2,17)=3.79; p<0.05$), with coefficients ($Y_0=8.91;\beta_{charts}=0.49;\beta_{maps}=-1.05$) demonstrating that charting positively influenced time taken, while the use of maps led to shorter times.
 
 \subsection{Condition B: Results and Observations}
-
 Participants were given the option of using web sites and/or a spreadsheet to make their choices, using the same data as condition A. There was mixed use of websites and the spreadsheet, and we measured the fraction of the trial time spent in Excel versus looking at the sites in a 5-value range (0,25,50,75,100\%).  Six individuals used Excel entirely (100\%) without consulting the web sites, while one avoided Excel entirely. The uses of Excel for external cognition ranged from collation behaviour to tallying annotations, to colour-coding cells to allow easy identification of  ``pros'' and ``cons''.  The complete data collected is given in Table \ref{tbl:data}. In general, users struggled with both the websites and with the spreadsheet, although could generally find the information they required after a short period of frustration. 
 
 
