@@ -316,16 +316,15 @@ Typically, users are interested in viewing and comparing the \emph{properties} o
 \end{center}
 \end{figure}
 
-When instances cannot be dereferenced by the chosen path selection, an additional path selection can be created. As with the first path selection, it causes all matching instances to be dereferenced.  Each group can carry an arbitrary number of path selections, and each path selection can be extended continually by selecting successive properties of values. This achieves the ability to \emph{link slide} as introduced by Parallax~\cite{parallax}, but across sets of heterogeneous items by supporting multiple parallel dereferenced paths simultaneously.  
+When instances cannot be dereferenced by the chosen path selection, an additional path selection can be created. As with the first path selection, it causes all matching instances to be dereferenced.  Each group can carry an arbitrary number of path selections, and each path selection can be extended continually by selecting successive properties of values. This achieves the ability to \emph{link slide} as introduced by Parallax~\cite{parallax}, but across sets of heterogeneous items by supporting multiple parallel dereferenced paths simultaneously.  Multiple selection group-dereferencing results in two key benefits. First, that users can quickly compare all instances that have the same structure, and second, that instances with different property names and be quickly consolidated.
 
-Multiple selection group-dereferencing results in two effects: 
-
-\begin{enumerate}
-\item Clicking on a property dereferences all corresponding values makes it easy to quickly compare all instances that have the same structure.  Although we were concerned that users might be surprised that path selection applied to all objects within each group in parallel, users adapted very quickly and used this functionality to save them time.   
-
-\item Supporting dereferencing along different paths \emph{by structure} allows instances with different property names, and even sub-structures to be quickly consolidated by separate dereferencing, thereby effectively coping with terminological and structural heterogeneity.
-\end{enumerate}
-
+%
+%\begin{enumerate}
+%\item Clicking on a property dereferences all corresponding values makes it easy to quickly compare all instances that have the same structure.  Although we were concerned that users might be surprised that path selection applied to all objects within each group in parallel, users adapted very quickly and used this functionality to save them time.   
+%
+%\item Supporting dereferencing along different paths \emph{by structure} allows instances with different property names, and even sub-structures to be quickly consolidated by separate dereferencing, thereby effectively coping with terminological and structural heterogeneity.
+%\end{enumerate}
+%
 \subsubsection{Coreference consolidation: Drag-and-Drop Same-as}
 
 A major challenge with integration from multiple sources is coreference consolidation, or combining representations that co-refer to the same entity into one.  For example, consolidating one's friends from Facebook, Google+, and LinkedIn, one might quickly want to de-duplicate and combine friends that use multiple services so that they each have one representation.  Although we considered a way to do this automatically, PS.2 revealed no way to reliably identify co-referring instances; due to a lack of standard URIs across social networks, identifiers used by each network were system-specific and inconsistent. Thus, we sought to make instead make it user-driven, and easy to do manually.  
