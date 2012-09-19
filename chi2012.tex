@@ -19,7 +19,7 @@
 
 
 % Load basic packages
-\usepackage{balance}  % to better equalize the last page
+\usepackage{balance}  % to better equalise the last page
 \usepackage{graphics} % for EPS, load graphicx instead
 \usepackage{times}    % comment if you want LaTeX's default font
 \usepackage{url}      % llt: nicely formatted URLs
@@ -113,7 +113,7 @@ While people naturally draw from diverse information sources in the course of ro
 
 \section{Introduction}
 
-In recent years, an unprecedented quantity and variety of information has been made available as structured data on the Web.  This information has emerged from many channels, from the APIs now offered by most of the major retailers, apps, and social media sites, to the massive publishing of datasets by governmental and other institutions, to even the emergence of new kinds of data sources, such as wearable and smartphone-based biosensors.  A primary goal of making much of this data available has been to give end-user citizens the ability to make more informed decisions pertaining to their health, wealth, and well-being \cite{Shadbolt:2006:SWR:1155313.1155373}.  This data is predominately used by specialised app developers, journalists and other ``data specialists'' but remains inaccessible to citizens because of the available tools.  For example, the most commonly used structured personal information management (PIM) tools either manage a small, fixed set of data types (such as digital calendaring tools and  to-do list managers) or provide little or no support for structured data at all, such as text editors and sketching/drawing tools \cite{infoscraps}.   
+In recent years, an unprecedented quantity and variety of information has been made available as structured data on the Web.  This information has emerged from many channels, from the APIs now offered by most of the major retailers, apps, and social media sites, to the massive publishing of datasets by governmental and other institutions, to even the emergence of new kinds of data sources, such as wearable and smartphone-based bio-sensors.  A primary goal of making much of this data available has been to give end-user citizens the ability to make more informed decisions pertaining to their health, wealth, and well-being \cite{Shadbolt:2006:SWR:1155313.1155373}.  This data is predominately used by specialised app developers, journalists and other ``data specialists'' but remains inaccessible to citizens because of the available tools.  For example, the most commonly used structured personal information management (PIM) tools either manage a small, fixed set of data types (such as digital calendaring tools and  to-do list managers) or provide little or no support for structured data at all, such as text editors and sketching/drawing tools \cite{infoscraps}.   
 
 We hypothesise that end-users will benefit from tools that allow them effectively browse, use and consume heterogeneous structured data from diverse sources. In this paper, we present an investigation into extending PIM tools to effectively use emerging ecosystems of personal data.  We used a three-stage sequential exploratory mixed-method approach: first, we performed a qualitative analysis of a semi-structured interview pre-study to understand the types of tasks people performed using a plurality of information sources, and the processes that they relied upon to perform such tasks.  Our results suggested that people rely on multiple and diverse sources, then singular, integrated ones for a number of reasons, including coverage, reliability, and for alternative perspectives.  
 
@@ -153,8 +153,8 @@ Recently, users are experiencing data fragmentation~\cite{Jones05towardsa} acros
   %The problem stems from the fact that] we are trying to integrate data systems that were developed for slightly (or vastly) different business needs. Hence, even if they model overlapping domains, they will model them in different ways. Differing structures are a byproduct of human nature --- people think differently from one another even when faced with the same modelling goal. \cite{alonhalevy}
 %\end{quote}
 
-% i think we do not need to differentiate between semantic web and databse integration here, we're saying they're both bad, let's lump them together to keep the argument flowing and not kill our readers
-The database integration and Semantic Web \cite{Shadbolt:2006:SWR:1155313.1155373} research communities have primarily focused efforts on purely-automatic approaches to the problem of data integration.  Such approaches typically take the form of either \emph{ontology} or \emph{schema-level matching}, or \emph{direct} or \emph{instance-level} matching.  We presently focus  on \emph{instance-level} matching, as schemas may not always be available, nor easily accesssed by users. Approaches to automatic instance matching have included applied natural language processing (NLP) techniques for terminological matching (e.g., \cite{euzenat2004api}), machine-learning techniques that use both structural and terminological features for matching \cite{doan2003learning}, probabilistic approaches \cite{suchanek2011paris}, and instance schema comparisons using structural and logical definitions \cite{castano2006matching}.   In real-world settings, however, manual and semi-automatic matching approaches are favoured over automatic because of the need for high degrees of accuracy.  
+% i think we do not need to differentiate between semantic web and database integration here, we're saying they're both bad, let's lump them together to keep the argument flowing and not kill our readers
+The database integration and Semantic Web \cite{Shadbolt:2006:SWR:1155313.1155373} research communities have primarily focused efforts on purely-automatic approaches to the problem of data integration.  Such approaches typically take the form of either \emph{ontology} or \emph{schema-level matching}, or \emph{direct} or \emph{instance-level} matching.  We presently focus  on \emph{instance-level} matching, as schemas may not always be available, nor easily accessed by users. Approaches to automatic instance matching have included applied natural language processing (NLP) techniques for terminological matching (e.g., \cite{euzenat2004api}), machine-learning techniques that use both structural and terminological features for matching \cite{doan2003learning}, probabilistic approaches \cite{suchanek2011paris}, and instance schema comparisons using structural and logical definitions \cite{castano2006matching}.   In real-world settings, however, manual and semi-automatic matching approaches are favoured over automatic because of the need for high degrees of accuracy.  
 
 A different approach entirely has been taken in the web mash-up community; this community has largely focused on end-user interfaces that allow people to interactively reconcile data from multiple sources.  Yahoo Pipes! is a visual programming language aimed at letting novice programmers easily create data-transformation workflows, but remained rather challenging to  use and effort-intensive for one-off information tasks.  Mash-up makers such as Intel Mashmaker \cite{}, QDEWiki \cite{}, and TX2 \cite{}. DataPalette's approach is most directly inspired by ``lightweight'' visual, user-interactive data collection, consolidation and alignment tools such as Potluck \cite{citeulike:3875264} and Cards \cite{Dontcheva:2007:RCS:1294211.1294224}.
 
@@ -171,7 +171,7 @@ A number of research PIM systems have demonstrated a great number of ways that u
 % For our purposes of allowing users to explore and compare data from different websites, we are particularly interested in aligning instances of the most common forms of data that people compare from website to website.  Instance matching within this scope is in its infancy, some of its problems have been addressed by the record linkage problem in the database field \cite{fellegi1969theory,winkler1999state,gu2003record}.  However, there are new problems to address in this field, which are strongly related to schema matching, including structural heterogeneity and logical heterogeneity.
 % The approaches used to match instances typically use: natural language processing, using lexicons like Wordnet to identify synonyms, and word stems \cite{euzenat2004api}; machine learning techniques \cite{doan2003learning}; probabilistic approaches \cite{suchanek2011paris} and comparisons of instance schemas structural and logical definitions \cite{castano2006matching}.  In our case, this is problematic because information from the web does not always have a schema.  In real-world scenarios, semi-automatic ontology matching approaches are favoured over automatic because reconciling the differences between ontologies that were designed for different purposes is not always accurate.  Semi-automatic approaches use varying levels of support to aid a user, from prompting users to manually check flagged alignments, to suggesting possible alignments.  Allowing users to compare instances across heterogeneous data is powerful because users can combine and evaluate multiple sources.  In principle, automatic instance matching approaches would allow users to seamlessly browse this data, however for now and the foreseeable future such approaches cannot make use of personal knowledge and do not guarantee their alignments.  Therefore, in our work, we adopt a semi-automated matching approach, which will support the user to make alignments between web data and their personal data.
 
-\section{Pre-studies: The Need for and Challenges in realizing Ad-Hoc Data Integration in PIM Tools}
+\section{Pre-studies: The Need for and Challenges in realising Ad-Hoc Data Integration in PIM Tools}
 
 %% not sure where this goes >> but i want to keep it
 
@@ -340,7 +340,7 @@ To remain consistent with the drag-and-drop interactions used throughout the int
 By making such consolidation user-driven, we gave the user freedom to combine things when it suited him or her. As we saw in the system evaluation, while in certain circumstances users preferred combining representations, in others people preferred to keep things separate.  Thus, user-initiated consolidation afforded an additional flexibility that was ultimately deemed beneficial.
 
 \subsubsection{Enumerated-type value consolidation}
-PS.2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reconcile and consolidate corresponding values from different  datasources, we extended the drag and drop support of co-reference combination to also allow users to drag and drop to combine enumerated literal values as well.  
+PS.2 revealed that enumerated values of properties were often inconsistent, e.g. ``Casual dining'' vs ``Relaxed'' for a restaurant's ``atmosphere'' property. To reconcile and consolidate corresponding values from different  data sources, we extended the drag and drop support of co-reference combination to also allow users to drag and drop to combine enumerated literal values as well.  
 
 \subsubsection{``Do What I Mean'' Visualisation}
 
@@ -351,13 +351,13 @@ Since it can get confusing having a single instance represented across several g
 
 % Data sources were represented as collapsible panels in a sidebar on the left of the workspace, from which instances or entire data sources could be ``pulled off'' onto the workspace.  Figure \ref{fig:workspace} displays the entire UI overview.
 
-%% it would be nice if we had space to summarize but i fear we don't
+%% it would be nice if we had space to summarise but i fear we don't
 
 %% \subsection{Summary of interaction capabilities}
 %% \begin{itemize}
 %% \item \emph{Group multi-path value selection} - Selecting any of the %% properties of an instance in a group (window) causes all of the rest %% of the instances that have that property in that group to be %% dereferenced along the same property, displaying the resulting value %% underneath the instance label.  Selecting a further property of the %% resulting value further dereferences this value.
-%% \item \emph{Drag-and-drop coreference / value combination} - In order %% to specify that two instances correspond to the same entity, they can %% be simly dragged together
-%% \item \emph{Group-based Drag-and-drop matching} - In order to specify %% that two instances correspond to the same entity, they can be simly %% dragged together
+%% \item \emph{Drag-and-drop coreference / value combination} - In order %% to specify that two instances correspond to the same entity, they can %% be simply dragged together
+%% \item \emph{Group-based Drag-and-drop matching} - In order to specify %% that two instances correspond to the same entity, they can be simply %% dragged together
 %% \item \emph{Universal model-based brushing} -
 %% \end{itemize}
 
@@ -371,7 +371,7 @@ We first describe our methodology, starting with the three hypotheses we set out
 %These hypothesis pertain to the usability of DP by end-users (h1), whether DP achieves its stated goal of enabling end-users to integrate data (h2), and finally if it has an effect on task performance (h3) - either in how well people perform a task, how quickly they perform it, or if it reduces task effort, as follows:
 
 
-% heather: instead of these low-level hypotheses, i've made higher level ones that we can explicitly address in the disucssion section - the more hypotheses we have, the more we have to come back to them; since we're short on space we might as well keep it simple!
+% heather: instead of these low-level hypotheses, I've made higher level ones that we can explicitly address in the discussion section - the more hypotheses we have, the more we have to come back to them; since we're short on space we might as well keep it simple!
 
 %% Interaction-method specific hypotheses
 %% \begin{itemize}
@@ -410,11 +410,11 @@ We planned to analyse the qualitative and quantitative data using thematic and s
 We recruited participants through adverts posted near the University campus and e-mails to student mailing lists.  We screened participants to be at least 18 years of age, but did not filter or preferentially select participants based on any other criteria.  We took the first 20 that signed up and that successfully specified time slots that were available.   As described below in results, we ended up getting a large number of international students, who had varying proficiency in English.  Since all such participants had passed the requisite proficiency tests to enrol at University, we did not think this would substantially impact results.  Participants were offered a small gift certificate from an online retailer for their time. 
 
 \subsection{Experimental Setup}
-The participants were given a standard desktop PC running MacOS X on a 22-inch monitor with a standard keyboard and mouse.  During the studies the Excel workbook and DP were initially set to full screen.  Each participant was asked to complete two tasks, one A and one B condition.  Each participant was given a maximum of 10 minutes to complete a task, but were told that if they finished earlier they could tell us and move on to the next condition.  In order to select which tasks the participant was given, we used a latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute DataPalette tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
+The participants were given a standard desktop PC running MacOS X on a 22-inch monitor with a standard keyboard and mouse.  During the studies the Excel workbook and DP were initially set to full screen.  Each participant was asked to complete two tasks, one A and one B condition.  Each participant was given a maximum of 10 minutes to complete a task, but were told that if they finished earlier they could tell us and move on to the next condition.  In order to select which tasks the participant was given, we used a Latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute DataPalette tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
 
 %Each task had an A and B condition.  The A condition, the participant could only use DataPalette to make their decision; and in the B condition the participant was given the choice to using any websites they desired and or workbook in Microsoft Excel containing the data taken from the data sources to make their choice on individual spreadsheets.
 
-%Each study consisted of two tasks, one A and one B condition.  Each participant was given 10 minutes to complete a task.  In order to select which tasks the participant was given, we used a latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute DataPalette tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
+%Each study consisted of two tasks, one A and one B condition.  Each participant was given 10 minutes to complete a task.  In order to select which tasks the participant was given, we used a Latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute DataPalette tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
 
 \begin{table*}[t]
 \begin{center}
@@ -448,7 +448,7 @@ Task	 &Choices	&Data Sources\\
 
 \section{Results}
 
-Twenty-six (26) participants responded, from which we selected the first 20.  Ten participants were female.  All of the participants spoke English, but 12 of them were non-native English speakers.  Seven were non-students, comprising University staff and alumni; out of the remaining 13, eight studied computer science and 5 studied other subjects.   On average, each study took 40 mins to complete.  The information in Table \ref{tbl:data} summarises the metrics that were captured of the trials for each participant. We analyse this data next.
+Twenty-six (26) participants responded, from which we selected the first 20.  Ten participants were female.  All of the participants spoke English, but 12 of them were non-native English speakers.  Seven were non-students, comprising University staff and alumni; out of the remaining 13, eight studied computer science and 5 studied other subjects.   On average, each study took 40 minutes to complete.  The information in Table \ref{tbl:data} summarises the metrics that were captured of the trials for each participant. We analyse this data next.
 
 \begin{table*}[htbp]
 \small
@@ -647,7 +647,7 @@ A key design decision we made at the outset was to target the most common, simpl
 %What we might look at next -- follow-on work
 %		We focused on terminological heterogeneity -- didn't address structural heterogeneity, semantic heterogeneity
 %		We focused on finite (small) sets Streaming data (how do select future data --) 
-%		Scale - small data, what are the facilites required for large data
+%		Scale - small data, what are the facilities required for large data
 %		Collaborative - how might interaction support multiple users collaborating?
 %
 %Limitations found from study... what is the take away from the limitations
@@ -657,7 +657,7 @@ A key design decision we made at the outset was to target the most common, simpl
 % - data integration literature demands `correct' but perfect is the enemy of the good.
 % ``perfect'' be the enemy of the good
 
-%% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sensemaking scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
+%% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sense-making scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
 
 Just as journalism became peer-produced with the explosion of blogging, data journalism is on the brink of moving from skilled data analysts the likes of The Guardian Datablog staff\footnote{Guardian Datablog - \url{http://www.guardian.co.uk/news/datablog}} into the hands of the ordinary citizen \cite{datajournalismhandbook}.  In order for this to happen, however, tools that allow people to effectively combine data more effectively than current structured PIM tools and generic spreadsheet tools will become increasingly important. 
 
