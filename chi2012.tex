@@ -300,9 +300,9 @@ The two pre-studies provided valuable insight towards this goal that allowed us 
 \subsection{Design Process}
 We followed a five-phase spiral model consisting of planning, designing, mocking-up, prototyping, and testing to derive the design of DataPalette.  This process was used because of the high degree of initial uncertainty associated with the mechanisms for facilitating the various aspects of effective data mixing that we describe in the next section. We approached this design challenge through alternative generation and elimination; alternatives were designed, drawn up and evaluated by expert colleagues (and in later iterations, non-expert potential users), who provided critiques of the alternatives. The ease with which designs could be prototyped in HTML5 with modern web frameworks allowed us to perform this develop-test-iterate rapidly through seven iterations of this process.
 
-In order to feel familiar to new users, we borrowed the overall  ``look and feel'' from MacOS Finder-style file managers.  In the DataPalette workspace, shown in Figure \ref{fig:workspace}, the user can arbitrarily drag and drop entities from data sources (on the left) into windows that they create, resize, arrange and label. (Although the design could be generalised to supporting nested groups, our prototype only supported a single level of grouping.)
+In order to feel familiar to new users, we borrowed the overall  ``look and feel'' from MacOS Finder-style file managers.  In the DataPalette workspace, shown in Figure \ref{fig:workspace}, the user can freely drag and drop entities from data sources (on the left) into windows that they create, resize, arrange and label. (Although the design could be generalised to supporting nested groups, our prototype only supported a single level of grouping.)
 
-Unlike file managers, the basic unit of data is not a file, but an \emph{instance} - corresponding to an RDF instance or any small bit of structured data. In order to make working with relational graphs manageable, an early decision we made was to break up RDF-like relational data) into discrete instances with properties; for JSON or XML data feeds, we represented all subtrees with more than 1 child as its an instance.  
+Unlike file managers, the basic unit of data is not a file, but an \emph{instance} - corresponding to an RDF instance or any small bit of structured data. In order to make working with relational graphs manageable, an early decision we made was to break up RDF-like relational data) into discrete instances with properties (for JSON or XML data feeds, we represented all subtrees with more than 1 child as an instance).
 
 \subsubsection{Multi-path selection: link-sliding for heterogeneous sets}
 
@@ -327,8 +327,6 @@ Multiple selection group-dereferencing results in two effects:
 \end{enumerate}
 
 \subsubsection{Coreference consolidation: Drag-and-Drop Same-as}
-
-
 
 A major challenge with integration from multiple sources is coreference consolidation, or combining representations that co-refer to the same entity into one.  For example, consolidating one's friends from Facebook, Google+, and LinkedIn, one might quickly want to de-duplicate and combine friends that use multiple services so that they each have one representation.  Although we considered a way to do this automatically, PS.2 revealed no way to reliably identify co-referring instances; due to a lack of standard URIs across social networks, identifiers used by each network were system-specific and inconsistent. Thus, we sought to make instead make it user-driven, and easy to do manually.  
 
@@ -654,18 +652,18 @@ Our study had several limitations.  First, the small sample size of our study (2
 
 \section{Conclusions} %Key findings of the whole paper and its implications
 
+Just as the wise Italian in Voltaire's poem \emph{La Begueule} predicted,``the best is the enemy of the good'', we believe that the quest for complete approaches to data integration have perhaps caused more scruffy, ``ad-hoc'' approaches to be overlooked.  Based upon the results of our investigation, we believe that there are a number of advantages to user-driven data reconciliation over automatic to bespoke ones; specifically, this enables the user to combine data as part of his or her sensemaking process, using subjective judgement in the process
+
+%% the abililty to  In our investigation we found that complete approaches to data integration
+
 % - data integration literature demands `correct' but perfect is the enemy of the good.
 % ``perfect'' be the enemy of the good
-
 %% In this paper, we take the position that there is a need for a difference in focus between the approaches taken to data integration between the approaches taken in database integration and that of PIM, because of vast differences in requirements.  In database systems, the overall objective is usually to allow multiple large databases to be accessed as if one. This requires essentially full mapping of all data types and objects and well-defined semantics concerning where and how data gets converted. The upfront costs of such complete integration are typically high, but are typically justified in the long-term, high-volume use cases imagined. In typical sense-making scenarios of PIM, however, people might need to combine information from multiple sources for a one-off task; meaning that any upfront cost would directly impact the time and effort a person has allocated for their task.  Moreover, while a fully, uniform query capability might be nice, such capability is likely of less overall importance for a single quick task than simply being able to quickly and easily identify and cope with differences.
-
-
 % Just as journalism became peer-produced with the explosion of blogging, data journalism is on the brink of moving from skilled data analysts the likes of The Guardian Datablog staff\footnote{Guardian Datablog - \url{http://www.guardian.co.uk/news/datablog}} into the hands of the ordinary citizen \cite{datajournalismhandbook}.  In order for this to happen, however, tools that allow people to effectively combine data more effectively than current structured PIM tools and generic spreadsheet tools will become increasingly important. 
 
 Just as journalism became peer-produced with the explosion of blogging, data journalism is on the brink of moving from skilled data analysts the likes of The Guardian Datablog staff\footnote{Guardian Datablog - \url{http://www.guardian.co.uk/news/datablog}} into the hands of the ordinary citizen \footnote{Data Journalism Hand Book: \url{datajournalismhandbook.org}}.  In order for this to happen, however, tools that allow people to effectively combine data more effectively than current structured PIM tools and generic spreadsheet tools will become increasingly important. 
 
-
-\section{Acknowledgments}
+%% \section{Acknowledgments}
 
 
 % Balancing columns in a ref list is a bit of a pain because you
