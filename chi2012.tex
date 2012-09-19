@@ -312,15 +312,15 @@ Unlike file managers, the basic unit of data is not a file, but an \emph{instanc
 
 \subsubsection{Multi-path selection: link-sliding for heterogeneous sets}
 
-\begin{figure}[htbp]
+Typically, users are interested in viewing and comparing the \emph{properties} of instances; for example, a user might be keen to examine a product's price, rating, manufacturer and so on.  An instance's properties are displayed beneath it; selecting a property creates a \emph{path selection}, which dereferences all of the instances in a group that contain the selected property and displays their corresponding values.  For example, when a user selects the \emph{manufacturer} property for a product, all products in the same group with a manufacturer property will be dereferenced, causing the manufactures to be displayed alongside their corresponding products.  When such a path selection is applied, the properties displayed are updated to be the set of properties of the \emph{terminating value of the path}, so that this value can be dereferenced further.  For example, once selecting a manufacturer, a user may want to know the product's manufacturer's reputation and selects their ``reputation score'' property, causing the previous path selection to be extended. This process is illustrated in Figure \ref{fig:multipathing}.
+
+\begin{figure}[h]
 \begin{center}
-\includegraphics[width=8.5cm]{img/multipathing}
+\includegraphics[width=8.7cm]{img/multipathing}
 \caption{To see properties, users click on the name of the property. When instances do not have a particular property, additional property names can be added.}
 \label{fig:multipathing}
 \end{center}
 \end{figure}
-
-Typically, users are interested in viewing and comparing the \emph{properties} of instances; for example, a user might be keen to examine a product's price, rating, manufacturer and so on.  An instance's properties are displayed beneath it; selecting a property creates a \emph{path selection}, which dereferences all of the instances in a group that contain the selected property and displays their corresponding values.  For example, when a user selects the \emph{manufacturer} property for a product, all products in the same group with a manufacturer property will be dereferenced, causing the manufactures to be displayed alongside their corresponding products.  When such a path selection is applied, the properties displayed are updated to be the set of properties of the \emph{terminating value of the path}, so that this value can be dereferenced further.  For example, once selecting a manufacturer, a user may want to know the product's manufacturer's reputation and selects their ``reputation score'' property, causing the previous path selection to be extended. This process is illustrated in Figure \ref{fig:multipathing}.
 
 When instances cannot be dereferenced by the chosen path selection, an additional path selection can be created. As with the first path selection, it causes all matching instances to be dereferenced.  Each group can carry an arbitrary number of path selections, and each path selection can be extended continually by selecting successive properties of values. This achieves the ability to \emph{link slide} as introduced by Parallax~\cite{parallax}, but across sets of heterogeneous items by supporting multiple parallel dereferenced paths simultaneously.  
 
@@ -336,7 +336,7 @@ Multiple selection group-dereferencing results in two effects:
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=8.5cm]{img/sameas}
+\includegraphics[width=8.7cm]{img/sameas}
 \caption{\emph{Coreference consolidation with drag-and-drop Same-As} - When two instances represent the same entity, users can drag one on top of the other, and they are combined - effectively displaying the union of properties of both source entities. This can be un-done by deleting the Same-As relationship in the view in the lower-left corner of the workspace.}
 \label{fig:sameas}
 \end{center}
@@ -403,7 +403,7 @@ We first describe our methodology, starting with the three hypotheses we set out
 To test these hypotheses, we designed a within-subjects lab-based A-B study in which participants were asked to perform two predefined tasks in separate timed trials, once with the DP interface (``condition A'') and once with a baseline interface (``condition B'' which we describe below).  We used upon the within-subjects A-B format in order to make both quantitative measurements about an individual's performance with DP (relative to baseline), but also to make qualitative observations of the processes used by each participant as they solved each task.  Each task was paired with one of two datasets, depending on condition, so that we could evaluate whether the participant's performance of completing a task differed with different datasets.  Conditions and interface order were fully counterbalanced among participants to eliminate ordering and task bias.  
 
 % why? why were these tasks selected? can we drop in the phrase ``multi-dimensional subjective choice task'' and refer back to PS.1 to justify the choice of tasks?
-We based our two tasks on choosing a university and picking a restaurant for a large social event, because in PS.1 the majority of people stated that they had used multiple websites for these tasks.  We used different two different variables for both tasks, where the restaurant was located (Glasgow and Cambridge) and which subject people choose (sport science and history).  The cities Glasgow and Cambridge were chosen because they are not geographically close to the participants, they are two heavily populated areas that have a choice of restaurants, and they contained detail data about the same restaurants on various review sites.  When deciding on which cities to use, we found that different areas favoured different review websites and places such as Hull had sets of disjoint sets of restaurant reviews.  We selected the top restaurants for on Tripadvisor and Yelp, because they were the top two websites people quoted for comparing reviews when travelling.  We selected the two university courses at random from a list taken form the complete university guide\footnote{The Complete University Guide - \url{www.thecompleteuniversityguide.co.uk}}, and selected the top six university for that subject because they provide a realistic shortlist and are comparable in terms of rankings and properties.   We selected a shortlist of six because it is typical for users to narrow down their options to a limited selection before analysing the details of their final choice.
+We based our two tasks on choosing a university and picking a restaurant for a large social event, because in PS.1 the majority of people stated that they had used multiple websites for these tasks.  We used different two different variables for both tasks, where the restaurant was located (Glasgow and Cambridge) and which subject people chose (sport science and history).  The cities Glasgow and Cambridge were chosen because they are not geographically close to the participants, they are two heavily populated areas that have a choice of restaurants, and they contained detail data about the same restaurants on various review sites.  When deciding on which cities to use, we found that different areas favoured different review websites and places such as Hull had sets of disjoint sets of restaurant reviews.  We selected the top restaurants for on Tripadvisor and Yelp, because they were the top two websites people quoted for comparing reviews when travelling.  We selected the two university courses at random from a list taken form the complete university guide\footnote{The Complete University Guide - \url{www.thecompleteuniversityguide.co.uk}}, and selected the top six university for that subject because they provide a realistic shortlist and are comparable in terms of rankings and properties.   We selected a shortlist of six because it is typical for users to narrow down their options to a limited selection before analysing the details of their final choice.
 
 \subsubsection{Task preparation}
 % how data was prepared for each of the tasks; exactly how the A condition was done (full screen DP in a web browser, no outside access to apps),  B condition and why
@@ -427,45 +427,26 @@ The participants were given a standard desktop PC running MacOS X on a 22-inch m
 
 %Each study consisted of two tasks, one A and one B condition.  Each participant was given 10 minutes to complete a task.  In order to select which tasks the participant was given, we used a Latin square to permutate the tasks and conditions.  In order to train the user on how to use our interface, they viewed a five-minute DataPalette tutorial video introducing its basic functionality, how to use histograms and maps, and linking instances.
 
-\begin{table}[t]
+\begin{table*}[t]
 \begin{center}
 \small
-\begin{tabular}{|p{3cm}|p{5cm}|}
+\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
 \hline
-Task		&Data Sources\\
+Task	 &Choices	&Data Sources\\
 \hline
-Three universities they would apply to study 1)Sport Science and 2) History & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
+1) Three universities they would apply to study Sport Science & Universities: 1) Loughborough,  2) Durham,  3) Exeter, 4) Edinburgh, 5) Birmingham, and 6) Bath & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
 \hline
-Restaurant they would book for 12 friends in 3) Cambridge and 4) Glasgow& www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
+2) Three universities they would apply to study History & Universities: 1) Cambridge, 2) London School of Economics and Political Science, 3) Durham, 4) Oxford, 5) St Andrews, and 6) University College London & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
+\hline
+3) Restaurant they would book for 12 friends in Cambridge&Restaurants : 1) Alimentum, 2) Gardenia Restaurant, 3) The Cambridge Chop House, 4) Al Casbah, 5) Midsummer House Restaurant, and 6) Nando's Restaurant. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
+\hline
+4) Restaurant they would book for 12 friends in Glasgow & Restaurants :1) Black Sheep Bistro, 2) Charcoals, 3) Number 16 Family Restaurant, 4) Fanny Trollope's Cafe, 5) Two Fat Ladies At The Buttery, and 6) Sapori D'Italia. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
 \hline
 \end{tabular}
 \end{center}
 \caption{Tasks, choices and data sources} \label{tab:studyfactors}
 \normalsize
-\end{table}%
-
-
-
-%\begin{table*}[t]
-%\begin{center}
-%\small
-%\begin{tabular}{|p{4cm}|p{6cm}|p{6cm}|}
-%\hline
-%Task	 &Choices	&Data Sources\\
-%\hline
-%1) Three universities they would apply to study Sport Science & Universities: 1) Loughborough,  2) Durham,  3) Exeter, 4) Edinburgh, 5) Birmingham, and 6) Bath & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
-%\hline
-%2) Three universities they would apply to study History & Universities: 1) Cambridge, 2) London School of Economics and Political Science, 3) Durham, 4) Oxford, 5) St Andrews, and 6) University College London & http://www.thecompleteuniversityguide.co.uk/, http://www.ucas.ac.uk/, http://unistats.direct.gov.uk/, http://www.timeshighereducation.co.uk/world-university-rankings/ \\
-%\hline
-%3) Restaurant they would book for 12 friends in Cambridge&Restaurants : 1) Alimentum, 2) Gardenia Restaurant, 3) The Cambridge Chop House, 4) Al Casbah, 5) Midsummer House Restaurant, and 6) Nando's Restaurant. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
-%\hline
-%4) Restaurant they would book for 12 friends in Glasgow & Restaurants :1) Black Sheep Bistro, 2) Charcoals, 3) Number 16 Family Restaurant, 4) Fanny Trollope's Cafe, 5) Two Fat Ladies At The Buttery, and 6) Sapori D'Italia. & www.yelp.co.uk, www.tripadvisor.co.uk, http://ratings.food.gov.uk/, facebook and google plus.\\
-%\hline
-%\end{tabular}
-%\end{center}
-%\caption{Tasks, choices and data sources} \label{tab:studyfactors}
-%\normalsize
-%\end{table*}%
+\end{table*}%
 
 
 
