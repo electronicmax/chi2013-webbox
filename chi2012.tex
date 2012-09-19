@@ -192,11 +192,11 @@ The second pre-study focused on the characteristics of the data available from t
 % Rewritten with paragraph below; feel free to revert, or delete this if you're happy, or whatever.
 % We designed a semi-structured interview about tasks people performed online that required the use of multiple websites, and the processes people used to perform such tasks.  We analysed the data collected from this study using a thematic approach.  In our first pre-study, we investigated the types of tasks people performed online that required heterogeneous data sources, and which tools they would use to organise a social event involving around 15 people.  We planned to interview 8 participants, using a general interview guide approach based on a set of questions.  This approach allowed the interviewer to adapt the interview to the participant's experiences, while collecting the same general areas of information.  Each interview was recorded and notes taken, the interviewer was trained in the purpose of the study and to minimise bias.
 
-For the first pre-study, we conducted a semi-structured interview to understand the reasons and ways that people drew information from diverse information sources. We interviewed 8 participants, asking them to identify tasks that performed recently that required use of multiple information sources, the kinds of sources used, and the tools used to manage the resulting information.  We then inquired as to how each participant would go about planning various aspects of a large party, such as date, location and entertainment.
+For the first pre-study, we conducted a semi-structured interview to understand the reasons and ways that people drew information from diverse information sources. We interviewed 8 participants, asking them to identify tasks they performed recently that required use of multiple information sources, the kinds of sources used, and the tools used to manage the resulting information.  We then inquired as to how each participant would go about planning various aspects of a large party, such as date, location and entertainment.
 
 \subsubsection{Results - Heterogeneous Data Tasks}
 
-The 8 participants, recruited informally via word of mouth, consisted of 7 male and 1 female. They were split evenly into two age groups of 18--25 and 26--32.   
+The 8 participants, recruited informally via word of mouth, consisted of 7 males and 1 female. They were split evenly into two age groups of 18--25 and 26--32.   
 % mention # that were computer scientists here?
 
 %\subsubsection{Question 1: Heterogenous Data Tasks}
@@ -204,7 +204,7 @@ All participants reported regular use of multiple websites to accomplish tasks, 
 % Jim - Not sure if this is relevant. If it is, put it back in.
 % one participant said that video reviews of items were particularly helpful, as the aesthetics and scale of the item could be seen.
 % Social networks were identified to have different functions, such as different groups of people belong to each and share different types of opinions.  One participant said that they shared their outlook and gmail calendars, but only for work events and did not record social activities on them.
-To provide a full coverage of information, websites of different types were used, such as manufacturers website for technical details, review aggregators for a range of opinions, and Google maps for location-based decisions.
+To provide a full coverage of information, websites of different types were used, such as manufacturers websites for technical details, review aggregators for a range of opinions, and Google maps for location-based decisions.
 
 %\subsubsection{Question 2: Process Used to Organise a Large Social Event}
 
@@ -245,7 +245,7 @@ retail				& milo			& 5						& 1.2						& z:2, s:3, e:1, a:3	& z:2, s:2, e:1, a:3
 (products)			& zappos			& 6						& 1						& s:2, e:2, a:3		& s:2, e:2, a:2				& s:0, e:0, a:0				& s:0, e:0, a:0 \\
 				& shopping.com	& 11						& 3.74					& e:2, a:8			& e:2, a:8					& e:0, a:0					& e:0, a:0 \\
 				& etsy			& 31						& 1.13					& a:11			& a:10					& a:1						& a:2 \\
-				& amazon			& 108					&						&				& 						&						& \\
+				& amazon			& 108					& 1.96					&				& 						&						& \\
 \hline
 contacts			& google contacts	& 7						& 1.46					& yp:2			& yp:2					& yp: 0					& yp: 0 \\
 				& yellowpages		& 25						& 1						&				&						&						& \\
@@ -259,12 +259,12 @@ weather			& weatherbug		& 8						& 2						& wu: 5, y: 5		& wu: 5, y: 5				& wu: 
 (forecasts)		& wundergound	& 52						& 1.38					& y:12			& y:12					& y:7						& y:3 \\
 				& yahoo weather	& 22						& 1.58					&				&						&						& \\
 \end{tabular}
-\caption{\emph{PS.2 Analysis of Data Feeds} - Structural statistics about data sampled from each API organised by category.  The first column lists the category and type of data record that was examined.  Cols 3 and 4 list the average number of properties per data record, and number of levels from root to leaf. The remaining fields show results from a pairwise analysis of data records from each of the data sources with those of the others in each category; values are prefixed with the first letter(s) of the target schema the row schema was compared against. For example ``Tw:5'' in the 5th column of Google+ row indicates that Facebook and Twitter records had 5 equivalent fields. }\label{tbl:prestudy2}
+\caption{\emph{PS.2 Analysis of Data Feeds}: Structural statistics about data sampled from each API organised by category.  The first column lists the category and type of data record that was examined.  Columns 3 and 4 list the average number of properties per data record, and number of levels from root to leaf. The remaining fields show results from a pairwise analysis of data records from each of the data sources with those of the others in each category; values are prefixed with the first letter(s) of the target schema the row schema was compared against. For example ``Tw:5'' in the 5th column of Google+ row indicates that Facebook and Twitter records had 5 equivalent fields. }\label{tbl:prestudy2}
 \end{table*}
 
 
 \subsection{PS.2 - Technical Challenges of Data Integration}
-Our analysis of structured data feeds started with identifying a set of candidate sources to examine.  We consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb - \url{http://www.programmableweb.com/apis/directory}} list of most popular data feeds for this purpose.  To increase the variety of sources, we selected from 5 categories: social network services, retailers, online event calendars, music sites, and weather, selecting 2--5 sources from each, for a total of 20.  
+Our analysis of structured data feeds started with identifying a set of candidate sources to examine.  We consulted the ProgrammableWeb API directory\footnote{ProgrammableWeb: \url{http://www.programmableweb.com/apis/directory}} list of most popular data feeds for this purpose.  To increase the variety of sources, we selected from 5 categories: social network services, retailers, online event calendars, music sites, and weather, selecting 2--5 sources from each, for a total of 20.  
 
 For each feed, 3--5 ``typical'' records of a single type were obtained; for social networking sites this was user profiles, for retail sites this was product info, etc.
 %Records were located either by first querying for popular key terms using each site's keyword query API (if available), or a ``top products'' query if available.  
@@ -298,7 +298,7 @@ In summary, while data records ranged in complexity, no source subsumed the rest
 
 At a high level, the overall goal of DataPalette was to empower end-users to mix arbitrary structured data feeds on-the-fly while solving their particular information task(s) --- be them sense-making or decision-making related --- in order to more effectively accomplish these tasks.  Unlike Mashup makers, including Yahoo Pipes!, the goal was to facilitate such integration without a need for an explicit separate mapping or integration step.  Instead, DataPalette's approach is most directly inspired by ``lightweight'' visual, user-interactive data collection, consolidation and alignment tools such as Potluck \cite{citeulike:3875264} and Cards \cite{Dontcheva:2007:RCS:1294211.1294224}.
 
-The two pre-studies provided valuable insight towards this goal that allowed us to guide our design process. PS.1 confirmed the need for data integration by showing that people preferred to rely upon multiple sources of information for making important decisions, and identified the kinds of sources most commonly used.  PS.2, meanwhile, revealed that the most common kinds of heterogeneity across data feeds were of the terminological structural varieties. As these were the ``simpler'' kinds of heterogeneity, this gave us optimism that an interactional approach would be feasible.  In the following sections, we describe the design process we used to create prototype DataPalette, followed by a detailed description of the design of the prototype and justification.
+The two pre-studies provided valuable insight towards this goal that allowed us to guide our design process. PS.1 confirmed the need for data integration by showing that people preferred to rely upon multiple sources of information for making important decisions, and identified the kinds of sources most commonly used.  PS.2, meanwhile, revealed that the most common kinds of heterogeneity across data feeds were of the terminological structural varieties. As these were the ``simpler'' kinds of heterogeneity, this gave us optimism that an interactional approach would be feasible.  In the following sections, we describe the design process we used to create the prototype of DataPalette, followed by a detailed description of the design of the prototype and justification.
 
 \subsection{Design Process}
 We followed a five-phase spiral model consisting of planning, designing, mocking-up, prototyping, and testing to derive the design of DataPalette.  This process was used because of the high degree of initial uncertainty associated with how we'd achieve effective data mixing by end-users. We approached this design challenge through alternative generation and elimination; alternatives were designed, drawn up and evaluated by colleagues (and in later iterations, non-expert potential users), who critiqued the alternatives. The ease with which designs could be prototyped in HTML5 with modern web frameworks allowed us to perform this develop-test-iterate rapidly through seven iterations of this process.
