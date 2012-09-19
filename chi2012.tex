@@ -486,15 +486,15 @@ The following four sections describe the metrics we used to measure task perform
 Participants spent an average of 8.9 minutes performing the tasks. Condition A (DP) took slightly less time ($M=8.7$min, $SD=1.79$) per trial than condition B ($M=9.0$min; $SD=1.44$); however, a 2-way repeated measures ANOVA test of time taken by interface condition, blocked by participant ID, revealed that interface condition did not have a significant effect on task completion time.  This analysis also showed no significant effect of participant ID on task completion.  Comparing tasks, the restaurant selection task took on average slightly less time ($M=8.8$min,$SD=1.58$) than the university trials ($M=8.9$min,$SD=1.66$), but this difference was not significant. 
 
 \subsubsection{Thoroughness: Factors weighed in final choice}
-The second metric was the number of factors the participant considered in making their final choice. To determine this, we asked participants to explain why they made their choice(s), and recorded the number of distinct data dimensions mentioned.  An ANOVA revealed a significant effect of interface on the number of such factors mentioned; post-hoc analysis using Tukey-Schiffe adjustments indicated that participants in the DP condition mentioned significantly more dimensions in their final decisions ($M=5.5; SD=1.7$) than those in the control condition ($M=4; SD=1.73$), $F(1,19)=3.95; p<0.10$. A strong significant effect was also observed between participant ID and number of dimensions mentioned, meaning people differed significantly on the number of reasons they gave ($F(19,19)=4.53 p < 0.001$).
+The second metric was the number of factors the participant considered in making their final choice. To determine this, we asked participants to explain why they made their choice(s), and recorded the number of distinct data dimensions mentioned.  A 2-way ANOVA test of the effect of interface and participant ID on the number of factors mentioned revealed a significant effect; post-hoc analysis with Tukey-Schiffe adjustments indicated that participants in the DP condition mentioned significantly more factors in their final decisions ($M=5.5; SD=1.7$) than those in the control condition ($M=4; SD=1.73$), $F(1,19)=3.95; p<0.10$. A strong significant effect was also observed between participant ID and number of dimensions mentioned, meaning some participants mentioned significantly more factors than others ($F(19,19)=4.53; p < 0.001$).
 
 \subsubsection{Diversity: Data sources consulted}
-The third metric we used to gauge how well the participant performed their tasks is the number of different data sources the participant consulted during the trial. In this metric, participants used an average of 88\% of data sources provided in the DP case, compared to 80\% in the standard interface, although an ANOVA test blocking on participant demonstrated that interface choice only approached significance in predicting the number of sources consulted ($F(1,19)=0.04$ $p\approx0.10$).
+The third metric we used to gauge the task performance is the number of different data sources consulted during the trial; our rationale for this metric was that more informed decisions derived from more thorough consideration of available data. In this metric, participants used an average of 88\% ($SD=0.13$) of data sources provided in the DP case, compared to 80\% ($SD=0.18$)in the standard interface, although an ANOVA test blocking on participant demonstrated that interface choice only approached significance ($F(1,19)=0.04$ $p\approx0.10$).
 
 \subsubsection{Effort: External cognition}
-Although we did not have an explicit measure of effort for this experiment (such as NASA's TLX \cite{tlx}) the use of paper notes provided an indicator of how much participants had to keep track of during the study.  We found that participants took notes less on average (25\%) with the DP interface than the standard interface (35\%), a difference which approached significance in an ANOVA blocked by participant ($F(1,19)= 8.22; p\approx0.10$).
+Although we did not have an explicit measure of effort for this experiment (such as NASA's TLX \cite{tlx}) the use of paper notes provided an indicator of how much information participants had to keep track of during the study.  We found that participants took notes less on average (25\%) with the DP interface than the standard interface (35\%), a difference which approached significance in a 2-way ANOVA blocked by participant ID ($F(1,19)= 8.22; p\approx0.10$).
 
-\begin{figure}[htb]
+\begin{figure}[tbp]
 \begin{center}
 \includegraphics[width=8.5cm]{img/results}
 \caption{\emph{Choice picks per participant trial} - Histogram of number of times each restaurant/university was chosen in DP interface (A condition) in blue/left bars, compared to the Excel/website (B condition) in red/to the right.}
@@ -502,12 +502,8 @@ Although we did not have an explicit measure of effort for this experiment (such
 \end{center}
 \end{figure}
 
-
 \subsubsection{Candidate selection}
-
 Since the tasks were subjective-choice, we could not evaluate the `correctness' of answers.  However, to determine whether there was a difference in variability of answers between interface conditions, we plotted their choice on a histogram for each trial, per task and dataset for both conditions, visible in Figure \ref{fig:chosen_results}.  As can be seen there is considerable variability and no discernible difference in variability between conditions.  
-
-
 
 \subsection{Strategies: Successive Elimination vs Tallying}
 As described in later this section, we noticed several different strategies people used to evaluate each candidate selection. One common strategy was \emph{successive elimination} - to look at a single dimension at a time, starting with the most important, ruling out candidates that did not meet the required minimum for that value.  However, when there is no clear ``most important'' aspect, this  ``greedy-style'' can result in suboptimal decisions.  Another strategy, which we called \emph{tallying the pros and cons}, kept all candidates around, and counted up the advantages and disadvantages of each, potentially weighing each factor by its perceived importance.  This strategy is less vulnerable to getting stuck in local maxima than the former.
