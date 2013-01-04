@@ -69,24 +69,12 @@ breaklinks=true,
 
 \title{Carp\'{e} Data: Supporting Serendipitous Data Integration in Personal Information Management}
 
-%% \numberofauthors{0}
-%% \author{
-%%   \alignauthor 1st Author Name\\
-%%     \affaddr{Affiliation}\\
-%%     \affaddr{Address}\\
-%%     \email{e-mail address}\\
-%%     \affaddr{Optional phone number}
-%%   \alignauthor 2nd Author Name\\
-%%     \affaddr{Affiliation}\\
-%%     \affaddr{Address}\\
-%%     \email{e-mail address}\\
-%%     \affaddr{Optional phone number}    
-%%   \alignauthor 3rd Author Name\\
-%%     \affaddr{Affiliation}\\
-%%     \affaddr{Address}\\
-%%     \email{e-mail address}\\
-%%     \affaddr{Optional phone number}
-%% }
+\numberofauthors{1}
+ \author{
+   \alignauthor Max Van Kleek, Daniel A. Smith, Heather R. Packer, James Skinner, Nigel R. Shadbolt \\
+     \affaddr{School of Electronics and Computer Science}\\
+     \affaddr{University of Southampton, Southampton UK}\\
+     \email{\{emax, ds, hp3, js40g09, nrs\}@ecs.soton.ac.uk}}
 
 % Teaser figure can go here
 %\teaser{
@@ -99,12 +87,10 @@ breaklinks=true,
 \maketitle
 
 \begin{abstract}
+The information processing capabilities of humans enable us to opportunistically draw evidence from available information sources to carry out tasks effectively.  However, in the digital realm, serendipitously combining structured data from different sources without prior careful alignment or integration remains difficult due to problems of heterogeneity that arise when data modeled and represented differently are brought together.  In this paper, we investigate the feasibility of extending digital Personal Information Management (PIM) tools to support lightweight, user-driven mixing of previously un-integrated data, towards enabling users to more effectively and routinely take advantage of the vast emerging ecosystems of structured data on the Web.  We conducted an exploratory, sequential, mixed-method investigation, starting with two pre-studies of the data integration needs and challenges, respectively, of Web-based data sources. These observations led to our design of \emph{DataPalette}, an interface that introduced simple co-reference and group multi-path-selection mechanisms for working with terminologically and structurally heterogeneous data.  Our lab study showed that participants understood the interaction mechanisms introduced, and made more carefully-justified decisions during subjective-choice tasks when using DataPalette than when using a control interface, drawing information from more data sources in the process.
 
-While people naturally draw from diverse information sources in the course of routine decision-making tasks, complementary support for managing heterogeneous data in digital Personal Information Management (PIM) tools remains poor.
-In this paper, we present an initial investigation of user-driven, ad-hoc data integration approaches for PIM, towards enabling greater use of the emerging ecosystems of structured data on the Web.
-We conducted an exploratory, sequential, mixed-method investigation, starting with two pre-studies of the data integration needs and challenges, respectively, of Web-based data sources.
-These observations led to our design of DataPalette, an interface that introduced simple co-reference and group multi-path-selection mechanisms for working with terminologically and structurally heterogeneous data.  
-Our lab study showed that participants understood the interaction mechanisms introduced, and made more carefully-justified decisions during subjective-choice tasks when using DataPalette than when using a control interface, drawing information from more data sources in the process.
+
+% While people naturally draw from diverse information sources in the course of routine decision-making tasks, complementary support for managing heterogeneous data in digital Personal Information Management (PIM) tools remains poor. In this paper, we present an initial investigation of user-driven, ad-hoc data integration approaches for PIM, towards enabling greater use of the emerging ecosystems of structured data on the Web. We conducted an exploratory, sequential, mixed-method investigation, starting with two pre-studies of the data integration needs and challenges, respectively, of Web-based data sources. These observations led to our design of DataPalette, an interface that introduced simple co-reference and group multi-path-selection mechanisms for working with terminologically and structurally heterogeneous data.  Our lab study showed that participants understood the interaction mechanisms introduced, and made more carefully-justified decisions during subjective-choice tasks when using DataPalette than when using a control interface, drawing information from more data sources in the process.
 
 %% While people naturally draw from diverse information sources in the course of routine decision-making, complementary support for managing diverse, heterogeneous data in digital Personal Information Management (PIM) tools remains poor.
 %% In this paper, we present an exploratory initial investigation of user-driven, ad-hoc data integration approaches for PIM, towards enabling greater use of emerging ecosystems of structured data available on the Web.
@@ -143,7 +129,7 @@ In this section, we motivate our work using three fields: PIM, data integration,
 The problem stems from [the fact that] we are trying to integrate data systems that were developed for slightly (or vastly) different business needs. Hence, even if they model overlapping domains, they will model them in different ways. Differing structures are a byproduct of human nature --- people think differently from one another even when faced with the same modelling goal~\cite{halevy2006data}.\looseness=-1
 \end{quote}
 
-A result of this problem is that users can experience data fragmentation~\cite{Jones05towardsa} across multiple web-based applications and services, and struggle to consolidate across them~\cite{bergman,boardmansasse}.  In our own previously-conducted field study, (reference anonymised) we observed variations of manual ``coping strategies'' (or, if programmers, elaborate, custom-coded one-off solutions) to allow people to manage both online and offline data.  Similar findings from other studies observed volunteers' ``homebrew databases'': manually-maintained information collated to handle the heterogeneous data requirements of groups needing to coordinate their activities~\cite{Voida:2011:HDC:1978942.1979078}.\looseness=-1
+A result of this problem is that users can experience data fragmentation~\cite{Jones05towardsa} across multiple web-based applications and services, and struggle to consolidate across them~\cite{bergman,boardmansasse}.  In our own previously-conducted field study, \cite{infoscraps} we observed variations of manual ``coping strategies'' (or, if programmers, elaborate, custom-coded one-off solutions) to allow people to manage both online and offline data.  Similar findings from other studies observed volunteers' ``homebrew databases'': manually-maintained information collated to handle the heterogeneous data requirements of groups needing to coordinate their activities~\cite{Voida:2011:HDC:1978942.1979078}.\looseness=-1
 
 A number of research PIM systems have demonstrated how users benefit from unified, integrated data models.  SEMEX's~\cite{semex} uniform query interface allows users to quickly trace references of people, places and things across files, folders and repositories.  Similarly, Haystack  allows users to visualise and customise how they worked with their data in a uniform, consolidated manner \cite{haystack}. 
 % Pertaining to each system's ability to integrate information from arbitrary new data sources, however, both systems generally required new sources to either already conform to pre-specified ontologies, or have the user specify such a mapping manually.
