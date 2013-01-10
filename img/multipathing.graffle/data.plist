@@ -53,7 +53,7 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
-			<string>{{663, 128}, {108, 40}}</string>
+			<string>{{634, 128}, {108, 40}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -131,6 +131,36 @@
 			<string>{{0.125, 0.25}, {0.75, 0.5}}</string>
 			<key>isConnectedShape</key>
 			<true/>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{704, 22}, {353, 297}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>38</integer>
+			<key>ImageID</key>
+			<integer>8</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -215,43 +245,13 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{381, 22}, {353, 297}}</string>
+			<string>{{366, 22}, {353, 297}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>39</integer>
 			<key>ImageID</key>
 			<integer>9</integer>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>Bounds</key>
-			<string>{{734, 22}, {353, 297}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>ID</key>
-			<integer>38</integer>
-			<key>ImageID</key>
-			<integer>8</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -366,7 +366,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-09-18 21:41:57 +0000</string>
+	<string>2013-01-10 08:48:34 +0000</string>
 	<key>Modifier</key>
 	<string>Daniel Smith</string>
 	<key>NotesVisible</key>
@@ -402,7 +402,7 @@
 		<key>NSPaperName</key>
 		<array>
 			<string>string</string>
-			<string>36F2FAAF-C3E2-4821-B1FB-2E5BC35CB674</string>
+			<string>F97E39BB-0B06-43A9-B5A9-988074DB082C</string>
 		</array>
 		<key>NSPaperSize</key>
 		<array>
@@ -457,7 +457,7 @@
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{92, 83}, {1284, 915}}</string>
+		<string>{{83, 83}, {1284, 915}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
