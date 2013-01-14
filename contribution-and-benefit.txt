@@ -1,0 +1,1 @@
+This paper focuses on the problem of user-driven data integration on the Web, with the goal of enabling end-users to use the emerging ecosystems of structured data APIs and feeds.
