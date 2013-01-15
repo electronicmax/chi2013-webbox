@@ -96,42 +96,49 @@ Existing approaches to electronic integrated health records have largely focused
 
 
 \section{Introduction}
-
 A key goal in improving patient-clinician communication is
 establishing a common context for communication with which a shared
 understanding can be established.  This understanding is
 bi-directional, in the sense that the patient needs to be able to
 effectively interpret what the clincian is trying to convey to him or
-her, but also the clinician needs to be able to arrive at an accurate
-characterisation of the patient's situation (often under time
-constraints) as updated since the last time the clinician met with the
-patient.
+her, but also that the clinician needs to be able to arrive at an
+accurate characterisation of the patient's situation and condition, as
+updated since the patient was last seen, often under time pressure and
+other constraints. 
 
 One of the most promising technologies that has the potential to help
 provide such a common context is the patient-centric electronic health
 record (henceforth EHR)\cite{ehr}, a digital representation of the
 complete medical history of an individual as recorded by clinicians
-throughout a patient's life. The EHR promises to enable both
-patients and their clinicians unfettered access to the patient's
-medical data, including diagnostics, reports, and history of
-interventions.  This means that clinicians can more easily review a
-patient's long-term history in the course of basing interpretations
-and interventions. Moreover, since patients have access to their own
-medical histories, there is (theoretically) a basis by which patients
-can understand the justifications for clinicial prognoses.
+throughout a patient's life. The EHR has enabled both patients and
+their clinicians unfettered access to the patient's medical data,
+including diagnostics, reports, and history of interventions.  This
+means that clinicians can more easily review a patient's long-term
+history even under time pressure and constriants. Moreover, since
+patients have access to their own medical histories, they can access
+the raw information that was the basis for a prognosis or decision.
 
 % proactive activity recording to provide sketches of a person's
 % activity profiles outside of the hospital, streaming data
 
-Yet so far, the ``medical history'' that EHRs have been used to store
-have constituted only the official diagnoses and diagnostic reports
-prepared by clinicians, technicians and nurses
+Yet, so far, EHRs have primarily been limited to the storage of
+official diagnoses and diagnostic reports prepared by clinicians,
+technicians and nurses.  These communications are both highly
+technical, making them difficult to interpret by end-user patients,
+but also highly limited in temporal resolution, reflecting only cases
+where a person was attended to and diagnostic-tested by a medical
+professional.  Although this may be frequent for patients in inpatient
+care, those that come to see their clinician, say, once a month end up
+with extremely low-resolution views of a patient's condition.
 
-
-% challenges to 
-% background on authors
-% 
-
+In this position paper, we look at the potential and problems of
+augmenting the next generation of EHRs with \emph{personal activity
+  diaries}, portraits of a person's dynamic condition captured at high
+temporal fidelity.  Such activity diaries, we posit, could be derived
+from a combination of automatically-sensed activity and vital
+statistics through a wide array of available consumer-grade
+network-enabled activity senors and diagnostic tools, as well as
+through manual annotations provided by patients about their day.
 
 \section{Personal Electronic Sensors}
 
