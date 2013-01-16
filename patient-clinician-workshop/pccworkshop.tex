@@ -250,19 +250,16 @@ However, many of these sites have APIs that provide access to the raw sensor dat
 
 Since SNOWMED-CT nor ICD cover routine measured activity, we are devising a supplemental ontology for these concepts called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities are measured, as well as the ability to describe the sensors used.  The intention is for Activity-SENSE records to, like those of SNOMED-CT, eventually be translatable to different languages and mapped to other similiar ontologies of behaviour.
 
-The data collected by patients' devices has the potential to create a large volumes of highly structured data. Some sensors
-are collecting minute-by-minute data values form multiple sensors 24 hours a day, whereas 
-EHRs tend to contain individual records for each clinical session. Therefore, existing methods of storing EHRs may
-prove to be unsuitable for the large volumes of data from activity diaries. However, integrating with existing EHRs
-would enable clinicians and patients to view the data in context. 
+\section{The WebBox EHR Platform}
 
-To this challenge we present our own personal data platform ``WebBox \cite{webbox}.'' We have used WebBox with EHRs
-to enable patient collected data to be augmented with hospital-provided EHR data. WebBox is able to combine
-data from multiple sources, and enables patients to make their own annotations against data, and
-to optionally share these annotations, along with their activity diaries, with their clinician. This
-then enables clinicians and patients to enter into a dialog about how well the patient is doing,
-and any lifestyle changes they can make to better their situation.
+The high-resolution data collected by activity-sensing devices, accumulated over a long period such as a patient's lifespan, can result in a substantially greater volume of data than current EHR platforms are designed to handle. To address this deficiency, we have devised a personal data platform ``WebBox \cite{webbox}'', optimised to handle the secure, long-term storage of structured data at large volume.  Thus far, WebBox has been used to archive clinician (hospital and GP-provided) data, including both raw structured data (such as clinical diagnostic results) and traditional reports prepared by clinicians.  Being optimised for structured data capture and integration, our current work extends this platform to the aforementioned activity profiles, created from retrieving raw sensed data from digital health device APIs and translating such observations to the Activity-SENSE representation.  
 
+%Following this, to optionally share these annotations, along with their activity diaries, with their clinician. This then enables clinicians and patients to enter into a dialog about how well the patient is doing, and any lifestyle changes they can make to better their situation.
+
+
+%% Furthermore, Therefore, existing platforms for storing EHRs may
+%% prove to be unsuitable for the large volumes of data from activity diaries. However, integrating with existing EHRs
+%% would enable clinicians and patients to view the data in context. 
 
 
 %% Such a representation might enable GPs to more quickly understand a   such as for providing
