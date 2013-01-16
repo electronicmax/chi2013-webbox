@@ -151,29 +151,60 @@ diary to their clinicians.  We discuss these, next.
 
 \section{Capturing activity diaries}
 
-\subsection{Automatic activity sensing and digital well-being}
 The recent proliferation in personal wearable activity sensors and
 network and storage- enabled digital health measurement devices has
-been driven by both the falling costs of embeddable electronics, and
-the demand for self-measurement from the ``quantified-self''\cite{}
-movement.  Wireless sensors such as the Fit-bit\cite{} and Nike
-FuelBand\cite{} and small, discreet, and low-cost, providing the
-wearer with high-resolution temporal data about their activity levels,
-with little or no effort.  
+been driven by both the falling costs of embeddable electronics, and a
+surging public interest in ``quantified-self''-style self-monitoring
+for self-improvement.  Many of these sensors are lightweight,
+can be worn discreetly, measure several physiological statistics
+simultaneously, and most require little maintenance. Table
+\ref{sensors} lists a variety of such sensors, currently available
+readily from online retailers.
 
-In addition to fitness monitors, the market for quantified self sensors has
-expanded into areas of personal health. For example, there are sensors for
-measuring blood oxygenation\footnote{SpO2 Blood Oxygenation sensor: \url{http://ispo2.com}},
-Heart Rate Variability and Respiratory Rate\footnote{Zensorium Tinke, heart and respiratory rate sensor: \newline \indent \indent \indent \url{http://www.zensorium.com/tinke/}} and
-Temperature and Galvanic Skin Response\footnote{BodyMedia Core 2, temperature and GSR sensor: \newline \indent \indent \indent  \url{http://www.bodymedia.com}}.
-The diet aspect of weight loss is also covered, by products such as a wireless fork that informs you how long you spent eating\footnote{HapiLabs HapiFork: \newline \indent \indent \indent  \url{http://hapilabs.com/products-hapifork.asp}}.
+\begin{table*}[htb]
+\small
+\begin{tabular}{p{5.0cm}  p{4cm} l}
+
+ measurement & products & price range \\
+\hline
+general activity (walking/jogging) & FitBit, Nike FuelBand  & 49-199 \\ 
+weight & Writhings WiFi Scale & 200 \\
+blood pressure & Writhings BPM & 200 \\ 
+sleep duration & Zeo Pro, WakeMate, & 100-300  \\
+heart rate variability & Zensorium Tinke & 200 \\
+blood oxygenation & Zensorium Tinke & 200 \\ 
+respiratory rate & Zensorium Tinke & 200 \\ 
+galvanic skin repsonse & BodyMedia CORE 2 &  50-100 \\
+body temperature & BodyMedia CORE 2 &  50-100 \\ 
+Eating & Hapifork & (not yet released) \\ 
+\end{tabular}
+\caption{\emph{Consumer-grade activity sensors}: Activity and physiological measurememnt sensors with automatic data uplink to cloud services }
+\end{table*}
+
+While few of these devices had been independently evaluated for
+accuracy for clinical use, as they have matured, several of these
+manufacturers begun rigorous evaluaton of their products for achieving
+certification. For example, BodyMedia advertise themselves as
+providing the ``FDA-approved, clincally validated, most accurate
+wireless activity measurement''.  A separate study of activity-based
+sleep monitoring tools revealed that ``low cost actigraphy-based
+approaches'' correlated well with baseline (in-lab EEG-based
+measurements) for sleep duration, although less with sleep quality
+metrics.
+
+%% In addition to fitness monitors, the market for quantified self sensors has
+%% expanded into areas of personal health. For example, there are sensors for
+%% measuring blood oxygenation\footnote{SpO2 Blood Oxygenation sensor: \url{http://ispo2.com}},
+%% Heart Rate Variability and Respiratory Rate\footnote{Zensorium Tinke, heart and respiratory rate sensor: \newline \indent \indent \indent \url{http://www.zensorium.com/tinke/}} and
+%% Temperature and Galvanic Skin Response\footnote{BodyMedia Core 2, temperature and GSR sensor: \newline \indent \indent \indent  \url{http://www.bodymedia.com}}.
+%% The diet aspect of weight loss is also covered, by products such as a wireless fork that informs you how long you spent eating\footnote{HapiLabs HapiFork: \newline \indent \indent \indent  \url{http://hapilabs.com/products-hapifork.asp}}.
+
+\section{Storing activity diaries}
 
 Currently these products tend to work in isolation, where the readings from a single product
 are presented either on the device themselves, or via a smartphone or website. However,
 their use could be integrated with clinical care, in order to monitor patients, and to give an
 insight into their lifestyle.
-
-\section{Storing activity diaries}
 
 The data collected by patients' devices has the potential to create a large volume of data, and therefore particular
 consideration should be paid about who and where the data will be stored. In particular, it is likely
