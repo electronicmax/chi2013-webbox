@@ -144,7 +144,7 @@ to see their clinician, say, once a month end up with extremely
 low-resolution samples of a patient's condition.
 
 In this position paper, we look at the potential and problems of
-augmenting the next generation of EHRs with \emph{personal activity
+augmenting the next generation of EHRs with personal \emph{activity
   diaries}, portraits of a person's dynamic condition captured at high
 temporal fidelity.  Such activity diaries are intended to supplement,
 rather than supplant, the existing diagnostic reports performed by
@@ -220,19 +220,18 @@ surging public interest in ``quantified-self''-style self-monitoring
 for self-improvement.  Many of these sensors are lightweight, can be
 worn discreetly, measure several physiological statistics
 simultaneously, and most require little maintenance. Table
-\ref{sensors} lists a variety of such sensors, currently available
-readily from online retailers.
+\ref{sensors} lists a sampling of the sensors currently available
+directly from retailers.
 
-While few of these devices had been independently evaluated for
-accuracy for clinical use, as they have matured, several of these
-manufacturers begun rigorous evaluation of their products for achieving
-certification. For example, BodyMedia advertise themselves as
-providing the ``FDA-approved, clinically validated, most accurate
-wireless activity measurement''.  A separate study of activity-based
-sleep monitoring tools revealed that ``low cost actigraphy-based
-approaches'' correlated well with baseline (in-lab EEG-based
-measurements) for sleep duration, although less with sleep quality
-metrics.
+While few of these devices had initially been evaluated for accuracy
+or certified for clinical use, increasingly device manufacturers have
+begun to get independent certification. For example, BodyMedia
+advertises its device as ``FDA-approved, clincally validated, most
+accurate wireless activity measurement''.  A separate study of
+activity-based sleep monitoring tools revealed that ``low cost
+actigraphy-based approaches'' correlated well with baseline (in-lab
+EEG-based measurements) for sleep duration, although less with sleep
+quality metrics \cite{reid1999correlation}.
 
 %% In addition to fitness monitors, the market for quantified self sensors has
 %% expanded into areas of personal health. For example, there are sensors for
@@ -243,12 +242,11 @@ metrics.
 
 
 \section{Storing and Representing Activity Diaries}
+Currently, these devices are designed to upload measurements only to separate, dedicated web sites set up by their manufacturer.  Such sites are poorly suited for the long-term storage of people's activity data for several reasons.  First, none of the sites providelong-term retention or access guarantees of user data (nor HIPAA security guarantees!).  Second, it is difficult for a user to gain a unified understanding of their activity through the disparate interfaces provided, in part due of the widely different visual and interface representations. Finally, many of interfaces represent activity in arbitrary, ``user-friendly'' units, such as ``Sleep score'', ``Fuel'', ``Zen level'' etc., which are difficult or impossible for users to compare.
 
-Currently, these products are designed to work separately by themselves, uploading sensor measurements to dedicated web sites set up by each device's manufacturer.  Such sites are poorly suited for the long-term storage for the highly personal activity data for several reasons; first, none of the sites provide any long-term retention or access guarantees of user data (nor HIPAA security guarantees).  Second, it is difficult for a user to gain a unified understanding of their activity across their devices through the disparate interfaces provided by these services, due of the widely different visual and interface representations provided. Finally, many of these visualisations represent user activity in arbitrary, ``user-friendly'' units, such as ``Sleep score'', ``Fuel'', ``Zen level'', which, being not rigorously defined are difficult or impossible to compare across services.
+However, many of these sites have APIs that provide programmatic access to raw sensor data.  Our approach has been touse such APIs to retrieve a patient's information from all services corresponding to their devices.  In particular, we propose that consolidating such information into a uniform, common taxonomy and description logic, like those provided by SNOMED-CT~\cite{stearns2001snomed} and ICD-10~\cite{world1993icd} for diseases, would enable such diaries to be interpretable and used directly by future clinical medical systems, such as primary care information management systems. 
 
-However, many of these sites have APIs that provide access to the raw sensor data, making it feasible to access and interpret captured data.  We propose that these APIs be used to consolidate information from among all of the services corresponding to a patient's personal health devices, into a single representation kept with their EHR.  In particular, grounding this activity data in a uniform, common taxonomy and description logic, like those provided for medical diagnoses and diseases through SNOMED-CT~\cite{stearns2001snomed} and ICD-10~\cite{world1993icd}, would enable these diaries to interpretable by future clinical medical systems, such as primary care information management systems. 
-
-Since SNOMED-CT nor ICD cover routine measured activity, we are devising a supplemental ontology for these concepts called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities are measured, as well as the ability to describe the sensors used.  The intention is for Activity-SENSE records to, like those of SNOMED-CT, eventually be translatable to different languages and mapped to other similar ontologies of behaviour.
+Since SNOWMED-CT nor ICD cover activity-related concepts, we devised a supplemental ontology called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities measurements were taken, and concepts for describing sensors used.  The intention is for records in Activity-SENSE, like those of SNOMED-CT, will be eventually translatable to dozens of different languages and mapped to similar activity ontologies, allowing international use and greater operability.
 
 \section{The WebBox EHR Platform}
 
