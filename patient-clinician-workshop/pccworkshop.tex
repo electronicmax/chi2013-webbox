@@ -165,16 +165,16 @@ diary to their clinicians.  We discuss these, next.
 We imagine integrated activity diaries to be used by both clinicians
 and patients in several ways.  First, for nearly all types of
 conditions, monitoring a person's overall daily activity and sleep
-duration could easily indicate how much rest, exercise, exposure to
-others, and the outside world they might be getting.  Daily
-records of the time(s) that a person gets up, eats, works, exercises
-and relaxes can be analysed by clinicians for irregular behaviours or
-habits that might be affecting a person's well-being. For more
-specific conditions, daily measurements of a person's blood pressure,
-blood oxidation, heart rate, breathing, weight, and galvanic skin
-response could be useful for tracking progress on a prescribed
-intervention, recovery from an illness, or onset of a new conditions,
-for example, or be used to pinpoint sources of prolonged stress.
+duration could easily indicate how much rest, exercise, and social
+exposure they might be getting.  Moreover, longitudinal records of the
+time(s) that a person gets up, eats, works, exercises and relaxes can
+be analysed for irregular behaviours or habits that might be affecting
+their well-being. For more specific conditions, daily
+measurements of a person's blood pressure, blood oxidation, heart
+rate, breathing, weight, and galvanic skin response could be useful
+for tracking progress on a prescribed intervention, recovery from an
+illness, or onset of a new conditions, for example, or be used to
+pinpoint sources of prolonged stress.
 
 Merely providing access to such activity records back to individuals
 could have direct effects on people's behaviour, motivation and
@@ -246,7 +246,7 @@ Currently, these devices are designed to upload measurements only to separate, d
 
 However, most of these sites have APIs providing programmatic access to raw sensor data.  Our approach has been to leverage such APIs to retrieve a patient's information from all their devices, consolidating it into a uniform, common taxonomy and description logic, like those provided by SNOMED-CT \cite{stearns2001snomed} and ICD-10 \cite{world1993icd}.  The goal of such a formalisation is to provide a standard descriptive mechanism by which this data could be interpreted, such as by future clinical medical systems. 
 
-Since SNOWMED-CT nor ICD cover activity-related concepts, we devised a supplemental ontology called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities measurements were taken, and concepts for describing sensors used.  The intention is for records in Activity-SENSE, like those of SNOMED-CT, will be eventually translatable to dozens of different languages and mapped to similar activity ontologies, allowing international use and greater operability.
+Since SNOWMED-CT nor ICD-10 cover activity-related concepts, we devised a supplemental ontology called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities measurements were taken, and concepts for describing sensors used.  The intention is for records in Activity-SENSE, like those of SNOMED-CT, will be eventually translatable to dozens of different languages and mapped to similar activity ontologies, allowing international use and greater operability.
 
 \section{The WebBox EHR Platform}
 
