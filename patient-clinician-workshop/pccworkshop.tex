@@ -201,7 +201,7 @@ WiThings WiFi Scale & weight & \$200 \\
 WiThings BPM & blood pressure & \$200 \\ 
 Zeo Pro & sleep duration \& quality & \$200 \\
 WakeMate & sleep duration & \$50  \\
-Zensorium Tinnke & heart rate variability, blood oxygenation, respiratory rate & \$200 \\
+Zensorium Tink\'{e} & heart rate variability, blood oxygenation, respiratory rate & \$200 \\
 BodyMedia CORE 2 & galvanic skin response, body temperature, sleep, respiratory rate, heart rate & (TBD) \\
 Hapifork & eating time, rate, frequency & (TBD) \\ 
 \end{tabular}
@@ -226,7 +226,7 @@ directly from retailers.
 While few of these devices had initially been evaluated for accuracy
 or certified for clinical use, increasingly device manufacturers have
 begun to get independent certification. For example, BodyMedia
-advertises its device as ``FDA-approved, clincally validated, most
+advertises its device as ``FDA-approved, clinically validated, most
 accurate wireless activity measurement''.  A separate study of
 activity-based sleep monitoring tools revealed that ``low cost
 actigraphy-based approaches'' correlated well with baseline (in-lab
@@ -242,11 +242,11 @@ quality metrics \cite{reid1999correlation}.
 
 
 \section{Storing and Representing Activity Diaries}
-Currently, these devices are designed to upload measurements only to separate, dedicated web sites run by their manufacturers.  Such sites are poorly suited for the long-term storage of people's activity data for several reasons.  First, none of the sites providelong-term retention or access guarantees of user data (nor HIPAA security guarantees!).  Second, it is difficult for a user to gain a unified understanding of their activity through the disparate interfaces provided, in part due of the widely different visual and interface representations. Finally, many of interfaces represent activity in arbitrary, ``user-friendly'' units, such as ``Sleep score'', ``Fuel'', ``Zen level'' etc., which are difficult or impossible for users to compare.
+Currently, these devices are designed to upload measurements only to separate, dedicated web sites run by their manufacturers.  Such sites are poorly suited for the long-term storage of people's activity data for several reasons.  First, none of the sites provide long-term retention or access guarantees of user data (nor HIPAA security guarantees!).  Second, it is difficult for a user to gain a unified understanding of their activity through the disparate interfaces provided, in part due of the widely different visual and interface representations. Finally, many of interfaces represent activity in arbitrary, ``user-friendly'' units, such as ``Sleep score'', ``Fuel'', ``Zen level'' etc., which are difficult or impossible for users to compare.
 
 However, most of these sites have APIs providing programmatic access to raw sensor data.  Our approach has been to leverage such APIs to retrieve a patient's information from all their devices, consolidating it into a uniform, common taxonomy and description logic, like those provided by SNOMED-CT \cite{stearns2001snomed} and ICD-10 \cite{world1993icd}.  The goal of such a formalisation is to provide a standard descriptive mechanism by which this data could be interpreted, such as by future clinical medical systems. 
 
-Since SNOWMED-CT nor ICD-10 cover activity-related concepts, we devised a supplemental ontology called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities measurements were taken, and concepts for describing sensors used.  The intention is for records in Activity-SENSE, like those of SNOMED-CT, will be eventually translatable to dozens of different languages and mapped to similar activity ontologies, allowing international use and greater operability.
+Since SNOMED-CT nor ICD-10 cover activity-related concepts, we devised a supplemental ontology called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities measurements were taken, and concepts for describing sensors used.  The intention is for records in Activity-SENSE, like those of SNOMED-CT, will be eventually translatable to dozens of different languages and mapped to similar activity ontologies, allowing international use and greater operability.
 
 \section{The WebBox EHR Platform}
 
