@@ -222,11 +222,19 @@ metrics.
 %% Temperature and Galvanic Skin Response\footnote{BodyMedia Core 2, temperature and GSR sensor: \newline \indent \indent \indent  \url{http://www.bodymedia.com}}.
 %% The diet aspect of weight loss is also covered, by products such as a wireless fork that informs you how long you spent eating\footnote{HapiLabs HapiFork: \newline \indent \indent \indent  \url{http://hapilabs.com/products-hapifork.asp}}.
 
-\section{Storing activity diaries}
+\section{Storing and Representing Activity Diaries}
 
 Currently these products are designed to work in isolation, that is, to upload sensor measurements to dedicated web sites set up by each device's manufacturer.  Such sites are poorly suited for the long-term storage for the highly personal activity data for several reasons; first, none of the sites provide any long-term retention or access guarantees of user data (nor HIPAA security guarantees).  Second, it is difficult for a user to gain a unified understanding of their activity across their devices through the disparate interfaces provided by these services, due of the widely different visual and interface representations provided. Finally, many of these visualisations represent user activity in arbitrary, 'user-friendly' units, such as 'Sleep score', 'Fuel', ``Zen level'', which, being not rigorously defined are difficult or impossible to compare across services.
 
 Fortunately, many of these sites have APIs that provide access to the raw sensor data, making it feasible to access and interpret captured data.  We propose that these APIs be used to consolidate information from among all of the services corresponding to a patient's personal health devices, into a single reprsentation kept with their EHR.  In particular, grounding this activity data in a uniform, common taxonomy and description logic, like those provided for medical diagnoses and diseases through SNOWMED-CT \cite{stearns2001snomed} and ICD-10 \cite{world1993icd}, would enable these diaries to interpretable by future clinical medical systems, such as primary care information management systems. 
+
+The data collected by patients' devices has the potential to create a large volume of highly structured data. This is in contrast to
+EHRs which tend to contain individual records for each clinical session.
+
+To this challenge we bring our contribution of a common ontology for recording and encompassing patient activities, which we have begun to
+connect to SNOMED-CT, in order to enable semantic interoperability with existing systems.
+
+
 
 %% Such a representation might enable GPs to more quickly understand a   such as for providing
 %% like the SNOWMEDif Building such a representation, however, makes several assumptions, the 
@@ -242,31 +250,30 @@ Fortunately, many of these sites have APIs that provide access to the raw sensor
 %% consideration should be paid about who and where the data will be stored. In particular, it is likely
 %% that existing providers of storage for electronic health records will not want to be burdened with the
 %% administration costs of storing additional data. The longevity of third-party storage providers is
-%% also a concern, because there has been a history of short-notice closures of EHR providers (such as Google Health).
+%% also a concern, because there has b een a history of short-notice closures of EHR providers (such as Google Health).
 
-\section{Representing activity diaries}
 
-Particular care should be taken when deciding on a format to store the activity diaries. Ideally
-a format will be machine-readable, using open standards (for example XML, RDF or JSON) and
-following existing schematic/ontological knowledge modelling conventions. There are a 
-number of medical ontologies that already exist, as well as vocabularies and systems (such as
-SNOMED CT \cite{stearns2001snomed} and IDC-10) that focus on the medical domain. The hope is that by using
-such systems, that the data collected by patients can be analysed more rapidly by clinical systems
-and staff.
-
-One option is to embrace the Semantic Web, because it offers several key benefits:
-
-\begin{itemize}
-
-\item Distributed system with universal addresses and standard mature protocols
-\item Open extensible ontology system and existing domain ontologies
-\item Existing library and tool support and expertise
-\item Interoperability with existing systems
-
-\end{itemize}
- 
-Even if personal health records or systems do not use the Semantic Web, there are existing
-techniques to integrate with their data.
+%Particular care should be taken when deciding on a format to store the activity diaries. Ideally
+%a format will be machine-readable, using open standards (for example XML, RDF or JSON) and
+%following existing schematic/ontological knowledge modelling conventions. There are a 
+%number of medical ontologies that already exist, as well as vocabularies and systems (such as
+%SNOMED CT \cite{stearns2001snomed} and IDC-10) that focus on the medical domain. The hope is that by using
+%such systems, that the data collected by patients can be analysed more rapidly by clinical systems
+%and staff.
+%
+%One option is to embrace the Semantic Web, because it offers several key benefits:
+%
+%\begin{itemize}
+%
+%\item Distributed system with universal addresses and standard mature protocols
+%\item Open extensible ontology system and existing domain ontologies
+%\item Existing library and tool support and expertise
+%\item Interoperability with existing systems
+%
+%\end{itemize}
+% 
+%Even if personal health records or systems do not use the Semantic Web, there are existing
+%techniques to integrate with their data.
 
 
 \section{Privacy Controls}
