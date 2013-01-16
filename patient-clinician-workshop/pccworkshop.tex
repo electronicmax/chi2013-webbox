@@ -109,7 +109,7 @@ has been in the interim.
 
 One of the most promising technologies that has the potential to help
 provide such a common context is the patient-centric electronic health
-record (henceforth EHR)\cite{hayrinen2008definition}, a digital representation of the
+record (henceforth EHR)~\cite{hayrinen2008definition}, a digital representation of the
 complete medical history of an individual as recorded by clinicians
 throughout a patient's life. The EHR has enabled both patients and
 their clinicians unfettered access to the patient's medical data,
@@ -160,15 +160,15 @@ users easy-to-use access to these diaries, and privacy controls for
 giving patients the ability to disclose desired quantities of their
 diary to their clinicians.  We discuss these, next.
 
-\section{Using activity diaries}
+\section{Using Activity Diaries}
 
-We imagine integrated activity diaries to be used by both clinicans
+We imagine integrated activity diaries to be used by both clinicians
 and patients in several ways.  First, for nearly all types of
 conditions, monitoring a person's overall daily activity and sleep
 duration could easily indicate how much rest, exercise, exposure to
-others, and the outside world he or she might be getting.  Daily
+others, and the outside world they might be getting.  Daily
 records of the time(s) that a person gets up, eats, works, exercises
-and relaxes can be analysed by clincians for irregular behaviours or
+and relaxes can be analysed by clinicians for irregular behaviours or
 habits that might be affecting a person's well-being. For more
 specific conditions, daily measurements of a person's blood pressure,
 blood oxidation, heart rate, breathing, weight, and galvanic skin
@@ -177,12 +177,12 @@ intervention, recovery from an illness, or onset of a new conditions,
 for example, or be used to pinpoint sources of prolonged stress.
 
 Merely providing access to such activity records back to individuals
-could have direct effects on people's behavior, motivation and
+could have direct effects on people's behaviour, motivation and
 perceived well-being.  For example, just as asking individuals to
 introspect and justify their opinions and feelings has been found to
-be both disruptive and reinforcing of their opinions
-\cite{wilson1989introspection}, allowing people to reflect upon their
-historical records of their activities might help people realize or
+be both disruptive and reinforcing of their opinions~\cite{wilson1989introspection},
+allowing people to reflect upon their
+historical records of their activities might help people realise or
 change their minds about how or why they feel particular ways. We feel
 that there is significant room for investigation here, and potential
 for research pertaining to self motivation and improvement.
@@ -197,15 +197,15 @@ product & measurement indices & price range (approx. USD) \\
 \hline
 FitBit & general activity (walking/jogging) & \$50 \\
 Nike FuelBand & general activity (walking/jogging) & \$199 \\ 
-Writhings WiFi Scale & weight & \$200 \\
-Writhings BPM & blood pressure & \$200 \\ 
+WiThings WiFi Scale & weight & \$200 \\
+WiThings BPM & blood pressure & \$200 \\ 
 Zeo Pro & sleep duration \& quality & \$200 \\
 WakeMate & sleep duration & \$50  \\
-Zensorium Tinkne & heart rate variability, blood oxygenation, respiratory rate & \$200 \\
-BodyMedia CORE 2 & galvanic skin repsonse, body temperature, sleep, respiratory rate, heart rate & (TBD) \\
+Zensorium Tinnke & heart rate variability, blood oxygenation, respiratory rate & \$200 \\
+BodyMedia CORE 2 & galvanic skin response, body temperature, sleep, respiratory rate, heart rate & (TBD) \\
 Hapifork & eating time, rate, frequency & (TBD) \\ 
 \end{tabular}
-\caption{\emph{Consumer-grade activity sensors}: Activity and physiological measurememnt sensors with automatic data uplink to cloud services }
+\caption{\emph{Consumer-grade activity sensors}: Activity and physiological measurement sensors with automatic data uplink to cloud services }
 \label{sensors}
 \end{table}
 }
@@ -214,7 +214,7 @@ Hapifork & eating time, rate, frequency & (TBD) \\
 \section{Capturing activity diaries}
 
 The recent proliferation in personal wearable activity sensors and
-network and storage- enabled digital health measurement devices has
+network- and storage- enabled digital health measurement devices has
 been driven by both the falling costs of embeddable electronics, and a
 surging public interest in ``quantified-self''-style self-monitoring
 for self-improvement.  Many of these sensors are lightweight, can be
@@ -225,9 +225,9 @@ readily from online retailers.
 
 While few of these devices had been independently evaluated for
 accuracy for clinical use, as they have matured, several of these
-manufacturers begun rigorous evaluaton of their products for achieving
+manufacturers begun rigorous evaluation of their products for achieving
 certification. For example, BodyMedia advertise themselves as
-providing the ``FDA-approved, clincally validated, most accurate
+providing the ``FDA-approved, clinically validated, most accurate
 wireless activity measurement''.  A separate study of activity-based
 sleep monitoring tools revealed that ``low cost actigraphy-based
 approaches'' correlated well with baseline (in-lab EEG-based
@@ -246,13 +246,13 @@ metrics.
 
 Currently, these products are designed to work separately by themselves, uploading sensor measurements to dedicated web sites set up by each device's manufacturer.  Such sites are poorly suited for the long-term storage for the highly personal activity data for several reasons; first, none of the sites provide any long-term retention or access guarantees of user data (nor HIPAA security guarantees).  Second, it is difficult for a user to gain a unified understanding of their activity across their devices through the disparate interfaces provided by these services, due of the widely different visual and interface representations provided. Finally, many of these visualisations represent user activity in arbitrary, ``user-friendly'' units, such as ``Sleep score'', ``Fuel'', ``Zen level'', which, being not rigorously defined are difficult or impossible to compare across services.
 
-However, many of these sites have APIs that provide access to the raw sensor data, making it feasible to access and interpret captured data.  We propose that these APIs be used to consolidate information from among all of the services corresponding to a patient's personal health devices, into a single representation kept with their EHR.  In particular, grounding this activity data in a uniform, common taxonomy and description logic, like those provided for medical diagnoses and diseases through SNOMED-CT \cite{stearns2001snomed} and ICD-10 \cite{world1993icd}, would enable these diaries to interpretable by future clinical medical systems, such as primary care information management systems. 
+However, many of these sites have APIs that provide access to the raw sensor data, making it feasible to access and interpret captured data.  We propose that these APIs be used to consolidate information from among all of the services corresponding to a patient's personal health devices, into a single representation kept with their EHR.  In particular, grounding this activity data in a uniform, common taxonomy and description logic, like those provided for medical diagnoses and diseases through SNOMED-CT~\cite{stearns2001snomed} and ICD-10~\cite{world1993icd}, would enable these diaries to interpretable by future clinical medical systems, such as primary care information management systems. 
 
-Since SNOWMED-CT nor ICD cover routine measured activity, we are devising a supplemental ontology for these concepts called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities are measured, as well as the ability to describe the sensors used.  The intention is for Activity-SENSE records to, like those of SNOMED-CT, eventually be translatable to different languages and mapped to other similar ontologies of behaviour.
+Since SNOMED-CT nor ICD cover routine measured activity, we are devising a supplemental ontology for these concepts called \emph{Activity-SENSE}.  This ontology encompasses patient activities, and standard units of measure with which activities are measured, as well as the ability to describe the sensors used.  The intention is for Activity-SENSE records to, like those of SNOMED-CT, eventually be translatable to different languages and mapped to other similar ontologies of behaviour.
 
 \section{The WebBox EHR Platform}
 
-The high-resolution data collected by activity-sensing devices can result in a greater volume of data than current EHR platforms are designed to handle when  accumulated over a patient's lifetime. To address this need, we have devised  ``WebBox \cite{webbox}'', a personal data platform optimised to handle the secure, long-term storage of large volumes of structured data.  Thus far, WebBox has been used to archive clinician (hospital and GP-provided) data, including both raw structured data (such as clinical diagnostic results) and traditional reports prepared by clinicians.  Being optimised for structured data capture and integration, our current work extends this platform to the aforementioned activity profiles, created from retrieving raw sensed data from digital health device APIs and translating such observations to the Activity-SENSE representation.  
+The high-resolution data collected by activity-sensing devices can result in a greater volume of data than current EHR platforms are designed to handle when  accumulated over a patient's lifetime. To address this need, we have devised  ``WebBox''~\cite{webbox}, a personal data platform optimised to handle the secure, long-term storage of large volumes of structured data.  Thus far, WebBox has been used to archive clinician (hospital and GP-provided) data, including both raw structured data (such as clinical diagnostic results) and traditional reports prepared by clinicians.  Being optimised for structured data capture and integration, our current work extends this platform to the aforementioned activity profiles, created from retrieving raw sensed data from digital health device APIs and translating such observations to the Activity-SENSE representation.  
 
 %Following this, to optionally share these annotations, along with their activity diaries, with their clinician. This then enables clinicians and patients to enter into a dialog about how well the patient is doing, and any lifestyle changes they can make to better their situation.
 
